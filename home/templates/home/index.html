@@ -2,9 +2,129 @@
 {% load static %}
 
 {% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
 
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
-<h1 class="bg-success">hello samuel</h1>
+ <!-- main content  -->
+ <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active hero-img-1">
+        <div class="container hero-box">
+          <h1>Example Headline</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur perspiciatis quis quaerat repudiandae
+            corporis! Commodi fuga quam aspernatur eius sequi?</p>
+          <a href="#" class="btn btn-lg btn-primary">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="carousel-item hero-img-2">
+        <div class="container hero-box">
+          <h1>Example Headline 2</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur perspiciatis quis quaerat repudiandae
+            corporis! Commodi fuga quam aspernatur eius sequi?</p>
+          <a href="#" class="btn btn-lg btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- trust statments -->
+  <div class="container py-3">
+    <div class="row py-3">
+      <div class="col-12 col-lg-3 text-center">
+        <i class="fas fa-shipping-fast fs-1"></i>
+        <h5>Fast Delivery</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ducimus.</p>
+      </div>
+      <div class="col-12 col-lg-3 text-center">
+        <i class="fas fa-user-shield fs-1"></i>
+        <h5>Secure Payment</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ducimus.</p>
+      </div>
+      <div class="col-12 col-lg-3 text-center">
+        <i class="fas fa-globe-africa fs-1"></i>
+        <h5>Worldwide Delivery</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ducimus.</p>
+      </div>
+      <div class="col-12 col-lg-3 text-center">
+        <i class="fas fa-undo fs-1"></i>
+        <h5>7 Days Return</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ducimus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- category section  -->
+  <div class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-12 col-md-8 col-lg-3 d-none d-lg-block">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Brands</h5>
+            <ul>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-6">
+        <div class="card h-100">
+          <img src="assets/media/concert-2171166_1920.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a short card.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100">
+          <img src="assets/media/music-1414165_1280.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <ul>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 d-lg-none">
+        <div class="card h-100">
+          <img src="assets/media/music-1414165_1280.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Brands</h5>
+            <ul>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

@@ -114,6 +114,20 @@
             {% include 'includes/mobile-header.html' %}
             {% include 'includes/main-nav.html' %}
         </nav>
+        <div class="collapse bg-light p-1" id="searchicon">
+            <form class="form" action="#">
+              <div class="input-group w-100">
+                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search...">
+                <div class="input-group-append">
+                  <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                    <span class="icon">
+                      <i class="fas fa-search"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
     </div>
     </header>
 

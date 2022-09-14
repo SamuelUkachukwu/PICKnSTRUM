@@ -29,6 +29,45 @@
     background-color: var(--black);
 }
 
+/* ---------------------main page styling  */
 .header-backspace {
     padding-top: 119px;
+}
+
+.carousel-item {
+    height: 32rem;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-img-1 {
+    background-image: url(/media/page-designs/hero-1.jpg);
+}
+
+.hero-img-2 {
+    background-image: url(/media/page-designs/hero-2.jpg);
+}
+
+.hero-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+    .header-backspace {
+        padding-top: 144px;
+    }
+}
+
+/* media styling for screen size mobile  */
+@media (max-width: 991px) {
+    .header-backspace {
+        padding-top: 90px;
+    }
 }
