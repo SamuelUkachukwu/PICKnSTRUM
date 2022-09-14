@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ----------------------root colors  */
+:root {
+    --white: #fff;
+    --light-grey: #ccc;
+    --black: #000;
+}
+
+/* -----------------------scrollbar styling */
+::-webkit-scrollbar {
+    width: .7vw;
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--light-grey);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--black);
+}
+
+.header-backspace {
+    padding-top: 119px;
+}

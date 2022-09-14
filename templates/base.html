@@ -15,7 +15,7 @@
 
     {% block corecss %}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="#">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -35,6 +35,86 @@
   <body>
     <header class="container-fluid fixed-top">
 
+           <!-- delivery bonus -->
+        <div class="row bg-warning">
+            <div class="col text-center">
+            <h5>Free delivery on orders over $</h5>
+            </div>
+        </div>
+
+      <!-- header on wide screen -->
+        <div class="row bg-light d-none d-lg-flex pt-2">
+            <div class="col-12 col-lg-4 text-lg-start my-auto py-1 py-lg-0">
+            <a href="#" class="navbar-brand fs-2">
+                <span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong> </span><i class="fas fa-guitar"></i>
+            </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <form action="" method="GET">
+                <div class="input-group w-100">
+                <input class="form-control border rounded-0" type="text" name="q" placeholder="Search...">
+                <div class="input-group-append">
+                    <button class="form-control btn border rounded-0" type="submit">
+                    <span class="icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    </button>
+                </div>
+                </div>
+            </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <ul class="list-inline list-unstyled text-center text-lg-end my-0">
+                <li class="list-inline-item dropdown">
+                <a class="nav-link" href="#" role="button" id="user-options" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <div class="text-center">
+                    <div><i class="fas fa-user fa-lg"></i></div>
+                    <p class="my-0">My Account</p>
+                    </div>
+                </a>
+                <ul class="dropdown-menu border-0" aria-labelledby="user-options">
+                    {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                            <li><a class="dropdown-item" href="#">Management</a></li>
+                        {% endif %}
+                    <li><a href="#" class="dropdown-item">Profile</a></li>
+                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </ul>
+                </li>
+                <li class="list-inline-item">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
+                    <div class="text-center">
+                        <div><i class="fas fa-shopping-cart"></i></div>
+                        <p class="my-0">
+                            {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                                $0.00
+                            {% endif %}
+                        </p>
+                    </div>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+         <!-- nav bar -->
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 p-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            {% include 'includes/mobile-header.html' %}
+            {% include 'includes/main-nav.html' %}
+        </nav>
+    </div>
     </header>
 
     {% if messages %}

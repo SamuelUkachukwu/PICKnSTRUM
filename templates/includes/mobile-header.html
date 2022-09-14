@@ -1,0 +1,33 @@
+       <!-- mobile top  -->
+       <li class="list-inline-item">
+           <a class="nav-link d-block d-lg-none" data-bs-toggle="collapse" href="#searchicon" role="button"
+               aria-expanded="false" aria-controls="searchicon" aria-haspopup="true">
+               <div class="text-center">
+                   <div><i class="fas fa-search fa-lg"></i></div>
+                   <p class="my-0">Search</p>
+               </div>
+           </a>
+       </li>
+       <li class="list-inline-item dropdown">
+           <a class="nav-link d-block d-lg-none" href="#" role="button" id="user-options" data-bs-toggle="dropdown"
+               aria-expanded="false">
+               <div class="text-center">
+                   <div><i class="fas fa-user fa-lg"></i></div>
+                   <p class="my-0">My Account</p>
+               </div>
+           </a>
+           <ul class="dropdown-menu border-0" aria-labelledby="user-options">
+               <li><a class="dropdown-item" href="#">Management</a></li>
+               <li><a class="dropdown-item" href="#">Register</a></li>
+               <li><a class="dropdown-item" href="#">Login</a></li>
+           </ul>
+       </li>
+       <li class="list-inline-item">
+           <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+               href="#">
+               <div class="text-center">
+                   <div><i class="fas fa-shopping-cart"></i></div>
+                   <p class="my-0">$0.00 </p>
+               </div>
+           </a>
+       </li>
