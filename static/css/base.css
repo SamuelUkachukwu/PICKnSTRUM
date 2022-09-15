@@ -51,12 +51,17 @@
     background-image: url(/media/page-designs/hero-2.jpg);
 }
 
+.hero-img-3 {
+    background-image: url(/media/page-designs/test3.jpg);
+}
+
 .hero-box {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 15px;
     padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 992px) {
