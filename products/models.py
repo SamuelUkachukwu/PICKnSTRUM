@@ -33,7 +33,7 @@ class Product(models.Model):
         return self.name
 
 
-class ProductFeatures(models.Model):
+class ProductFeature(models.Model):
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE)
     featur_1 = models.TextField(max_length=100, null=True, blank=True)

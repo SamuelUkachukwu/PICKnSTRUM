@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, ProductFeatures
+from .models import Product, Category, ProductFeature
 
 
 # Register your models here.
@@ -25,7 +25,7 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('friendly_name',)
 
 
-class ProductFeaturesAdmin(admin.ModelAdmin):
+class ProductFeatureAdmin(admin.ModelAdmin):
     list_display = (
         'product',
     )
@@ -34,4 +34,4 @@ class ProductFeaturesAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(ProductFeatures, ProductFeaturesAdmin)
+admin.site.register(ProductFeature, ProductFeatureAdmin)

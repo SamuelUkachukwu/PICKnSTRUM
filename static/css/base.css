@@ -64,6 +64,11 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* product page styling */
+.product-card{
+    box-shadow: 2px 2px 3px #aaaaaa;
+}
+
 @media (min-width: 992px) {
     .header-backspace {
         padding-top: 144px;
