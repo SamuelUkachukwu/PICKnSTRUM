@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-5 col-lg-4 offset-lg-2">
+            <div class="image-container card my-5 product-card rounded-0">
+                {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-5">
+            <div class="mb-5 mt-md-5">
+                <h4>{{ product.name }}</h4>
+                {% if product.category %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted text-decoration-none" href="#">
+                        <i class="fas fa-tags me-1"></i>{{ product.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
+                <p class="fs-3 text-danger fw-bold mt-1">€ {{ product.price }}</p>
+                {% if product.rating %}
+                    <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
+                {% else %}
+                    <small class="text-muted">No Rating</small>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a class="text-decoration-none" href="#">Edit</a> |
+                    <a class="text-danger text-decoration-none" href="#">Delete</a>
+                </small>
+                {% endif %}
+                <p class="mt-3">{{ product.description }}</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
