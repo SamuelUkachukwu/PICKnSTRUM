@@ -28,6 +28,10 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    features = models.ForeignKey(
+        'ProductFeature', null=True, blank=True, on_delete=models.SET_NULL,
+        related_name='feature_set')
+
 
     def __str__(self):
         return self.name
