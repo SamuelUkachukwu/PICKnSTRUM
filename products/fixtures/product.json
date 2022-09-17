@@ -1,0 +1,421 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "HAR-MED-CHE-WOO",
+            "name": "Hartwood Revival Vibrato Semi Acoustic Guitar",
+            "description": "The Hartwood Revival Semi Acoustic will bring a classic edge to your sound. Its iconic semi acoustic style is matched with an authentic feel and a warm, traditional tone. This model has been designed to make your sound stand out. With a classic neck and bridge humbucker configuration and parallel tonebar bracing, it produces a striking tone that will cut through the mix. It also delivers dynamic tonal possibilities thanks to a rich basswood body",
+            "price": 292.99,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "Hartwood-Revival-Vibrato.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "SIN-MED-BLA-WOO",
+            "name": "Single Cutaway Electro Acoustic Guitar",
+            "description": "The Single Cutaway Electro Acoustic Guitar by Gear4music is the perfect solution for any guitarist looking for versatility, style and value with their acoustic sound. It can alternatively provide for any electric guitar player looking for an acoustic guitar as a quality second instrument, representing reliability at an unmatched low cost.",
+            "price": 93.40,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Single-Cutaway-Electro-Acoustic.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "TAN-MED-WHI-WOO",
+            "name": "Tanglewood TWCR O Crossroads Orchestra Acoustic",
+            "description": "The Tanglewood TWCR O Crossroads offers incredible tone, projection, and playability that really belies its price. With a body constructed entirely from mahogany, the Crossroads produces a punchy, deep, resonant, and lively sound that falls on the warmer end of the tonal spectrum.",
+            "price": 119.00,
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "Tanglewood-TWCR-O-Crossroads-Orchestra-Acoustic.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "FEN-MED-3CO-WOO",
+            "name": "Fender CD-60 Dreadnought V3",
+            "description": "Get your groove on. The Fender CD-60 Dreadnought V3 WN is a stunning example of how affordable guitars can still excel in sound and quality. Boasting top tonewoods and heaps of playability, it is perfect if you just want to pick up a guitar and jam. Containing a host of great features and a powerful, pristine tone",
+            "price": 143.75,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Fender-CD-60-Dreadnought-V3.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "YAM-MED-BRO-WOO",
+            "name": "Yamaha C40 Classical Guitar",
+            "description": "Get inspired. The Yamaha C40 Classical Guitar is expertly designed with beginners in mind. This is your acoustic-playing future. It's the place where it all starts. Whether you're a complete beginner, a seasoned pro, or picking up an old hobby. A nylon-strung acoustic has been the first guitar played for the majority of musicians - globally. So it's about time you get deep into your creativity, and explore a tone, look, and feel that truly belies the price tag.",
+            "price": 147.00,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Yamaha-C40-Classical-Guitar.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "GRE-MED-2CO-WOO",
+            "name": "Gretsch G9500 Jim Dandy Flat Top Acoustic",
+            "description": "The Gretsch G9500 Jim Dandy Flat Top Acoustic is a bright voiced parlour style guitar. Offering a bold resonance, comfortable playability, and a vintage inspired aesthetic, the G9500 will fuel your creativity. And that's because it's just so easy to pick up and play! The smaller size, coupled with a shorter 24' scale length, makes it an approachable instrument for any size - or level - of player. And it's a good thing that it's so inviting to play, because the resonant, bright tones it emits are simply sublime. Featuring a basswood body and an X-braced top",
+            "price": 195.25,
+            "category": 1,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Gretsch-G9500-Jim-Dandy-Flat-Top-Acoustic.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "DEA-MED-RED-MET",
+            "name": "Dean Gran Sport X, Trans Cherry",
+            "description": "The Dean Gran Sport X is a stunning, rock ready guitar. It's packed with crunchy, gnarly sounds thanks to a pair of deadly DMT design pickups. These powerful humbuckers give a weight and presence to everything you play, letting chords hit with impact and solos slice through a mix.",
+            "price": 221.75,
+            "category": 9,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "Dean-Gran-Sport-X-Trans-Cherry.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "SUB-MED-TOB-MET",
+            "name": "SubZero Rogue VI Baritone Electric Guitar",
+            "description": "The SubZero Rogue VI produces a unique sound that cuts through the mix. Tuned an octave lower than a standard electric guitar, the SubZero Rogue VI creates an unmistakeable low tone found in a range of music from aggresive rock and metal to mellow pop and indie. Comfortable with agile playing, the body shape has been carefully developed for comfort. Whilst the neck, though longer than an average eletric guitar, retains a very playable 42mm nut width",
+            "price": 349.99,
+            "category": 9,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "SubZero-Rogue-VI-Baritone-Electric-Guitar.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "SQU-MED-BLO-MET",
+            "name": "Squier Affinity Telecaster MN, Butterscotch",
+            "description": "",
+            "price": 236.75,
+            "category": 9,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Squier-Affinity-Telecaster-MN-Butterscotch.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "SQU-MED-ARC-MET",
+            "name": "Squier Bullet Stratocaster w/ Trem",
+            "description": "A legend, within your reach. The Squier Bullet Stratocaster w/ Trem brings all of the classic Strat sound quality and style into an extremely affordable model - perfect for beginners. It's a top-class rock and roll machine. And it exhibits all the behaviour and tonal flavour single-coils are known for. Expect this beauty to kick out all the vintage tones that defined an era of rock 'n' roll. Tasty",
+            "price": 159.00,
+            "category":9,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Squier-Bullet-Stratocaster-w-Trem.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "YAM-MED-BRO-MET",
+            "name": "Yamaha V10SG Intermediate Violin Outfit, Full Size",
+            "description": "Take a sophisticated step. The Yamaha V10SG intermediate violin outfit lets you move on with the sweetest sounds. Such warmth comes from the classic Stradivari design in refined Yamaha Maple and Spruce. Yamaha's wealth of experience helps them to select only the best materials then treat them to perfection. Make the rich sound that comes with such quality.",
+            "price": 1239.00,
+            "category": 14,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "Yamaha-V10SG-Intermediate-Violin-Outfit-Full-Size.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "SEA-MED-RED-MET",
+            "name": "Seattle Bass Guitar by Gear4music",
+            "description": "The latest addition to the Gear4music Bass Range, the Seattle Bass Guitar features a jazz style body packed with grunge and surf tones. Complete with an attractive Red finish, this bass guitar has an offset body, maple neck with a poplar laminate fretboard and a set of PJ style pickups - a split coil pickup in the middle and a single coil at the bridge. Supplied with a free 1/4'' jack cable and gigbag as standard.",
+            "price": 163.50,
+            "category": 4,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Seattle-Bass-Guitar-by-Gear4music.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "HAR-MED-BLA-MET",
+            "name": "Harlem V Bass Guitar by Gear4music",
+            "description": "The Harlem V Bass Guitar has a sturdy build and playability that lends itself perfectly to the speed and precision required in the most technical metal sub-genres. The poplar laminate fingerboard provides intonation and consistent, impressive response under fire, which is in part helped by the slightly shorter scale length.",
+            "price": 175.25,
+            "category": 4,
+            "rating": 4.8,
+            "image_url": "",
+            "image": "Harlem-V-Bass-Guitar-by-Gear4music.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "ARC-MED-BRO-MET",
+            "name": "Archer 44V-600 Violin by Gear4music",
+            "description": "A violin that looks as good as it sounds. The Archer 44V-600 violin by Gear4music is a stunning instrument which is perfect for advancing students. Boasting a hand-carved body alongside beautiful Ebony fittings, the Archer 600 series violin is guaranteed to impress.",
+            "price": 385.50,
+            "category": 14,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Archer-44V-600-Violin-by-Gear4music.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "GEW-MED-BRO-MET",
+            "name": "GEWA Novita 3.0 Electric Violin",
+            "description": "Explore the creative possibilities of digital technology. Thanks to Gewa's deep understanding of classic lutherie, they have been able to make an instrument for even the most demanding of performers - the Gewa Novita 3.0 electric violin in gold brown.",
+            "price": 817.00,
+            "category": 14,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "GEWA-Novita-3-0-Electric-Violin.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "STE-MED-BLU-MET",
+            "name": "Stentor Harlequin Violin Outfit",
+            "description": "Who said learning the violin had to be boring? All Harlequin violins from Stentor are finished in bright and sparkling colour. This glistening black Harlequin is constructed from solid maple and spruce - a timeless and traditional build quality. Stentor believes you shouldn't sacrifice quality for design. Fitted with a good quality bridge and composite tailpiece with integral adjusters, the Harlequin violin is designed to withstand the day-to-day life of a music student. Included with the Harlequin violin is a lightweight case with two pockets to hold all of your accessories. Also included is a durable P&H fibreglass bow so you can start practising straight away.",
+            "price": 185.00,
+            "category": 14,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Stentor-Harlequi-nViolin-Outfit.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "CHR-MED-BLA-MET",
+            "name": "Chromatic Clip-On Tuner",
+            "description": "The easy-to-read, light-up display ensures quick and efficient tuning under stage lights and in darker environments. It's superbly accurate, with a default 440Hz pitch and broad frequency range. Just clip to your instrument and you're ready to play.",
+            "price": 4.66,
+            "category": 13,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Chromatic-Clip-On-Tuner.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "BC7-MED-BLA-PLA",
+            "name": "BC-700 Chromatic Tuner",
+            "description": "The BC-700 Chromatic Tuner by Gear4music is a compact and simple tuner, ideal for guitar, bass and other acoustic instruments thanks to the built-in microphones. This easy to use tuner is capable of tuning a wide range of notes, from A0 to C8, making it highly useful and versatile. Requiring 2x 1.5v (AAA) batteries, this tuner has a built-in power save mode that automatically disables the tuner after 5 minutes without use, meaning you get the most out of your batteries, a must have for any gigging musician.",
+            "price": 10.50,
+            "category": 13,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "BC-700-Chromatic-Tuner.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "BAR-MED-BRO-WOO",
+            "name": "Barnes & Mullins UBJ2 Banjo Ukulele",
+            "description": "The Barnes & Mullins UBJ2 Banjo Ukulele boasts a truly unique tone. Blending the best of ukulele and banjo design to create a quality banjolele. It's fun to play with a sleek, comfortable feel while top-notch tonewoods and a high-end remo head gives you an addictive sound too. It's also a classy-looking sonic companion with its antique stain, no-knot style tailpiece, and chrome hardware, so you'll look great wherever you play too. Stand out with unique tonal flair and sophisticated style.",
+            "price": 186.75,
+            "category": 3,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Barnes-&-Mullins-UBJ2-Banjo-Ukulele.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "BAR-MED-BRO-WOO-2",
+            "name": "Barnes & Mullins BJ304GT Perfect Irish Gaelic 4 String Banjo",
+            "description": "The Barnes & Mullins BJ304GT Perfect Irish Gaelic 4 String Banjo boasts the ultimate tone for fast-paced folk and traditional Irish fiddle music. It was simply birthed to thrive in that environment. But that's not all, it's also a perfect introduction into playing banjo, boasting a slightly shorter scale for a more comfortable, slinkier feel. Plus, designed to be as authentic as early 1900 banjos, this Irish Gaelic 4 String Banjo also delivers instantly recognisable sound with style of days gone by too.",
+            "price": 257.00,
+            "category": 3,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "Barnes-&-Mullins-BJ304GT-Perfect-Irish-Gaelic.jpg "
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "OZA-MED-BRO-WOO",
+            "name": "Ozark Travel Banjo",
+            "description": "The Ozark Travel Banjo is perfect for the travelling player. It's a lightweight, extremely playable banjo with an instantly recognisable tone. Explore a warm, punchy, authentic sound thanks to a mahogany build while meticulous Ozark know-how allows this Travel Banjo to deliver that classic tonal twang you expect.",
+            "price": 229.75,
+            "category": 3,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Ozark-Travel-Banjo.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "FUL-MED-DAR-WOO",
+            "name": "Full Size Cello with Case by Gear4music",
+            "description": "Perfect for beginners. The Student Full Size Cello produces a rich and warm sound. Its laminated spruce top and basswood sides form a hard-wearing body and provide a musical resonance. For quick and accurate tuning, four integral tailpiece tuners are included. There's also a lightweight hard case, rosin and hardwood bow.",
+            "price": 303.50,
+            "category": 6,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Full-Size-Cello-with-Case-by-Gear4music.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "GEA-MED-DAR-WOO",
+            "name": "Gear4music Full Size Cello with Case",
+            "description": "The Student Full Size Cello produces a rich and warm sound. Its laminated spruce top and basswood sides form a hard-wearing body and provide a musical resonance. For quick and accurate tuning, four integral tailpiece tuners are included. There's also a lightweight hard case, rosin and hardwood bow",
+            "price": 303.60,
+            "category": 6,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Gear4music-Full-Size-Cello-with-Case.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "GUI-MED-DAR-PLA",
+            "name": "Guitar Pick by Gear4music, 0.46mm",
+            "description": "0.46mm Guitar Pick by Gear4music - Light gauge shell guitar pick, ideal for fast, accurate playing in all styles. Colour may differ from image shown.",
+            "price": 1.26,
+            "category": 11,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Guitar-Pick-by-Gear4music-046mm.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "GIB-MED-BLA-PLA",
+            "name": "Gibson Standard Style Pick, Medium",
+            "description": "Gibson authenticity. It matters. So, this Gibson Standard Style Pick gives the high-quality performance you'd expect with the durability needed for any passionate performer. It features a classic, Standard Style design which results in superb comfort as well as an excellent grip. Plus, made from reliable, timeless celluloid.",
+            "price": 1.00,
+            "category": 11,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Gibson-Standard-Style-Pick-Medium.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "DRE-MED-BLA-FAB",
+            "name": "Dreadnought ABS Guitar Case by Gear4music",
+            "description": "The Dreadnought ABS Guitar Case by Gear4music provides a high level of protection for any dreadnought / 41' acoustic guitar. With sturdy lockable catches and padded plush interior with a handy accessory compartment, this hard case makes sure that your instrument and accessories are kept safe when you're on the move.",
+            "price": 81.80,
+            "category": 5,
+            "rating": 4.6,
+            "image_url": "",
+            "image": "Dreadnought-ABS-Guitar-Case-by-Gear4music.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "EPI-MED-BLA-FAB",
+            "name": "Epiphone Les Paul Hard Case",
+            "description": "The Epiphone Les Paul Hard Case is all you need to keep your prized instrument safe on the road. A special guitar needs the proper protection to stave off knocks and scrapes, and this matching case is more than up to the task. Sturdy and rugged, it’ll keep your LP looking as good as new whilst you’re travelling, particularly thanks to the plush interior that’ll prevent any scratches or marks from happening.",
+            "price": 116.20,
+            "category": 5,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Epiphone-Les-Paul-Hard-Case.jpg"
+        }
+    },{
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "IBA-MED-ORA-MET",
+            "name": "Ibanez RGR5221 Prestige, Transparent Fluorescent Orange",
+            "description": "Don't just push the boundaries. Break them. The Ibanez RGR5221 Prestige is part of the cutting edge series that defines quality. Expert old-world Japanese craftsmanship means that the manufacturing techniques used on this guitar are the best of the best. It is an instrument built to last. Stainless steel frets, a five-piece maple/wenge neck and a wood grain fretboard not only make the RGR5221 incredibly durable to withstand the most aggressive players but also add to the ultra-metal tone.",
+            "price": 2160.00,
+            "category": 9,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "Ibanez-RGR5221-Prestige.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "sku": "IBA-MED-GRA-MET",
+            "name": "Ibanez RG5320 Prestige, Cosmic Shadow",
+            "description": "Melt faces. And deliver an unforgettable performance, night after night. The Ibanez RG5320 Prestige represents world-renowned quality, cutting-edge manufacturing, and old-world Japanese craftsmanship - combined. Ibanez also understand the world of playability, tone, and the overall guitar community is adapting with the modern industry. ",
+            "price": 2400.00,
+            "category": 9,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Ibanez-RG5320-Prestige.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "sku": "ERN-MED-NON-FIB",
+            "name": "Ernie Ball Regular Slinky Electric Guitar Strings, 3 Pack (10 - 46)",
+            "description": "Blissful tone, long-lasting lifespan. The Ernie Ball Regular Slinky Electric Guitar Strings come in a pack of three sets, and are infused with world class Ernie Ball quality - because it matters. Slinkys are also are the string of choice for many professional artists including Eric Clapton, Jimmy Page, Slash, Angus Young, John Mayer,",
+            "price": 24.80,
+            "category": 12,
+            "rating": 4.7,
+            "image_url": "",
+            "image": "Ernie-Ball-Regular-Slinky-String.jpg"
+        }
+    }
+]
