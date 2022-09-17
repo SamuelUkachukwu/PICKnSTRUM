@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* ----------------------root colors  */
 :root {
     --white: #fff;
@@ -65,8 +66,25 @@
 }
 
 /* product page styling */
-.product-card{
+.product-card {
     box-shadow: 2px 2px 3px #aaaaaa;
+}
+
+.product-card:hover {
+    box-shadow: 2px 2px 3px #310d0d;
+}
+
+.product-image {
+    transition: 1s;
+}
+
+.product-image:hover {
+    overflow: hidden;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 @media (min-width: 992px) {
