@@ -4,7 +4,7 @@
         "model": "products.category",
         "fields": {
             "name": "acoustic_guitar",
-            "friendly_name": "acoustic_guitar"
+            "friendly_name": "Acoustic Guitar"
         }
     },
     {
@@ -12,7 +12,7 @@
         "model": "products.category",
         "fields": {
             "name": "amps",
-            "friendly_name": "amps"
+            "friendly_name": "Amps"
         }
     },
     {
@@ -20,7 +20,7 @@
         "model": "products.category",
         "fields": {
             "name": "banjo",
-            "friendly_name": "banjo"
+            "friendly_name": "Banjo"
         }
     },
     {
@@ -28,7 +28,7 @@
         "model": "products.category",
         "fields": {
             "name": "bass_guitar",
-            "friendly_name": "bass_guitar"
+            "friendly_name": "Bass Guitar"
         }
     },
     {
@@ -36,7 +36,7 @@
         "model": "products.category",
         "fields": {
             "name": "carry_case",
-            "friendly_name": "carry_case"
+            "friendly_name": "Carry Case"
         }
     },
     {
@@ -44,7 +44,7 @@
         "model": "products.category",
         "fields": {
             "name": "cello",
-            "friendly_name": "cello"
+            "friendly_name": "Cello"
         }
     },
     {
@@ -52,7 +52,7 @@
         "model": "products.category",
         "fields": {
             "name": "clearance",
-            "friendly_name": "clearance"
+            "friendly_name": "Clearance"
         }
     },
     {
@@ -60,7 +60,7 @@
         "model": "products.category",
         "fields": {
             "name": "deals",
-            "friendly_name": "deals"
+            "friendly_name": "Deals"
         }
     },
     {
@@ -68,7 +68,7 @@
         "model": "products.category",
         "fields": {
             "name": "electric_guitar",
-            "friendly_name": "electric_guitar"
+            "friendly_name": "Electric Guitar"
         }
     },
     {
@@ -76,7 +76,7 @@
         "model": "products.category",
         "fields": {
             "name": "new_arrival",
-            "friendly_name": "new_arrival"
+            "friendly_name": "New Arrival"
         }
     },
     {
@@ -84,7 +84,7 @@
         "model": "products.category",
         "fields": {
             "name": "picks",
-            "friendly_name": "picks"
+            "friendly_name": "Picks"
         }
     },
     {
@@ -92,7 +92,7 @@
         "model": "products.category",
         "fields": {
             "name": "strings",
-            "friendly_name": "strings"
+            "friendly_name": "Strings"
         }
     },
     {
@@ -100,7 +100,7 @@
         "model": "products.category",
         "fields": {
             "name": "tuners",
-            "friendly_name": "tuners"
+            "friendly_name": "Tuners"
         }
     },
     {
@@ -108,7 +108,7 @@
         "model": "products.category",
         "fields": {
             "name": "violin",
-            "friendly_name": "violin"
+            "friendly_name": "Violin"
         }
     }
 ]

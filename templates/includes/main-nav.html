@@ -17,10 +17,10 @@
                     Guitar
                 </a>
                 <ul class="dropdown-menu dropdown-menu border-0" aria-labelledby="guitar">
-                    <li><a class="dropdown-item" href="#">Electric Guitar</a></li>
-                    <li><a class="dropdown-item" href="#">Acoustic Guitar</a></li>
-                    <li><a class="dropdown-item" href="#">Bass Guitar</a></li>
-                    <li><a class="dropdown-item" href="#">All Guitars</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=electric_guitar">Electric Guitar</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=acoustic_guitar">Acoustic Guitar</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=bass_guitar">Bass Guitar</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=electric_guitar,acoustic_guitar,bass_guitar">All Guitars</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -28,10 +28,10 @@
                     Orchestral
                 </a>
                 <ul class="dropdown-menu dropdown-menu border-0" aria-labelledby="orchestral">
-                    <li><a class="dropdown-item" href="#">Violin/Viola</a></li>
-                    <li><a class="dropdown-item" href="#">Cello</a></li>
-                    <li><a class="dropdown-item" href="#">Banjo</a></li>
-                    <li><a class="dropdown-item" href="#">All Orchestral</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=violin">Violin</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=cello">Cello</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=banjo">Banjo</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=violin,cello,banjo">All Orchestral</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -39,11 +39,11 @@
                     Accessories
                 </a>
                 <ul class="dropdown-menu dropdown-menu border-0" aria-labelledby="accessories">
-                    <li><a class="dropdown-item" href="#">Picks</a></li>
-                    <li><a class="dropdown-item" href="#">Amps</a></li>
-                    <li><a class="dropdown-item" href="#">Carry Cases</a></li>
-                    <li><a class="dropdown-item" href="#">Strings</a></li>
-                    <li><a class="dropdown-item" href="#">Tuners</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=picks">Picks</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=amps">Amps</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=carry_case">Carry Cases</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=strings">Strings</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=tuners">Tuners</a></li>
                 </ul>
             </li>
             <li class="dropdown">
