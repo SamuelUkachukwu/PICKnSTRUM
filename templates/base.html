@@ -50,7 +50,7 @@
             </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <form action="" method="GET">
+            <form action="{% url 'products' %}" method="GET">
                 <div class="input-group w-100">
                 <input class="form-control border rounded-0" type="text" name="q" placeholder="Search...">
                 <div class="input-group-append">
@@ -115,7 +115,7 @@
             {% include 'includes/main-nav.html' %}
         </nav>
         <div class="collapse bg-light p-1" id="searchicon">
-            <form class="form" action="#">
+            <form class="form" action="{% url 'products' %}" method="GET">
               <div class="input-group w-100">
                 <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search...">
                 <div class="input-group-append">
