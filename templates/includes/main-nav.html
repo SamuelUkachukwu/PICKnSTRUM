@@ -6,9 +6,9 @@
                     All Products
                 </a>
                 <ul class="dropdown-menu dropdown-menu border-0" aria-labelledby="all-products">
-                    <li><a class="dropdown-item" href="{% url 'products' %}">By Price</a></li>
-                    <li><a class="dropdown-item" href="#">By Rating</a></li>
-                    <li><a class="dropdown-item" href="#">By Category</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a></li>
                     <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
                 </ul>
             </li>
@@ -53,7 +53,6 @@
                 <ul class="dropdown-menu dropdown-menu border-0" aria-labelledby="seasonal-offers">
                     <li><a class="dropdown-item" href="#">Clearance</a></li>
                     <li><a class="dropdown-item" href="#">Deals</a></li>
-                    <li><a class="dropdown-item" href="#">New Arrivals</a></li>
                     <li><a class="dropdown-item" href="#">All Specials</a></li>
                 </ul>
             </li>
