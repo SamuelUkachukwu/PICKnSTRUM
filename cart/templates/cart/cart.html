@@ -20,7 +20,7 @@
                 <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart</h4>
             </div>
             {% for item in cart_items %}
-                <div class="card mb-3">
+                <div class="card mb-3 border-0">
                     <div class="row g-0">
                     <div class="col-3 d-flex">
                         {% if item.product.image %}
@@ -31,26 +31,61 @@
                     </div>
                     <div class="col-9">
                         <div class="card-body">
-                            <h5 class="card-title">{{ item.product.name }} | {{ item.product.sku|upper }}</h5>
+                            <h5 class="card-title">{{ item.product.name }}</h5>
+                            <p class="m-0"><small>SKU: {{ item.product.sku|upper }}</small></p>
                             <p class="card-text">Product Price: <small class="text-muted"> €{{ item.product.price }}</small></p>
-                            <p>quantity | update | delete | Sub Total: €0.00</p>
+                            <div class="row g-3">
+                                    <div class="col-sm-3">
+                                        <form action="">
+                                            {% csrf_token %}
+                                        <select class="form-select w-50" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                            <option value="1">Quantity: 1</option>
+                                            <option value="2"> 2</option>
+                                            <option value="3"> 3</option>
+                                            <option value="4"> 4</option>
+                                            <option value="5"> 5</option>
+                                            <option value="6"> 6</option>
+                                            <option value="7"> 7</option>
+                                            <option value="8"> 8</option>
+                                            <option value="9"> 9</option>
+                                            <option value="10"> 10</option>
+                                            <option value="15"> 15</option>
+                                            <option value="20"> 20</option>
+                                            <option value="25"> 25</option>
+                                            <option value="30"> 30</option>
+                                            <option value="35"> 35</option>
+                                            <option value="40"> 40</option>
+                                            <option value="45"> 45</option>
+                                            <option value="50"> 50</option>
+                                        </select>
+                                    </form>
+                                    </div>
+                                    <div class="col-sm">
+                                        <span><a class="text-decoration-none" href="">Update</a></span> |
+                                        <span><a class="text-decoration-none" href="">Remove</a></span>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p>Sub Total: €0.00</p>
+                                    </div>
+                              </div>
+
                         </div>
                     </div>
                     </div>
                 </div>
             {% endfor %}
-            <div class="card text-end">
+            <div class="card text-end border-0">
                 <div class="card-body">
                   <h5 class="card-title">Cart Total: €{{ total|floatformat:2 }}</h5>
                   <p class="card-text">Delivery: €{{ delivery|floatformat:2 }}</p>
                   <h5>Grand Total: €{{ grand_total|floatformat:2 }}</h5>
                     {% if free_delivery_delta > 0 %}
                         <p class="mb-1 text-danger">
-                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                            Spend <strong>€{{ free_delivery_delta }}</strong> more and get your purchase delivered free!
                         </p>
                     {% endif %}
-                  <a href="{% url 'products' %}" class="btn btn-primary"><i class="fas fa-chevron-left"></i> Continue Shopping</a>
-                  <a href="#" class="btn btn-primary">Proceed to checkout</a>
+                  <a href="{% url 'products' %}" class="btn btn-primary my-1"><i class="fas fa-chevron-left"></i> Continue Shopping</a>
+                  <a href="#" class="btn btn-primary my-1">Proceed to checkout</a>
                 </div>
             </div>
         {% else %}

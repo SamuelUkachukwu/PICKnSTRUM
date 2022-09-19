@@ -55,7 +55,7 @@
 
             <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                 {% csrf_token %}
-                <div class="row">
+                <div class="row mx-2">
                     <a href="{% url 'products' %}" class="btn w-50">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
@@ -73,9 +73,17 @@
                         <option value="8"> 8</option>
                         <option value="9"> 9</option>
                         <option value="10"> 10</option>
+                        <option value="15"> 15</option>
+                        <option value="20"> 20</option>
+                        <option value="25"> 25</option>
+                        <option value="30"> 30</option>
+                        <option value="35"> 35</option>
+                        <option value="40"> 40</option>
+                        <option value="45"> 45</option>
+                        <option value="50"> 50</option>
                     </select>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-2 mx-2">
                     <button class="btn border bg-danger" type="submit">ADD TO CART</button>
                 </div>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
