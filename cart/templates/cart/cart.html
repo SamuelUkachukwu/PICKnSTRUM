@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        {% if cart_items %}
+            <div class="col">
+                <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart</h4>
+
+            </div>
+        {% else %}
+            <div class="col text-center">
+                <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart is Empty</h4>
+                <p class="mt-5 mb-5">
+                    Your Shopping Cart yearn to be filled. Give it purpose — fill it with quality string Instrument.
+                    Continue shopping on the <a class="text-decoration-none" href="{% url 'products' %}"><strong>PICK </strong>&<strong> STRUM</strong> homepage</a>,
+                    learn about today's <a class="text-decoration-none" href="{% url 'products' %}?category=clearance,deals">deals</a>.
+                </p>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+</div>
+ <!-- trust statments here  -->
+ {% include 'includes/trust-stm.html' %}
+{% endblock %}

@@ -51,9 +51,9 @@
                     Seasonal Offers
                 </a>
                 <ul class="dropdown-menu dropdown-menu border-0" aria-labelledby="seasonal-offers">
-                    <li><a class="dropdown-item" href="#">Clearance</a></li>
-                    <li><a class="dropdown-item" href="#">Deals</a></li>
-                    <li><a class="dropdown-item" href="#">All Specials</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=clearance">Clearance</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=deals">Deals</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=clearance,deals">All Specials</a></li>
                 </ul>
             </li>
             <li><a class="nav-link" href="#">Blog</a></li>
