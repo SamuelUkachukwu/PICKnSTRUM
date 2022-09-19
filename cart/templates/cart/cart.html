@@ -15,9 +15,43 @@
 <div class="container mt-5">
     <div class="row">
         {% if cart_items %}
+
             <div class="col">
                 <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart</h4>
-
+            </div>
+            {% for item in cart_items %}
+                <div class="card mb-3">
+                    <div class="row g-0">
+                    <div class="col-3 d-flex">
+                        {% if item.product.image %}
+                        <img class="img-fluid rounded m-auto" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="110px" height="110px">
+                        {% else %}
+                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="110px" height="110px">
+                        {% endif %}
+                    </div>
+                    <div class="col-9">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ item.product.name }} | {{ item.product.sku|upper }}</h5>
+                            <p class="card-text">Product Price: <small class="text-muted"> €{{ item.product.price }}</small></p>
+                            <p>quantity | update | delete | Sub Total: €0.00</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="card text-end">
+                <div class="card-body">
+                  <h5 class="card-title">Cart Total: €{{ total|floatformat:2 }}</h5>
+                  <p class="card-text">Delivery: €{{ delivery|floatformat:2 }}</p>
+                  <h5>Grand Total: €{{ grand_total|floatformat:2 }}</h5>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="mb-1 text-danger">
+                            You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                        </p>
+                    {% endif %}
+                  <a href="{% url 'products' %}" class="btn btn-primary"><i class="fas fa-chevron-left"></i> Continue Shopping</a>
+                  <a href="#" class="btn btn-primary">Proceed to checkout</a>
+                </div>
             </div>
         {% else %}
             <div class="col text-center">
