@@ -20,7 +20,7 @@
                 <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart</h4>
             </div>
             {% for item in cart_items %}
-                <div class="card mb-3 border-0">
+                <div class="card mb-3">
                     <div class="row g-0">
                     <div class="col-3 d-flex">
                         {% if item.product.image %}
@@ -34,39 +34,46 @@
                             <h5 class="card-title">{{ item.product.name }}</h5>
                             <p class="m-0"><small>SKU: {{ item.product.sku|upper }}</small></p>
                             <p class="card-text">Product Price: <small class="text-muted"> €{{ item.product.price }}</small></p>
-                            <div class="row g-3">
-                                    <div class="col-sm-3">
-                                        <form action="">
+                            <div class="row">
+                                    <div class="col-sm col-md-3">
+                                        <form class="form update-form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                             {% csrf_token %}
-                                        <select class="form-select w-50" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                            <option value="1">Quantity: 1</option>
-                                            <option value="2"> 2</option>
-                                            <option value="3"> 3</option>
-                                            <option value="4"> 4</option>
-                                            <option value="5"> 5</option>
-                                            <option value="6"> 6</option>
-                                            <option value="7"> 7</option>
-                                            <option value="8"> 8</option>
-                                            <option value="9"> 9</option>
-                                            <option value="10"> 10</option>
-                                            <option value="15"> 15</option>
-                                            <option value="20"> 20</option>
-                                            <option value="25"> 25</option>
-                                            <option value="30"> 30</option>
-                                            <option value="35"> 35</option>
-                                            <option value="40"> 40</option>
-                                            <option value="45"> 45</option>
-                                            <option value="50"> 50</option>
-                                        </select>
-                                    </form>
+                                            <div class="input-group" >
+                                            <select class="form-select" name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                <option value="{{ item.quantity }}">Quantity: {{ item.quantity }}</option>
+                                                <option value="1"> 1</option>
+                                                <option value="2"> 2</option>
+                                                <option value="3"> 3</option>
+                                                <option value="4"> 4</option>
+                                                <option value="5"> 5</option>
+                                                <option value="6"> 6</option>
+                                                <option value="7"> 7</option>
+                                                <option value="8"> 8</option>
+                                                <option value="9"> 9</option>
+                                                <option value="10"> 10</option>
+                                                <option value="15"> 15</option>
+                                                <option value="20"> 20</option>
+                                                <option value="25"> 25</option>
+                                                <option value="30"> 30</option>
+                                                <option value="35"> 35</option>
+                                                <option value="40"> 40</option>
+                                                <option value="45"> 45</option>
+                                                <option value="50"> 50</option>
+                                            </select>
+                                            <button type="submit">update</button>
+                                        </div>
+
+                                        </form>
                                     </div>
-                                    <div class="col-sm">
-                                        <span><a class="text-decoration-none" href="">Update</a></span> |
-                                        <span><a class="text-decoration-none" href="">Remove</a></span>
+
+                                    <div class="col-sm d-flex justify-content-between">
+                                        <form action="{% url 'remove_from_cart' item.item_id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                        <p>Sub Total: €</p>
                                     </div>
-                                    <div class="col-sm">
-                                        <p>Sub Total: €0.00</p>
-                                    </div>
+
                               </div>
 
                         </div>
