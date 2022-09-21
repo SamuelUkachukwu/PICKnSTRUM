@@ -19,7 +19,6 @@ def add_to_cart(request, item_id):
         cart[item_id] = quantity
 
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
 
 
@@ -28,7 +27,6 @@ def update_cart(request, item_id):
     # product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
-    print('THIS IS:', quantity)
 
     if item_id in list(cart.keys()):
         if quantity > 0:
@@ -41,7 +39,7 @@ def update_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the shopping cart"""
+    """Remove items from the shopping cart"""
     cart = request.session.get('cart', {})
     try:
         cart.pop(item_id)

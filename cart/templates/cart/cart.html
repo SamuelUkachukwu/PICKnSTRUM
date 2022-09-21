@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
 <div class="container header-backspace">
@@ -71,7 +72,7 @@
                                             {% csrf_token %}
                                             <button type="submit">Delete</button>
                                         </form>
-                                        <p>Sub Total: €</p>
+                                        <p>Sub Total: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </div>
 
                               </div>
