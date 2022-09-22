@@ -36,7 +36,7 @@
                             <p class="m-0"><small>SKU: {{ item.product.sku|upper }}</small></p>
                             <p class="card-text">Product Price: <small class="text-muted"> €{{ item.product.price }}</small></p>
                             <div class="row">
-                                    <div class="col-sm col-md-3">
+                                    <div class="col-sm col-lg-3">
                                         <form class="form update-form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                             {% csrf_token %}
                                             <div class="input-group" >
@@ -71,7 +71,7 @@
                                             {% csrf_token %}
                                             <button type="submit">Delete</button>
                                         </form>
-                                        <p>Sub Total: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="text-center">Sub Total: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </div>
                               </div>
                         </div>
