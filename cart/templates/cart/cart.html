@@ -40,30 +40,29 @@
                                         <form class="form update-form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                             {% csrf_token %}
                                             <div class="input-group" >
-                                            <select class="form-select" name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                                <option value="{{ item.quantity }}">Quantity: {{ item.quantity }}</option>
-                                                <option value="1"> 1</option>
-                                                <option value="2"> 2</option>
-                                                <option value="3"> 3</option>
-                                                <option value="4"> 4</option>
-                                                <option value="5"> 5</option>
-                                                <option value="6"> 6</option>
-                                                <option value="7"> 7</option>
-                                                <option value="8"> 8</option>
-                                                <option value="9"> 9</option>
-                                                <option value="10"> 10</option>
-                                                <option value="15"> 15</option>
-                                                <option value="20"> 20</option>
-                                                <option value="25"> 25</option>
-                                                <option value="30"> 30</option>
-                                                <option value="35"> 35</option>
-                                                <option value="40"> 40</option>
-                                                <option value="45"> 45</option>
-                                                <option value="50"> 50</option>
-                                            </select>
-                                            <button type="submit">update</button>
-                                        </div>
-
+                                                <select class="form-select" name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    <option value="{{ item.quantity }}">Quantity: {{ item.quantity }}</option>
+                                                    <option value="1"> 1</option>
+                                                    <option value="2"> 2</option>
+                                                    <option value="3"> 3</option>
+                                                    <option value="4"> 4</option>
+                                                    <option value="5"> 5</option>
+                                                    <option value="6"> 6</option>
+                                                    <option value="7"> 7</option>
+                                                    <option value="8"> 8</option>
+                                                    <option value="9"> 9</option>
+                                                    <option value="10"> 10</option>
+                                                    <option value="15"> 15</option>
+                                                    <option value="20"> 20</option>
+                                                    <option value="25"> 25</option>
+                                                    <option value="30"> 30</option>
+                                                    <option value="35"> 35</option>
+                                                    <option value="40"> 40</option>
+                                                    <option value="45"> 45</option>
+                                                    <option value="50"> 50</option>
+                                                </select>
+                                                <button type="submit">update</button>
+                                            </div>
                                         </form>
                                     </div>
 
@@ -74,9 +73,7 @@
                                         </form>
                                         <p>Sub Total: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </div>
-
                               </div>
-
                         </div>
                     </div>
                     </div>

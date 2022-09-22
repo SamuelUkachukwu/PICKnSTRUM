@@ -132,9 +132,13 @@
     </div>
     </header>
 
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
+    {% for message in messages %}
+      {% if message %}
+        <div class="message-container">
+          {% include 'includes/toasts/toast_success.html' %}
+        </div>
+      {% endif %}
+    {% endfor %}
 
     {% block page_header %}
     {% endblock %}
@@ -209,7 +213,8 @@
     {% block postloadjs %}
     <script>
         document.getElementById("copy-right1").innerHTML = new Date().getFullYear();
-     </script>
+    </script>
+
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
         (function ($) {
