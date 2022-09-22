@@ -65,7 +65,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* product page styling */
+/* -------------product page styling */
 .product-card {
     box-shadow: 2px 2px 3px #aaaaaa;
 }
@@ -86,8 +86,16 @@
     -o-transform: scale(1.02);
     transform: scale(1.02);
 }
-
-/* element with cusors */
+/*---------------------- cart styling */
+.cart-items{
+    position: relative;
+}
+.delete-btn{
+    position:absolute;
+    top: 10px;
+    right: 10px;
+}
+/* ----------------element with cusors */
 .btt-link {
     cursor: pointer;
 }
@@ -100,7 +108,7 @@
     right: 10px;
 }
 
-/* toast styling */
+/*------------------- toast styling */
 .message-container {
     position: fixed;
     right: 15px;
