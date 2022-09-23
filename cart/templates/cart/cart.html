@@ -21,7 +21,7 @@
                 <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart</h4>
             </div>
             {% for item in cart_items %}
-                <div class="card mb-3 cart-items">
+                <div class="card mb-3 cart-items border-0">
                     <div class="row g-0">
                     <div class="col-3 d-flex">
                         {% if item.product.image %}
@@ -79,6 +79,7 @@
                     </form>
 
                 </div>
+                <hr class="my-1">
             {% endfor %}
             <div class="card text-end border-0">
                 <div class="card-body">

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% load cart_tools %}
-{% load crispy_forms_tags %}
 
 {% block page_header %}
 <div class="container header-backspace">
@@ -16,30 +15,88 @@
 {% block content %}
 <div class="container mt-5">
     <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col text-center mb-2">
+            <h2><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong> </span> Checkout</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6 px-4">
             <div class="row">
                 <div class="col-7 offset-2">item</div>
                 <div class="col-3 text-end">Subtotal</div>
             </div>
-            <div class="row">
-                <div class="col-2">
-                    <img class="w-100" src="..." alt="product image">
+            {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-2">
+                        <a href="#">
+                            {% if item.product.image %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <p>{{ item.product.name }}</p>
+                        <p>Quantity: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 text-end">
+                        <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    </div>
                 </div>
-                <div class="col-7">
-                    <p>product name</p>
-                </div>
-                <div class="col-3 text-end">
-                    <p>E0.00</p>
+                <hr class="my-1">
+            {% endfor%}
+            <div class="card text-end border-0">
+                <div class="card-body">
+                  <h5 class="card-title">Cart Total: €{{ total|floatformat:2 }}</h5>
+                  <p class="card-text">Delivery: €{{ delivery|floatformat:2 }}</p>
+                  <h5>Grand Total: €{{ grand_total|floatformat:2 }}</h5>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 px-4">
             <div class="row d-flex justify-content-center">
                 <div class="col-12">
                     <form action="" method="post">
-                        {% csrf_token %}
-                        {% crispy form %}
-                        <button type="submit" class="btn btn-warning btn-large">submit</button>
+                        <fieldset class="mb-3 px-3">
+                            <legend class="form-label fs-6 px-2 w-auto">Details</legend>
+                            {{ order_form.full_name | as_crispy_field }}
+                            {{ order_form.email | as_crispy_field }}
+                        </fieldset>
+                        <fieldset class="mb-3 px-3">
+                            <legend class="form-label fs-6 px-2 w-auto">Delivery Address</legend>
+                            {{ order_form.phone_number | as_crispy_field }}
+                            {{ order_form.street_address1 | as_crispy_field }}
+                            {{ order_form.street_address2 | as_crispy_field }}
+                            {{ order_form.town_or_city | as_crispy_field }}
+                            {{ order_form.county | as_crispy_field }}
+                            {{ order_form.postcode | as_crispy_field }}
+                            {{ order_form.country | as_crispy_field }}
+                        </fieldset>
+                        <div class="text-end mb-3 px-3">
+							{% if user.is_authenticated %}
+                                <input class="form-check-input me-2" type="checkbox" id="save-delivery-info" name="" aria-label="Save deliviery information to profile" checked>
+                                <label class="" for="save-delivery-info">Save delivery information</label>
+							{% else %}
+								<label class="form-check-label" for="save-delivery-info">
+                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                </label>
+							{% endif %}
+						</div>
+
+                        <div class="mb-3 px-3">
+                             <p><i><span><small>Your Card will Be charged</small> <strong>${{ grand_total|floatformat:2 }}</strong></span></i></p>
+                            {{ order_form.postcode | as_crispy_field }} <!-- placeholder for stripe element -->
+                            <!-- Stripe elements go here -->
+                            <div class="mb-3" id="card-element"></div>
+                            <!-- display form errors -->
+                            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        </div>
+
+                        <div class="mb-3 px-3">
+                            <button class="btn btn-warning btn-large" type="submit"><i class="fas fa-lock pe-2"></i>Make Payment</button>
+                        </div>
                     </form>
                 </div>
             </div>
