@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_tools %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="row">
+                <div class="col-7 offset-2">item</div>
+                <div class="col-3 text-end">Subtotal</div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <img class="w-100" src="..." alt="product image">
+                </div>
+                <div class="col-7">
+                    <p>product name</p>
+                </div>
+                <div class="col-3 text-end">
+                    <p>E0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {% crispy form %}
+                        <button type="submit" class="btn btn-warning btn-large">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- trust statments here  -->
+ {% include 'includes/trust-stm.html' %}
+{% endblock %}
