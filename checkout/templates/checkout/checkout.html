@@ -80,10 +80,10 @@
                         </fieldset>
                         <div class="text-end mb-3 px-3">
 							{% if user.is_authenticated %}
-                                <input class="form-check-input me-2" type="checkbox" id="save-delivery-info" name="" aria-label="Save deliviery information to profile" checked>
-                                <label class="" for="save-delivery-info">Save delivery information</label>
+                                <input class="form-check-input me-2" type="checkbox" id="save-dlv-info" name="" aria-label="Save deliviery information to profile" checked>
+                                <label class="" for="save-dlv-info">Save delivery information</label>
 							{% else %}
-								<label class="form-check-label" for="save-delivery-info">
+								<label class="form-check-label" for="save-dlv-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>

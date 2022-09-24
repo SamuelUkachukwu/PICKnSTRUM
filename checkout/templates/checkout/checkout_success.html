@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_tools %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center mb-2">
+            <h2><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong> </span> Checkout Successful! <i class="fas fa-check-circle text-success"></i></h2>
+        </div>
+    </div>
+    <div class="row">
+        <p>Your Order Has Been Confirmed. A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
+        <p>Order Summary</p>
+    </div>
+</div>
+ <!-- trust statments here  -->
+ {% include 'includes/trust-stm.html' %}
+{% endblock %}
