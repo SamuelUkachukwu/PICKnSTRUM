@@ -2,6 +2,10 @@
 {% load static %}
 {% load cart_tools %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block page_header %}
 <div class="container header-backspace">
     <div class="row">
@@ -22,13 +26,13 @@
     <div class="row">
         <div class="col-12 col-lg-6 px-4">
             <div class="row">
-                <div class="col-7 offset-2">item</div>
+                <div class="col-7 offset-2">Order Summary ({{ product_count }})</div>
                 <div class="col-3 text-end">Subtotal</div>
             </div>
             {% for item in cart_items %}
                 <div class="row">
                     <div class="col-2">
-                        <a href="#">
+                        <a href="{% url 'product_detail' item.product.id %}">
                             {% if item.product.image %}
                                 <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                             {% else %}
@@ -86,8 +90,7 @@
 						</div>
 
                         <div class="mb-3 px-3">
-                             <p><i><span><small>Your Card will Be charged</small> <strong>${{ grand_total|floatformat:2 }}</strong></span></i></p>
-                            {{ order_form.postcode | as_crispy_field }} <!-- placeholder for stripe element -->
+                            <p><i><span><small>Your Card will Be charged</small> <strong>${{ grand_total|floatformat:2 }}</strong></span></i></p>
                             <!-- Stripe elements go here -->
                             <div class="mb-3" id="card-element"></div>
                             <!-- display form errors -->
@@ -105,4 +108,11 @@
 </div>
  <!-- trust statments here  -->
  {% include 'includes/trust-stm.html' %}
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ publishable_key|json_script:"id_publishable_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
