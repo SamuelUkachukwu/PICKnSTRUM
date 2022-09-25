@@ -16,7 +16,9 @@ class OrderAdmin(admin.ModelAdmin):
         'date',
         'delivery_cost',
         'order_total',
-        'grand_total'
+        'grand_total',
+        'original_cart',
+        'stripe_pid'
         )
 
     fields = (
@@ -33,7 +35,9 @@ class OrderAdmin(admin.ModelAdmin):
         'country',
         'delivery_cost',
         'order_total',
-        'grand_total'
+        'grand_total',
+        'original_cart',
+        'stripe_pid'
         )
 
     list_display = (
