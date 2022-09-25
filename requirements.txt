@@ -3,7 +3,7 @@ backports.zoneinfo==0.2.1
 crispy-bootstrap5==0.6
 Django==3.2.14
 django-allauth==0.41.0
-django-countries==7.3.2
+django-countries==7.2.1
 django-crispy-forms==1.14.0
 oauthlib==3.2.1
 Pillow==9.2.0
