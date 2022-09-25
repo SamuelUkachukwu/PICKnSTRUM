@@ -16,6 +16,8 @@ class Webhook_Handler:
 
     def payment_intent_succeded(self, event):
         """Handles payment intent succeded webhook (stripe)"""
+        intent = event.data.object
+        print(intent)
         return HttpResponse(
             content=f'Webhook recieved: {event["type"]}', status=200)
 
