@@ -107,7 +107,38 @@
     bottom: 50px;
     right: 10px;
 }
+/*-------------------- allauth styling */
+input, .allauth-form-inner-content input,
+.mail-chimp-box input {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 0px;
+    background-color: white;
+    padding: 10px 12px;
+    box-shadow: 0 1px 3px 0 #5d6977;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
 
+  .allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'],
+.mail-chimp-box input[type='submit']{
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#ffc107;;
+    border: 1px solid #ffc107;;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+}
 /*------------------- toast styling */
 .message-container {
     position: fixed;
@@ -125,6 +156,6 @@
 /* media styling for screen size mobile  */
 @media (max-width: 991px) {
     .header-backspace {
-        padding-top: 110px;
+        padding-top: 100px;
     }
 }

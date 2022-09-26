@@ -21,7 +21,7 @@
                     {% if request.user.is_superuser %}
                         <li><a class="dropdown-item" href="#">Management</a></li>
                     {% endif %}
-                <li><a href="#" class="dropdown-item">Profile</a></li>
+                <li><a href="{% url 'profile' %}" class="dropdown-item">Profile</a></li>
                 <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                 {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -33,13 +33,13 @@
            <a class="{% if product_count %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
                <div class="text-center">
                    <div><i class="fas fa-shopping-cart"></i></div>
-                    <p class="my-0">
+
                         {% if product_count %}
-                            <p>Cart <span class="badge text-bg-secondary">{{ product_count }}</span></p>
+                            <p class="m-0">Cart <span class="badge text-bg-secondary">{{ product_count }}</span></p>
                         {% else %}
-                            <p>Cart <span class="badge text-bg-secondary">0</span></p>
+                            <p class="m-0">Cart <span class="badge text-bg-secondary">0</span></p>
                         {% endif %}
-                    </p>
+
                </div>
            </a>
        </li>

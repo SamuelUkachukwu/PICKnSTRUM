@@ -81,7 +81,7 @@
                         {% if request.user.is_superuser %}
                             <li><a class="dropdown-item" href="#">Management</a></li>
                         {% endif %}
-                    <li><a href="#" class="dropdown-item">Profile</a></li>
+                    <li><a href="{% url 'profile' %}" class="dropdown-item">Profile</a></li>
                     <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                     {% else %}
                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -166,7 +166,7 @@
           <div class="col-12 col-lg-4"></div>
             <div class="col-12 col-lg-4">
                 <!-- Begin Mailchimp Signup Form -->
-                <div id="mc_embed_signup">
+                <div id="mc_embed_signup" class="mail-chimp-box">
                   <form
                     action="https://gmail.us14.list-manage.com/subscribe/post?u=2f7dbdbcc9a2cdb4acadbcbc5&amp;id=a6c7c4e7e1&amp;f_id=003a66e3f0"
                     method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate pt-4"
@@ -186,7 +186,7 @@
                           name="b_2f7dbdbcc9a2cdb4acadbcbc5_a6c7c4e7e1" tabindex="-1" value=""></div>
                       <div class="optionalParent">
                         <div class="clear foot">
-                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success button mt-2">
+                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn button mt-2">
                         </div>
                       </div>
                     </div>
