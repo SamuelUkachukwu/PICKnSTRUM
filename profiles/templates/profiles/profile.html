@@ -3,7 +3,7 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/profile.css' %}">
+ <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -17,16 +17,90 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container mt-4">
+    <div class="row">
+        <div class="card text-bg-dark mb-2 profile-header">
+            <img class="header-image" src="..." class="card-img" alt="...">
+            <div class="col-3 bg-light rounded-circle profile-image" >
+                <img class="profile-image" src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active text-resp" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true">Orders</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-resp" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false">Reviews</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link text-resp" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
+                    role="tab" aria-controls="messages" aria-selected="false">Comments</button>
+            </li>
+            <li class="nav-item text-resp" role="presentation">
+                <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
+                    role="tab" aria-controls="settings" aria-selected="false">Edit Profile</button>
+            </li>
+        </ul>
 
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="row row-cols-1 row-cols-md-2 g-2">
+                    <div class="col-sm-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, sapiente.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card h-100">
+                          <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                          </div>
+                          <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">... hi</div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...sad</div>
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">{{ profile}}</div>
+        </div>
+    </div>
 </div>
- <!-- trust statments here  -->
- {% include 'includes/trust-stm.html' %}
+<!-- trust statments here  -->
+{% include 'includes/trust-stm.html' %}
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

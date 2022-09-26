@@ -1,0 +1,13 @@
+.profile-header{
+    height: 20vh;
+}
+
+.profile-image{
+    height: 140px;
+    width: 140px;
+    border-radius: 100px;
+}
+.text-resp{
+    font-size: clamp(0.7rem, 0.9vw, 1.2rem);
+    font-weight: bold;
+}
