@@ -43,7 +43,7 @@
             </li>
             <li class="nav-item text-resp" role="presentation">
                 <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
-                    role="tab" aria-controls="settings" aria-selected="false">Edit Profile</button>
+                    role="tab" aria-controls="settings" aria-selected="false">Address</button>
             </li>
         </ul>
 
@@ -90,8 +90,48 @@
             </div>
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">... hi</div>
             <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...sad</div>
-            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">{{ profile}}</div>
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">
+                <div class="row col-12 col-md-6 m-auto">
+                    <div class="card border-0 mt-5">
+                        <p class="my-1"><strong class="text-uppercase">NAME: </strong>{{ profile.user }}</p>
+                        <p class="my-1"><strong class="text-uppercase">Email: </strong>{{ profile.user.email }}</p>
+                        {% if profile.default_phone_number %}
+                        <p class="my-1"><strong class="text-uppercase">PHONE NUMBER: </strong>{{ profile.default_phone_number }}</p>
+                        {% endif %}
+                        <div class="text-center">
+                            <p class="my-1">View saved <strong class="text-uppercase">Delivery Address</strong> below</p>
+                            <p>{% if profile.default_street_address1 %}{{ profile.default_street_address1 }}{% endif %}</p>
+                            <p>{% if profile.default_street_address2 %}{{ profile.default_street_address2 }}{% endif %}</p>
+                            <p>{% if profile.default_town_or_city %}{{ profile.default_town_or_city }}{% endif %}</p>
+                            <p>{% if profile.default_county %}{{ profile.default_county }}{% endif %}</p>
+                            <p>{% if profile.default_postcode %}{{ profile.default_postcode }} / {% endif %} {% if profile.default_country %}{{ profile.default_country }}{% endif %}</p>
+                        </div>
+                        <div class="card-footer text-end border-0 bg-white">
+                          <a class="text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">UPDATE PROFILE</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+          <div class="modal-header border-0">
+            <p class="modal-title" id="exampleModalLabel">Hi <strong>{{profile}}!</strong> Update Your Profile</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+           <form action="" method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+          </div>
+          <div class="modal-footer border-0">
+            <input type="submit" class="btn btn-warning btn-small" value="Submit">
+          </div>
+        </form>
+        </div>
+      </div>
     </div>
 </div>
 <!-- trust statments here  -->
