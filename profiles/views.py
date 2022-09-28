@@ -1,16 +1,47 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import UserProfile
 
-from .forms import UserProfileForm
+from .forms import UserProfileForm, ProfileImageForm
 
 
 # Create your views here.
+@login_required
 def profile(request):
     """Renders the profile page"""
     profile = get_object_or_404(UserProfile, user=request.user)
-    form = UserProfileForm()
+    image_form = ProfileImageForm(
+        request.POST or None,
+        request.FILES or None,
+        instance=profile
+    )
+    if image_form.is_valid():
+        image_form.save()
+        return redirect('profile')
+    orders = profile.orders.all()
     context = {
         'profile': profile,
-        'form': form,
+        'orders': orders,
+        'image_form': image_form,
     }
     return render(request, 'profiles/profile.html', context)
+
+
+@login_required
+def edit_profile(request):
+    """Profile address update view"""
+    profile = get_object_or_404(UserProfile, user=request.user)
+    address_form = UserProfileForm(
+        request.POST or None,
+        request.FILES or None,
+        instance=profile
+    )
+    if address_form.is_valid():
+        address_form.save()
+        return redirect('profile')
+    context = {
+        'address_form': address_form,
+        'profile': profile,
+    }
+    return render(request, 'profiles/update_address.html', context)

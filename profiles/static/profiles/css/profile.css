@@ -1,29 +1,65 @@
-.profile-header{
+.profile-header {
     height: 20vh;
+    position: relative;
 }
 
-.profile-image{
-    height: 140px;
-    width: 140px;
+.edit-icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.profile-image {
+    height: 150px;
+    width: 150px;
     border-radius: 100px;
 }
-.text-resp{
+
+.text-resp {
     font-size: clamp(0.7rem, 0.9vw, 1.2rem);
     font-weight: bold;
 }
-.profile-update-input{
-    box-sizing: border-box;
-  height: 44px;
-  padding: 10px 12px;
-  border: 1px solid #000;
-  border-radius: 0px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #5d6977;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+
+/* background cover photo */
+.cool {
+    background: url(/media/page-designs/cool.jpg) no-repeat center center;
+    background-size: cover;
 }
 
-.profile-update-input input[type='submit']{
+.goth {
+    background: url(/media/page-designs/goth.png) no-repeat center center;
+    background-size: cover;
+}
+
+.serenity {
+    background: url(/media/page-designs/serenity.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.rock {
+    background: url(/media/page-designs/hero-1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#div_id_cover_photo label {
+    margin-left: 20px;
+    font-weight: bold;
+    display: flex;
+}
+
+.profile-update-input {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #000;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #5d6977;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+
+.profile-update-input input[type='submit'] {
     font-weight: 400;
     color: #000;
     text-align: center;
@@ -32,8 +68,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color:#ffc107;;
-    border: 1px solid #ffc107;;
+    background-color: #ffc107;
+    ;
+    border: 1px solid #ffc107;
+    ;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
