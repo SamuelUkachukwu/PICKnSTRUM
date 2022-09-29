@@ -18,6 +18,16 @@
 
 {% block content %}
 <div class="container mt-5">
+    {% if from_profile %}
+    <div class="row">
+        <div class="col text-center mb-2">
+            <h2><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong> </span> Checkout Was Successful! <i class="fas fa-check-circle text-success"></i></h2>
+        </div>
+        <div class="row text-center">
+            <p>Your order has been confirmed. A confirmation email was sent to <strong>{{ order.email }}</strong></p>
+        </div>
+    </div>
+    {% else %}
     <div class="row">
         <div class="col text-center mb-2">
             <h2><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong> </span> Checkout Successful! <i class="fas fa-check-circle text-success"></i></h2>
@@ -26,6 +36,7 @@
     <div class="row text-center">
         <p>Your order has been confirmed. A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
     </div>
+    {% endif %}
     <div class="row text-center col-10 m-auto">
         <p><strong>Order Summary</strong></p>
         <hr class="mb-2">
@@ -39,7 +50,7 @@
         </div>
     </div>
     <div class="row col-12 col-md-9 col-lg-10 m-auto mb-2">
-        <div class="col col-md-6">
+        <div class="col-12 col-md-6">
             <p class="m-0"><small><i class="fas fa-user"></i> {{ order.full_name }}</small></p>
             <p class="m-0"><small><i class="fas fa-phone"></i> {{ order.phone_number }}</small></p>
             <p class="m-0"><small><i class="fas fa-address-book"></i><span> {{ order.street_address1 }}</span>,{% if order.street_address2 %}<span>{{ order.street_address2 }},</span>{% endif %} <span>{{ order.town_or_city }}</span></small></p>
@@ -49,7 +60,7 @@
 
             <p class="m-0"><small><i class="fas fa-circle"></i> {% if order.postcode %}{{ order.postcode }} / {% endif %} <span> {{ order.country }}</small></span></p>
         </div>
-        <div class="col col-md-6">
+        <div class="col-12 col-md-6">
            <p class="m-0 text-end"><small><strong>Order Total:</strong> <span>{{ order.order_total }}</span></small></p>
            <p class="m-0 text-end"><small><strong>Delivery: </strong><span>{{ order.delivery_cost }}</span></small></p>
            <p class="m-0 text-end"><small><strong>Grand Total: </strong><span>{{ order.grand_total }}</span></small></p>

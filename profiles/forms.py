@@ -1,12 +1,17 @@
 from django import forms
 from .models import UserProfile
-from crispy_forms.helper import FormHelper
 
 
 class ProfileImageForm(forms.ModelForm):
-    COVER_PHOTO = (('Cool', 'Cool'), ('Goth', 'Goth'), ('Serenity', 'Serenity'), ('Rock', 'Rock'))
+    COVER_PHOTO = (
+        ('Cool', 'Cool'),
+        ('Goth', 'Goth'),
+        ('Serenity', 'Serenity'),
+        ('Rock', 'Rock')
+        )
 
-    cover_photo = forms.CharField(widget=forms.RadioSelect(choices=COVER_PHOTO))
+    cover_photo = forms.CharField(
+        widget=forms.RadioSelect(choices=COVER_PHOTO))
 
     class Meta:
         model = UserProfile
@@ -22,8 +27,6 @@ class ProfileImageForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].label = False
             self.fields[field].widget.attrs['class'] = 'profile-update-input'
-
-
 
 
 class UserProfileForm(forms.ModelForm):

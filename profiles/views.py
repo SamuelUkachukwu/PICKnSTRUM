@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import UserProfile
 
 from .forms import UserProfileForm, ProfileImageForm
+from checkout.models import Order
 
 
 # Create your views here.
@@ -24,6 +25,7 @@ def profile(request):
         'profile': profile,
         'orders': orders,
         'image_form': image_form,
+        'profile_page': True
     }
     return render(request, 'profiles/profile.html', context)
 
@@ -39,9 +41,23 @@ def edit_profile(request):
     )
     if address_form.is_valid():
         address_form.save()
+        messages.success(
+            request,
+            'Your Profile Address has been updated successfully')
         return redirect('profile')
     context = {
         'address_form': address_form,
         'profile': profile,
+        'profile_page': True
     }
     return render(request, 'profiles/update_address.html', context)
+
+
+def order_history(request, order_number):
+    """Retrieve the order from the order app"""
+    order = get_object_or_404(Order, order_number=order_number)
+    context = {
+        'order': order,
+        'from_profile': True
+    }
+    return render(request, 'checkout/checkout_success.html', context)

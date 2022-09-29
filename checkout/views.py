@@ -7,7 +7,9 @@ from cart.contexts import cart_contents
 from products.models import Product
 
 from .forms import OrderForm
+from profiles.models import UserProfile
 from .models import Order, OrderLineItem
+from profiles.forms import UserProfileForm
 
 import stripe
 import json
@@ -115,6 +117,24 @@ def checkout_success(request, order_number):
 
     save_dlv_info = request.session.get('save_dlv_info')
     order = get_object_or_404(Order, order_number=order_number)
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        order.user_profile = profile
+        order.save()
+
+        if save_dlv_info:
+            profile_data = {
+                'default_phone_number': order.phone_number,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
+                'default_town_or_city': order.town_or_city,
+                'default_county': order.county,
+                'default_postcode': order.postcode,
+                'default_country': order.country,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
 
     messages.success(request, f'Your Order: {order_number} has been processed!\
         A confirmation email will be sent to {order.email}')

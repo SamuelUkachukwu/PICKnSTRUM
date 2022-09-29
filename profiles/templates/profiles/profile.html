@@ -74,43 +74,33 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              {% if orders %}
                 <div class="row row-cols-1 row-cols-md-2 g-2">
+
+                  {% for order in orders %}
                     <div class="col-sm-6">
                       <div class="card h-100">
                         <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">{{orders}}</p>
+                          <h6 class="card-title"><a href="{% url 'order_history' order.order_number %}" title="{{order.order_number}}">Order No: <small>{{order.order_number|truncatechars:7}}</small></a></h6>
+                          <p class="card-text">{{ order.date }}</p>
+                          <p>{{ order.grand_total }}</p>
+                          {% for item in order.lineitems.all %}
+                          <p>{{ item.product.name }}</p>
+                          <p> qty: {{ item.quantity }} @ €{{ item.product.price }}</p>
+                          {% endfor %}
                         </div>
                         <div class="card-footer">
                             <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card h-100">
-                          <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                          </div>
-                          <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
                         </div>
                       </div>
-                  </div>
+                    </div>
+                    {% endfor %}
+                </div>
+              {% else %}
+              <div class="text-center mt-3">
+                <h6 >Order History is currently empty shop best deals for you</h6>
+              </div>
+              {% endif %}
             </div>
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">... hi</div>
             <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...sad</div>
@@ -141,5 +131,6 @@
     </div>
 </div>
 <!-- trust statments here  -->
+{% include 'includes/mood_choices.html' %}
 {% include 'includes/trust-stm.html' %}
 {% endblock %}

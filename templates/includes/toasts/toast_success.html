@@ -11,7 +11,7 @@
       </div>
 
     </div>
-    {% if grand_total %}
+    {% if grand_total and not profile_page %}
     <p class="bg-white py-1">({{ product_count }}) {% if product_count == 1 %} Item {% else %} Items {% endif %} in your cart</p>
     <hr>
     <div class="cart-toast-wrapper">

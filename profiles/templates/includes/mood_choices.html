@@ -1,0 +1,14 @@
+<div class="container text-center mt-3">
+    {% if profile.cover_photo == 'Cool' %}
+    <a class="text-decoration-none fs-5"
+        href="{% url 'products' %}?category=acoustic_guitar,cello,electric_guitar"><strong>Shop Now</strong></a>
+    {% elif profile.cover_photo == 'Goth' %}
+    <a class="text-decoration-none fs-5"
+        href="{% url 'products' %}?category=bass_guitar,electric_guitar"><strong>Shop Now</strong></a>
+    {% elif profile.cover_photo == 'Serenity' %}
+    <a class="text-decoration-none fs-5" href="{% url 'products' %}?category=violin,cello"><strong>Shop Now</strong></a>
+    {% else %}
+    <a class="text-decoration-none fs-5"
+        href="{% url 'products' %}?category=electric_guitar,bass_guitar"><strong>Shop Now</strong></a>
+    {% endif %}
+</div>
