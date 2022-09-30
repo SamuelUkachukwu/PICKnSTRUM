@@ -62,8 +62,10 @@ def all_products(request):
 def product_detail_view(request, product_id):
     """ Renders a detail view of the product"""
     product = get_object_or_404(Product, pk=product_id)
+    features = product.features.all()
 
     context = {
         'product': product,
+        'features': features,
     }
     return render(request, 'products/product_detail.html', context)
