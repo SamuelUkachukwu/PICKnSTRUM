@@ -39,9 +39,9 @@
     <header class="container-fluid fixed-top">
 
            <!-- delivery bonus -->
-        <div class="row bg-warning">
+        <div class="row bg-warning py-2">
             <div class="col text-center">
-            <h5>Free delivery on orders over €{{ free_delivery_threshold }}</h5>
+            <h5 class="m-0">Free delivery on orders over €{{ free_delivery_threshold }}</h5>
             </div>
         </div>
 
@@ -67,13 +67,17 @@
             </form>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-end my-0">
-                <li class="list-inline-item dropdown">
+            <ul class="list-inline list-unstyled text-center text-lg-end my-0 pt-2">
+                <li class="list-inline-item dropdown me-3">
                 <a class="nav-link" href="#" role="button" id="user-options" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <div class="text-center">
                     <div><i class="fas fa-user fa-lg"></i></div>
-                    <p class="my-0">My Account</p>
+                    {% if request.user.is_authenticated %}
+                        <p class="my-0">{{ user.username }}</p>
+                    {% else %}
+                        <p class="my-0">My Account</p>
+                    {% endif %}
                     </div>
                 </a>
                 <ul class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -89,7 +93,7 @@
                     {% endif %}
                 </ul>
                 </li>
-                <li class="list-inline-item">
+                <li class="list-inline-item me-3">
                 <a class="{% if product_count %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-cart"></i></div>
@@ -160,7 +164,7 @@
 
       <!-- footer section  -->
 
-  <footer class="container-fluid bg-warning text-center">
+  <footer class="container-fluid bg-warning text-center py-3">
     <!-- <div class="container text-center"> -->
         <div class="row">
           <div class="col-12 col-lg-4"></div>
