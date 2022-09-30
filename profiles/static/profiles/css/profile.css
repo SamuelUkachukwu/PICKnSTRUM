@@ -1,5 +1,5 @@
 .profile-header {
-    height: 20vh;
+    height: 21vh;
     position: relative;
 }
 
@@ -13,6 +13,9 @@
     height: 150px;
     width: 150px;
     border-radius: 100px;
+    position:absolute;
+    left:15px;
+    bottom: 15px;
 }
 
 .text-resp {

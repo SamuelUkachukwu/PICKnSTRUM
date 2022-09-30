@@ -29,13 +29,13 @@
                 <div class="card text-bg-dark mb-2 profile-header rounded-0 rock">
             {% endif %}
 
-              <div class="bg-light profile-image mt-2">
+
                 {% if profile.image %}
                 <img class="profile-image" src="{{ profile.image.url }}" alt="profile image">
                 {% else %}
-                <img class="profile-image" src="{{ MEDIA_URL }}noimage.png" alt="profile image not available">
+                <img class="profile-image float-start" src="{{ MEDIA_URL }}noimage.png" alt="profile image not available">
                 {% endif %}
-              </div>
+
             <a class="edit-icon" data-bs-toggle="collapse" href="#pic-edit" role="button" aria-expanded="false"
               aria-controls="edit profile pictures collapse button">
               <i class="far fa-edit text-white"></i>
