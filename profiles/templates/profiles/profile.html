@@ -3,134 +3,144 @@
 
 
 {% block extra_css %}
- <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
 <div class="container header-backspace">
-    <div class="row">
-        <div class="col">
+  <div class="row">
+    <div class="col">
 
-        </div>
     </div>
+  </div>
 </div>
 {% endblock %}
 
 {% block content %}
 <div class="container mt-4">
     <div class="row">
-          {% if profile.cover_photo == 'Cool' %}
-          <div class="card text-bg-dark mb-2 profile-header rounded-0 cool">
-          {% elif profile.cover_photo == 'Goth' %}
-          <div class="card text-bg-dark mb-2 profile-header rounded-0 goth">
-          {% elif profile.cover_photo == 'Serenity' %}
-          <div class="card text-bg-dark mb-2 profile-header rounded-0 serenity">
-          {% else %}
-          <div class="card text-bg-dark mb-2 profile-header rounded-0 rock">
-          {% endif %}
+            {% if profile.cover_photo == 'Cool' %}
+                <div class="card text-bg-dark mb-2 profile-header rounded-0 cool">
+            {% elif profile.cover_photo == 'Goth' %}
+                <div class="card text-bg-dark mb-2 profile-header rounded-0 goth">
+            {% elif profile.cover_photo == 'Serenity' %}
+                <div class="card text-bg-dark mb-2 profile-header rounded-0 serenity">
+            {% else %}
+                <div class="card text-bg-dark mb-2 profile-header rounded-0 rock">
+            {% endif %}
 
-            <div class="bg-light profile-image mt-2" >
-              {% if profile.image %}
-                      <img class="profile-image" src="{{ profile.image.url }}" alt="profile image">
-              {% else %}
-                      <img class="profile-image" src="{{ MEDIA_URL }}noimage.png" alt="profile image not available">
-              {% endif %}
-            </div>
-            <a class="edit-icon" data-bs-toggle="collapse" href="#pic-edit" role="button" aria-expanded="false" aria-controls="edit profile pictures collapse button">
+              <div class="bg-light profile-image mt-2">
+                {% if profile.image %}
+                <img class="profile-image" src="{{ profile.image.url }}" alt="profile image">
+                {% else %}
+                <img class="profile-image" src="{{ MEDIA_URL }}noimage.png" alt="profile image not available">
+                {% endif %}
+              </div>
+            <a class="edit-icon" data-bs-toggle="collapse" href="#pic-edit" role="button" aria-expanded="false"
+              aria-controls="edit profile pictures collapse button">
               <i class="far fa-edit text-white"></i>
             </a>
-        </div>
-        <div class="collapse" id="pic-edit">
-          <div class="card card-body border-0">
-            <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
-              {% csrf_token %}
-              {{ image_form | crispy }}
-              <input type="submit" class="btn btn-small bg-warning rounded-0" value="Add Selection">
-            </form>
           </div>
-        </div>
-    </div>
-    <div class="row">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
+          <div class="collapse" id="pic-edit">
+            <div class="card card-body border-0">
+              <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ image_form | crispy }}
+                <input type="submit" class="btn btn-small bg-warning rounded-0" value="Add Selection">
+              </form>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active text-resp" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                    role="tab" aria-controls="home" aria-selected="true">Orders</button>
+              <button class="nav-link active text-resp" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                type="button" role="tab" aria-controls="home" aria-selected="true">Orders</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-resp" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                    role="tab" aria-controls="profile" aria-selected="false">Reviews</button>
+              <button class="nav-link text-resp" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                type="button" role="tab" aria-controls="profile" aria-selected="false">Reviews</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-resp" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
-                    role="tab" aria-controls="messages" aria-selected="false">Comments</button>
+              <button class="nav-link text-resp" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+                type="button" role="tab" aria-controls="messages" aria-selected="false">Comments</button>
             </li>
             <li class="nav-item text-resp" role="presentation">
-                <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
-                    role="tab" aria-controls="settings" aria-selected="false">Address</button>
+              <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button"
+                role="tab" aria-controls="settings" aria-selected="false">Address</button>
             </li>
-        </ul>
+          </ul>
 
-        <!-- Tab panes -->
-        <div class="tab-content">
+          <!-- Tab panes -->
+          <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
               {% if orders %}
-                <div class="row row-cols-1 row-cols-md-2 g-2">
-
-                  {% for order in orders %}
-                    <div class="col-sm-6">
-                      <div class="card h-100">
-                        <div class="card-body">
-                          <h6 class="card-title"><a href="{% url 'order_history' order.order_number %}" title="{{order.order_number}}">Order No: <small>{{order.order_number|truncatechars:7}}</small></a></h6>
-                          <p class="card-text">{{ order.date }}</p>
-                          <p>{{ order.grand_total }}</p>
-                          {% for item in order.lineitems.all %}
-                          <p>{{ item.product.name }}</p>
-                          <p> qty: {{ item.quantity }} @ €{{ item.product.price }}</p>
-                          {% endfor %}
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    {% endfor %}
+              <div class="row d-none d-md-flex text-center">
+                <div class="col-md-4"><h6><strong>Order Number</strong></h6></div>
+                <div class="col-md-4"><h6><strong>Date</strong></h6></div>
+                <div class="col-md-4"><h6><strong>Grand Total</strong></h6></div>
+              </div>
+              {% for order in orders %}
+              <div class="row d-none d-md-flex text-center">
+                <div class="col-md-4"><a class="text-decoration-none" href="{% url 'order_history' order.order_number %}" title="{{order.order_number}}">
+                  <small>{{order.order_number|truncatechars:15}}</small></a>
                 </div>
+                <div class="col-md-4"><small>{{ order.date }}</small></div>
+                <div class="col-md-4"><small>€{{ order.grand_total }}</small></div>
+              </div>
+              {% endfor %}
+              {% for order in orders %}
+              <div class="card text-center d-md-none text-center rounded-0 border border-2">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Order No:<a class="text-decoration-none" href="{% url 'order_history' order.order_number %}" title="{{order.order_number}}">
+                    <small>{{order.order_number|truncatechars:15}}</small></a></li>
+                  <li class="list-group-item"><small>{{ order.date }}</small></li>
+                  <li class="list-group-item">Grand Total: <small>{{ order.grand_total }}</small></li>
+                </ul>
+              </div>
+              {% endfor %}
               {% else %}
               <div class="text-center mt-3">
-                <h6 >Order History is currently empty shop best deals for you</h6>
+                <h6>Your Order History is currently empty.</h6>
               </div>
               {% endif %}
             </div>
+
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">... hi</div>
             <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">...sad</div>
             <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">
-                <div class="row col-12 col-md-6 m-auto">
-                    <div class="card border-0 mt-5">
-                        <p class="my-1"><strong class="text-uppercase">NAME: </strong>{{ profile.user }}</p>
-                        <p class="my-1"><strong class="text-uppercase">Email: </strong>{{ profile.user.email }}</p>
-                        {% if profile.default_phone_number %}
-                        <p class="my-1"><strong class="text-uppercase">PHONE NUMBER: </strong>{{ profile.default_phone_number }}</p>
-                        {% endif %}
-                        <div class="text-center">
-                            <p class="my-1">View saved <strong class="text-uppercase">Delivery Address</strong> below</p>
-                            <p class="my-1">{% if profile.default_street_address1 %}{{ profile.default_street_address1 }}{% endif %}
-                              <span> {% if profile.default_street_address2 %}{{ profile.default_street_address2 }}{% endif %}</span></p>
-                            <p class="my-1">{% if profile.default_town_or_city %}{{ profile.default_town_or_city }}{% endif %}
-                              <span>{% if profile.default_county %}{{ profile.default_county }}{% endif %}</span></p>
-                            <p class="my-1">{% if profile.default_postcode %}{{ profile.default_postcode }} / {% endif %}
-                              <span> {% if profile.default_country %}{{ profile.default_country }}{% endif %}</span></p>
-                        </div>
-                        <div class="card-footer text-end border-0 bg-white">
-                          <a class="text-decoration-none" href="{% url 'edit_profile' %}">UPDATE PROFILE</a>
-                        </div>
-                      </div>
+              <div class="row col-12 col-md-6 m-auto">
+                <div class="card border-0 mt-5">
+                  <p class="my-1"><strong class="text-uppercase">NAME: </strong>{{ profile.user }}</p>
+                  <p class="my-1"><strong class="text-uppercase">Email: </strong>{{ profile.user.email }}</p>
+                  {% if profile.default_phone_number %}
+                  <p class="my-1"><strong class="text-uppercase">PHONE NUMBER:
+                    </strong>{{ profile.default_phone_number }}</p>
+                  {% endif %}
+                  <div class="text-center">
+                    <p class="my-1">View saved <strong class="text-uppercase">Delivery Address</strong> below</p>
+                    <p class="my-1">
+                      {% if profile.default_street_address1 %}{{ profile.default_street_address1 }}{% endif %}
+                      <span>
+                        {% if profile.default_street_address2 %}{{ profile.default_street_address2 }}{% endif %}</span>
+                    </p>
+                    <p class="my-1">{% if profile.default_town_or_city %}{{ profile.default_town_or_city }}{% endif %}
+                      <span>{% if profile.default_county %}{{ profile.default_county }}{% endif %}</span></p>
+                    <p class="my-1">{% if profile.default_postcode %}{{ profile.default_postcode }} / {% endif %}
+                      <span> {% if profile.default_country %}{{ profile.default_country }}{% endif %}</span></p>
+                  </div>
+                  <div class="card-footer text-end border-0 bg-white">
+                    <a class="text-decoration-none" href="{% url 'edit_profile' %}">UPDATE PROFILE</a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<!-- trust statments here  -->
-{% include 'includes/mood_choices.html' %}
-{% include 'includes/trust-stm.html' %}
-{% endblock %}
+      </div>
+
+      <!-- trust statments here  -->
+      {% include 'includes/mood_choices.html' %}
+      {% include 'includes/trust-stm.html' %}
+      {% endblock %}

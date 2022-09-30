@@ -1,0 +1,121 @@
+[
+    {
+        "pk": 1,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "hollow wood with a large sound hole."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "wide, flat necks made from quality rosewood"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "top quality nylon strings"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "steel string reinforced with nickel hooks"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Includes Gig Bag, Spare Strings and Headstock Tuner "
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "laminated spruce top"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "mahogany laminated top"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "ABS body featuring Lightweight, feedback resistant and durable"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Adjustable Straps & Carry Handle"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Cleaver Front Pocket"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "fine mesh polyester fibers reduces humidity build up"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Reinforced durability from roasted maple neck"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Diamond Vintage Tremolo bridge increases sound distribution"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Full bodied ,hollow body design"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "High quality tone wood"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "Include hard foam case bow and rosin"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.productfeature",
+        "fields": {
+            "title": "smooth fingerboard design"
+        }
+    }
+]

@@ -28,23 +28,15 @@ class Product(models.Model):
         max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    features = models.ForeignKey(
-        'ProductFeature', null=True, blank=True, on_delete=models.SET_NULL,
-        related_name='feature_set')
-
+    features = models.ManyToManyField(
+        'ProductFeature', blank=True, related_name='feature_set')
 
     def __str__(self):
         return self.name
 
 
 class ProductFeature(models.Model):
-    product = models.ForeignKey(
-        Product, on_delete=models.CASCADE)
-    featur_1 = models.TextField(max_length=100, null=True, blank=True)
-    featur_2 = models.TextField(max_length=100, null=True, blank=True)
-    featur_3 = models.TextField(max_length=100, null=True, blank=True)
-    featur_4 = models.TextField(max_length=100, null=True, blank=True)
-    featur_5 = models.TextField(max_length=100, null=True, blank=True)
+    title = models.TextField(max_length=80, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.product}"
+        return self.title

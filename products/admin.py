@@ -27,7 +27,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ProductFeatureAdmin(admin.ModelAdmin):
     list_display = (
-        'product',
+        'title',
     )
     search_fields = ('product',)
 
