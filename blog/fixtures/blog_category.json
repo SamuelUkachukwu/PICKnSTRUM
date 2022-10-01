@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1,
+        "model": "blog.postcategory",
+        "fields": {
+            "name": "top_stories",
+            "friendly_name": "Top Stories"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "blog.postcategory",
+        "fields": {
+            "name": "maintainance",
+            "friendly_name": "Love and Care"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "blog.postcategory",
+        "fields": {
+            "name": "diy",
+            "friendly_name": "DIY Tips and tricks"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "blog.postcategory",
+        "fields": {
+            "name": "events",
+            "friendly_name": "Festival Events"
+        }
+    }
+]
