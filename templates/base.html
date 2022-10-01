@@ -39,12 +39,13 @@
     <header class="container-fluid fixed-top">
 
            <!-- delivery bonus -->
+        {% if not on_blog %}
         <div class="row bg-warning py-2">
             <div class="col text-center">
             <h5 class="m-0">Free delivery on orders over €{{ free_delivery_threshold }}</h5>
             </div>
         </div>
-
+        {% endif %}
       <!-- header on wide screen -->
         <div class="row bg-light d-none d-lg-flex pt-2">
             <div class="col-12 col-lg-4 text-lg-start my-auto py-1 py-lg-0">
@@ -99,9 +100,9 @@
                         <div><i class="fas fa-shopping-cart"></i></div>
                         <p class="my-0">
                             {% if product_count %}
-                                <p>Cart <span class="badge text-bg-secondary">{{ product_count }}</span></p>
+                                <p class="my-0">Cart <span class="badge text-bg-secondary">{{ product_count }}</span></p>
                             {% else %}
-                                <p>Cart <span class="badge text-bg-secondary">0</span></p>
+                                <p class="my-0">Cart <span class="badge text-bg-secondary">0</span></p>
                             {% endif %}
                         </p>
                     </div>

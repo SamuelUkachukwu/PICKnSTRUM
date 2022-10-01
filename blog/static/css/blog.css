@@ -1,0 +1,17 @@
+/* ---------------------main page styling  */
+.header-backspace-blog {
+    padding-top: 200px;
+}
+
+@media (min-width: 992px) {
+    .header-backspace-blog {
+        padding-top: 170px;
+    }
+}
+
+/* media styling for screen size mobile  */
+@media (max-width: 991px) {
+    .header-backspace-blog {
+        padding-top: 100px;
+    }
+}

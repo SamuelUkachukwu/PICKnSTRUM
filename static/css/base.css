@@ -32,7 +32,7 @@
 
 /* ---------------------main page styling  */
 .header-backspace {
-    padding-top: 119px;
+    padding-top: 200px;
 }
 
 .carousel-item {
@@ -152,7 +152,7 @@ input, .allauth-form-inner-content input,
 
 @media (min-width: 992px) {
     .header-backspace {
-        padding-top: 144px;
+        padding-top: 170px;
     }
 }
 
