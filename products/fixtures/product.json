@@ -478,5 +478,20 @@
             "image": "Schecter-Corsair-Gloss-Natural.jpg",
             "features": [2,3,4]
         }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "sku": "GUI-MED-WOO-SAN",
+            "name": "Electro Acoustic Bass Guitar, Black + 35W Amp Pack",
+            "description": "Comfortably perform. Our team of experts chose the Electro Acoustic Bass Guitar's compact design and C-shaped sapele mahogany neck expressly to make it comfortable for stand-up musicians. Its single cutaway design enhances the brightness of the tonewoods selected, complementing them, and provides immediate access to higher frets.",
+            "price": 259.00,
+            "category": 8,
+            "rating": 4.9,
+            "image_url": "",
+            "image": "Electro-Acoustic-Bass-Guitar.jpg",
+            "features": [1,9,12]
+        }
     }
 ]
