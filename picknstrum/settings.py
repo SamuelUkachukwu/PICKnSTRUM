@@ -28,6 +28,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 ALLOWED_HOSTS = []
 
 
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
     'checkout',
     'crispy_forms',
     'crispy_bootstrap5',
+    'django_summernote',
     'blog',
 ]
 
@@ -189,3 +192,30 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 # company data
 PICKNSTRUM_PHONE = '+353831900005'
 PICKNSTRUM_EMAIL = 'picknstrum@gmail.com'
+
+SUMMERNOTE_THEME = 'bs5'
+
+SUMMERNOTE_CONFIG = {
+
+    'iframe': True,
+
+    'width': '100%',
+    'height': '380',
+    'lang': None,
+    'toolbar': [
+        ['style', ['style']],
+        ['font', [
+            'bold',
+            'underline',
+            'strikethrough',
+            'superscript',
+            'subscript']],
+        ['fontsize', ['fontsize']],
+        ['fontname', ['fontname']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['insert', ['link']],
+        ['view', ['fullscreen']],
+    ],
+
+}
