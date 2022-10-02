@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post, PostCategory
 
 
@@ -22,6 +22,15 @@ def blog_home(request):
     return render(request, template_name, context)
 
 
-def view_blog_article(request):
+def view_blog_article(request, slug):
     """View to view individual blog posts"""
-    pass
+    queryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    cat_list = PostCategory.objects.all()
+    template_name = 'blog/post_view.html'
+    context = {
+        'post': post,
+        'cat_list': cat_list,
+        'on_blog': True,
+    }
+    return render(request, template_name, context)
