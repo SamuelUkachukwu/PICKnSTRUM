@@ -17,5 +17,75 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
+  <div class="row">
+    <!-- left side bar -->
+    <div class="col col-md-2 d-none d-lg-block">
 
+        <div class="card rounded-0" style="width: 95%; margin: auto;">
+          <img src="{{ MEDIA_URL }}guitar-head.jpg" class="card-img-top rounded-0" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">{{ post}}.</p>
+          </div>
+        </div>
+
+    </div>
+    <!-- middle content -->
+    <div class="col col-md-7">
+      <div class="card rounded-0 border-0">
+        <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
+        <div class="card-body text-end">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.created_on }}</p>
+          <p class="card-text">{{ post.author }}</p>
+        </div>
+      </div>
+      <div class="content">
+        <p>{{ post.content|safe }}</p>
+      </div>
+      <div>
+        <p>rate this post<span><i class="fas fa-heart"></i>{{ post.likes.count }}</span><span><i class="fas fa-heart-broken"></i>{{ post.dislikes.count }}</span></p>
+      </div>
+    </div>
+    <!-- right side bar -->
+    <div class="col col-md-4 col-lg-3 d-none d-sm-block bd-toc text-muted">
+      {% for post in posts %}
+      <div class="card rounded-0 border-0 mb-2 py-0" style="width: 95%; margin: auto;">
+        <a href="{% url 'view_post' post.slug %}">
+        <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0" alt="{{ post.title }}">
+      </a>
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title}}</h5>
+          <p class="card-text">{{ post.excerpt|truncatechars:100 }}</p>
+        </div>
+        <div class="card-footer bg-white border-0 p-0 text-end">
+          <p class="card-text bg-danger p-2 author"><strong>{{ post.author }}</strong></p>
+        </div>
+      </div>
+      {% endfor %}
+        <!-- pagination -->
+      <div class="row my-2">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+              {% if posts.has_previous %}
+                <li class="page-item"> <a class="page-link" href="?page=1">&laquo; first</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">previous</a></li>
+              {% endif %}
+
+              <span class="current">
+                <li class="page-item disabled"><a class="page-link rounded-0" href="">Page {{ posts.number }} of
+                    {{ posts.paginator.num_pages }}.</a></li>
+              </span>
+
+              {% if posts.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ posts.paginator.num_pages }}">last &raquo;</a></li>
+              {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

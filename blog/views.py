@@ -24,12 +24,19 @@ def blog_home(request):
 
 def view_blog_article(request, slug):
     """View to view individual blog posts"""
+    paginator = Paginator(
+        Post.objects.filter(status=1).order_by("?"), 3)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     cat_list = PostCategory.objects.all()
+
     template_name = 'blog/post_view.html'
     context = {
         'post': post,
+        'posts': posts,
         'cat_list': cat_list,
         'on_blog': True,
     }
