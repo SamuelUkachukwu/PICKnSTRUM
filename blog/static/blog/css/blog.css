@@ -1,9 +1,9 @@
 .post-card,
-.top-stories-container {
+.stories-container {
     position: relative;
 }
 
-.top-stories-container {
+.stories-container {
     border: 2px solid #fff;
 }
 
@@ -16,20 +16,29 @@
     color: #fff;
     border-radius: 0px 0px 20px 2px;
     box-shadow: 1px 2px 3px 0 #5d6977;
+    margin-top: -4px;
 }
 
 .text-box {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    bottom: 10px;
+    bottom: 0;
+    width: 100%;
 }
 .author{
      box-shadow: 1px 1px 1px 0 #5d6977;
 }
 .post-heading {
     font-size: clamp(1.2rem, 1vw, 1.6rem) !important;
-    /* font-size: 1.2rem !important; */
+}
+.text-responsive{
+    font-size: clamp(0.8rem, 0.9vw, 1.1rem) !important;
+    font-weight: bold;
+}
+/*  post likes and dislikes */
+.likes-dislikes {
+    color: hsl(0, 81%, 35%)
 }
 
 /* ---------------------main page styling  */

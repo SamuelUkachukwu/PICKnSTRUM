@@ -22,11 +22,11 @@
     <!-- left side bar -->
     <div class="col col-md-2 d-none d-lg-block">
 
-        <div class="card rounded-0" style="width: 95%; margin: auto;">
-          <img src="{{ MEDIA_URL }}guitar-head.jpg" class="card-img-top rounded-0" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">{{ post}}.</p>
+        <div class="card rounded-0 post-card text-center bg-warning py-3 dynamic-card" style="width: 95%; margin: auto;">
+          <img src="{{ MEDIA_URL }}esp-guitar.png" class="card-img-top rounded-0" alt="standing guitar image back ground">
+          <div class="text-box py-2 border-0">
+            <p class="card-text"><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong></span></p>
+            <a href="{% url 'products' %}" class="card-title btn btn-lg btn-primary">SHOP NOW</a>
           </div>
         </div>
 
@@ -44,9 +44,32 @@
       <div class="content">
         <p>{{ post.content|safe }}</p>
       </div>
-      <div>
-        <p>rate this post<span><i class="fas fa-heart"></i>{{ post.likes.count }}</span><span><i class="fas fa-heart-broken"></i>{{ post.dislikes.count }}</span></p>
-      </div>
+      {% if user.is_authenticated %}
+        <div class="d-flex">
+          <p class="text-muted"><i>rate this post</i></p>
+        <!-- like post form  -->
+          <form action="{% url 'post_likes' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button class="border-0 bg-transparent px-2" type="submit"><i class="fas fa-heart likes-dislikes"></i><span> {{ post.number_of_likes }}</span></button>
+            {% else %}
+            <button class="border-0 bg-transparent px-2" type="submit"><i class="fas fa-heart"></i><span> {{ post.number_of_likes }}</span></button>
+            {% endif %}
+          </form>
+          <!-- dislike post form -->
+          <form action="{% url 'post_dislikes' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if disliked %}
+            <button class="border-0 bg-transparent px-2" type="submit"><i class="fas fa-heart-broken likes-dislikes"></i><span> {{ post.number_of_dislikes }}</span></button>
+            {% else %}
+            <button class="border-0 bg-transparent px-2" type="submit"><i class="fas fa-heart-broken"></i><span> {{ post.number_of_dislikes }}</span></button>
+            {% endif %}
+          </form>
+        </div>
+      {% else %}
+        <p class="mb-5"><i><span><a href="{% url 'account_signup' %}" class="text-decoration-none">Sign Up</a></span> or <span><a href="{% url 'account_login' %}" class="text-decoration-none">Login</a></span> To Rate This Post!</i></p>
+      {% endif %}
+
     </div>
     <!-- right side bar -->
     <div class="col col-md-4 col-lg-3 d-none d-sm-block bd-toc text-muted">
@@ -69,18 +92,18 @@
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-end">
               {% if posts.has_previous %}
-                <li class="page-item"> <a class="page-link" href="?page=1">&laquo; first</a></li>
-                <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">previous</a></li>
+                <li class="page-item"> <a class="page-link text-responsive" href="?page=1">&laquo; first</a></li>
+                <li class="page-item"><a class="page-link text-responsive" href="?page={{ posts.previous_page_number }}">previous</a></li>
               {% endif %}
 
               <span class="current">
-                <li class="page-item disabled"><a class="page-link rounded-0" href="">Page {{ posts.number }} of
+                <li class="page-item disabled"><a class="page-link text-responsive rounded-0" href="">Page {{ posts.number }} of
                     {{ posts.paginator.num_pages }}.</a></li>
               </span>
 
               {% if posts.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">next</a></li>
-                <li class="page-item"><a class="page-link" href="?page={{ posts.paginator.num_pages }}">last &raquo;</a></li>
+                <li class="page-item"><a class="page-link text-responsive" href="?page={{ posts.next_page_number }}">next</a></li>
+                <li class="page-item"><a class="page-link text-responsive" href="?page={{ posts.paginator.num_pages }}">last &raquo;</a></li>
               {% endif %}
           </ul>
         </nav>

@@ -36,7 +36,7 @@
 }
 
 .carousel-item {
-    height: 32rem;
+    height: 66vh;
     background-color: #000;
     color: #fff;
     position: relative;
@@ -66,19 +66,19 @@
 }
 
 /* -------------product page styling */
-.product-card {
+.dynamic-card {
     box-shadow: 2px 2px 3px #aaaaaa;
 }
 
-.product-card:hover {
+.dynamic-card:hover {
     box-shadow: 2px 2px 3px #310d0d;
 }
 
-.product-image {
+.product-image, .yoo {
     transition: 1s;
 }
 
-.product-image:hover {
+.product-image:hover, .yoo {
     overflow: hidden;
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
