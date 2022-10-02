@@ -55,7 +55,7 @@
                 {% for feature in features %}
                     <p><small><i class="fas fa-circle me-2 fs-6"></i> {{ feature }}</small></p>
                 {% endfor %}
-
+                {{review}}
 
             <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                 {% csrf_token %}

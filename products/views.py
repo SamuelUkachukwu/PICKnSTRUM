@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from . models import Product, Category
+from . models import Product, Category, Review
 
 
 # Create your views here.
@@ -62,10 +62,12 @@ def all_products(request):
 def product_detail_view(request, product_id):
     """ Renders a detail view of the product"""
     product = get_object_or_404(Product, pk=product_id)
+    review = product.reviews.all().order_by('created_on')
     features = product.features.all()
 
     context = {
         'product': product,
+        'review': review,
         'features': features,
     }
     return render(request, 'products/product_detail.html', context)
