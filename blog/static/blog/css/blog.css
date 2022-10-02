@@ -1,0 +1,51 @@
+.post-card,
+.top-stories-container {
+    position: relative;
+}
+
+.top-stories-container {
+    border: 5px solid #fff;
+}
+
+.category-tag {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    position: absolute;
+    left: 10px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 0px 0px 20px 2px;
+    box-shadow: 1px 2px 3px 0 #5d6977;
+}
+
+.text-box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    bottom: 10px;
+}
+.author{
+     box-shadow: 1px 1px 1px 0 #5d6977;
+}
+.post-heading {
+    font-size: clamp(1.2rem, 1vw, 1.6rem) !important;
+    /* font-size: 1.2rem !important; */
+}
+
+/* ---------------------main page styling  */
+.header-backspace-blog {
+    padding-top: 200px;
+}
+
+@media (min-width: 992px) {
+    .header-backspace-blog {
+        padding-top: 170px;
+    }
+}
+
+/* media styling for screen size mobile  */
+@media (max-width: 991px) {
+    .header-backspace-blog {
+        padding-top: 100px;
+    }
+}

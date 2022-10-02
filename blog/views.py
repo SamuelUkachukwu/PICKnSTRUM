@@ -1,11 +1,18 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import Post, PostCategory
 
 
 # Create your views here.
 def blog_home(request):
-    posts = Post.objects.filter(status=1).order_by("-created_on")
-    top_stories = PostCategory.objects.filter(name='top_stories').order_by('?')
+    paginator = Paginator(
+        Post.objects.filter(status=1).order_by("-created_on"), 3)
+
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
+
+    query = PostCategory.objects.get(name='top_stories')
+    top_stories = Post.objects.filter(category=query).order_by('?')
     context = {
         'posts': posts,
         'on_blog': True,

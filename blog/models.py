@@ -24,15 +24,15 @@ class PostCategory(models.Model):
 
 class Post(models.Model):
     """Blod post model"""
-    title = models.CharField(max_length=30, unique=True)
-    slug = models.SlugField(max_length=30, unique=True)
+    title = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(
         User, null=True, on_delete=models.SET_NULL)
     updated_on = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(
         PostCategory, null=True, on_delete=models.SET_NULL, related_name='post')
     content = models.TextField()
-    featured_image = models.URLField(max_length=1024, null=True, blank=True)
+    featured_image = models.ImageField(null=True, blank=True)
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
