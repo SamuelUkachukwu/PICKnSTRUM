@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_title %} | {{ product.name }}{% endblock %}
 
 {% block page_header %}
 <div class="container header-backspace">
@@ -18,13 +19,13 @@
         <div class="col-12 col-md-5 col-lg-4 offset-lg-2">
             <div class="image-container card my-5 dynamic-card rounded-0">
                 {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                </a>
                 {% endif %}
             </div>
         </div>
@@ -40,9 +41,9 @@
                 {% endif %}
                 <p class="fs-3 text-danger fw-bold mt-1">€ {{ product.price }}</p>
                 {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
+                <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
                 {% else %}
-                    <small class="text-muted">No Rating</small>
+                <small class="text-muted">No Rating</small>
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
@@ -53,49 +54,99 @@
                 <p class="mt-3">{{ product.description }}</p>
                 <h5>Product Features</h5>
                 {% for feature in features %}
-                    <p><small><i class="fas fa-circle me-2 fs-6"></i> {{ feature }}</small></p>
+                <p><small><i class="fas fa-circle me-2 fs-6"></i> {{ feature }}</small></p>
                 {% endfor %}
-                {{review}}
 
-            <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                {% csrf_token %}
-                <div class="row mx-2">
-                    <a href="{% url 'products' %}" class="btn w-50">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                    <select class="form-select w-50" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                        <option value="1">Quantity: 1</option>
-                        <option value="2"> 2</option>
-                        <option value="3"> 3</option>
-                        <option value="4"> 4</option>
-                        <option value="5"> 5</option>
-                        <option value="6"> 6</option>
-                        <option value="7"> 7</option>
-                        <option value="8"> 8</option>
-                        <option value="9"> 9</option>
-                        <option value="10"> 10</option>
-                        <option value="15"> 15</option>
-                        <option value="20"> 20</option>
-                        <option value="25"> 25</option>
-                        <option value="30"> 30</option>
-                        <option value="35"> 35</option>
-                        <option value="40"> 40</option>
-                        <option value="45"> 45</option>
-                        <option value="50"> 50</option>
-                    </select>
-                </div>
-                <div class="row mt-2 mx-2">
-                    <button class="btn border bg-warning" type="submit">ADD TO CART</button>
-                </div>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
-            </form>
-        </div>
+                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row mx-2">
+                        <a href="{% url 'products' %}" class="btn w-50">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                        <select class="form-select w-50" name="quantity" data-item_id="{{ product.id }}"
+                            id="id_qty_{{ product.id }}">
+                            <option value="1">Quantity: 1</option>
+                            <option value="2"> 2</option>
+                            <option value="3"> 3</option>
+                            <option value="4"> 4</option>
+                            <option value="5"> 5</option>
+                            <option value="6"> 6</option>
+                            <option value="7"> 7</option>
+                            <option value="8"> 8</option>
+                            <option value="9"> 9</option>
+                            <option value="10"> 10</option>
+                            <option value="15"> 15</option>
+                            <option value="20"> 20</option>
+                            <option value="25"> 25</option>
+                            <option value="30"> 30</option>
+                            <option value="35"> 35</option>
+                            <option value="40"> 40</option>
+                            <option value="45"> 45</option>
+                            <option value="50"> 50</option>
+                        </select>
+                    </div>
+                    <div class="row mt-2 mx-2">
+                        <button class="btn border bg-warning" type="submit">ADD TO CART</button>
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+                </form>
+            </div>
         </div>
     </div>
+    {% if reviews %}
+    <div class="row">
+        <div class="col-11 m-auto">
+            <h5 class="yoo">Reviews:</h5>
+            {% for review in reviews %}
+            <div class="border rounded-2 p-3 mt-3">
+
+            {% if review.rate == 5 %}
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            {% elif review.rate == 4 %}
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="far fa-star"></i>
+            {% elif review.rate == 3 %}
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            {% elif review.rate == 2 %}
+            <i class="fas fa-star yellow"></i>
+            <i class="fas fa-star yellow"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            {% else %}
+            <i class="fas fa-star yellow"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            {% endif %} | <span><strong>{{review.name}} </strong>|</span> <br class="d-block d-sm-none"> <span><small class="text-muted">{{ review.created_on }}</small></span>
+                <div class="card-body mt-1">
+                    {{ review.body }}
+                </div>
+                {% if review.updated_on %}
+                    <p class="text-end pt-2 m-0"><i><small class="text-muted">Updated on: {{ review.updated_on }}</small></i></p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </div>
 
 <!-- trust statments here  -->
