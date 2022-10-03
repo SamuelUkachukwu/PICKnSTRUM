@@ -118,7 +118,8 @@
 /*-------------------- allauth and general forms styling save stripe */
 input,
 .allauth-form-inner-content input,
-.mail-chimp-box input, .form-styling {
+.mail-chimp-box input,
+.form-styling {
     box-sizing: border-box;
     border: 1px solid #000;
     border-radius: 0px;
@@ -153,6 +154,18 @@ input,
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
 
+}
+
+#div_id_rate div {
+    display: flex;
+}
+
+#div_id_rate label {
+    display: none;
+}
+
+#div_id_rate div .form-check {
+    margin-right: 5px;
 }
 
 /*------------------- toast styling */
