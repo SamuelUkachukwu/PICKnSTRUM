@@ -26,7 +26,7 @@ class ProfileImageForm(forms.ModelForm):
 
         for field in self.fields:
             self.fields[field].label = False
-            self.fields[field].widget.attrs['class'] = 'profile-update-input'
+            self.fields[field].widget.attrs['class'] = 'form-styling'
 
 
 class UserProfileForm(forms.ModelForm):
@@ -49,7 +49,7 @@ class UserProfileForm(forms.ModelForm):
 
         for field in self.fields:
             self.fields[field].label = False
-            self.fields[field].widget.attrs['class'] = 'profile-update-input'
+            self.fields[field].widget.attrs['class'] = 'form-styling'
         self.fields['default_phone_number'].widget.attrs['placeholder'] = 'Phone Number'
         self.fields['default_street_address1'].widget.attrs['placeholder'] = 'Street Address 1'
         self.fields['default_street_address2'].widget.attrs['placeholder'] = 'Street Address 2'

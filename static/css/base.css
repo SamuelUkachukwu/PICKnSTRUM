@@ -78,13 +78,11 @@
     box-shadow: 2px 2px 3px #310d0d;
 }
 
-.product-image,
-.yoo {
+.product-image {
     transition: 1s;
 }
 
-.product-image:hover,
-.yoo {
+.product-image:hover {
     overflow: hidden;
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
@@ -117,10 +115,10 @@
     right: 10px;
 }
 
-/*-------------------- allauth styling */
+/*-------------------- allauth and general forms styling save stripe */
 input,
 .allauth-form-inner-content input,
-.mail-chimp-box input {
+.mail-chimp-box input, .form-styling {
     box-sizing: border-box;
     border: 1px solid #000;
     border-radius: 0px;
@@ -133,7 +131,8 @@ input,
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'],
-.mail-chimp-box input[type='submit'] {
+.mail-chimp-box input[type='submit'],
+.form-styling input[type='submit'] {
     font-weight: 400;
     color: #000;
     text-align: center;

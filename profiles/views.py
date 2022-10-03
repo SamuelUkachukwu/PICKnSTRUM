@@ -53,6 +53,7 @@ def edit_profile(request):
     return render(request, 'profiles/update_address.html', context)
 
 
+@login_required
 def order_history(request, order_number):
     """Retrieve the order from the order app"""
     order = get_object_or_404(Order, order_number=order_number)

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-7 m-auto mt-4">
+
+            <form action="#" method="POST">
+                {% csrf_token %}
+                {{ review_form | crispy }}
+                <input type="submit" class="btn btn-small bg-warning rounded-0" value="Submit Review">
+                <a class="ms-3 btn btn-small bg-warning rounded-0" href="{% url 'profile' %}">Return to Profile</a>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- trust statments here  -->
+{% include 'includes/trust-stm.html' %}
+{% endblock %}

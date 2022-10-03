@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from .forms import ReviewForm
 from . models import Product, Category, Review
 
 
@@ -71,3 +73,35 @@ def product_detail_view(request, product_id):
         'features': features,
     }
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def review(request, product_id):
+
+    product = get_object_or_404(Product, pk=product_id)
+    try:
+        review = product.reviews.get(name=request.user)
+        if review:
+            review_form = ReviewForm(
+                request.POST or None,
+                instance=review
+            )
+            if review_form.is_valid():
+                review_form.save()
+                messages.success(
+                    request, f'You have updated your review of {product}.\
+                    Thank you for your feed back!')
+                return redirect('profile')
+            template_name = 'products/review.html'
+            context = {
+                'product': product,
+                'review': review,
+                'review_form': review_form,
+                }
+            return render(request, template_name, context)
+    except Review.DoesNotExist:
+        review_form = ReviewForm()
+        return render(request, 'products/review.html', {
+            'review_form': review_form,
+            'product': product
+            })
