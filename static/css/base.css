@@ -133,7 +133,7 @@ input,
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'],
 .mail-chimp-box input[type='submit'],
-.form-styling input[type='submit'] {
+.form-styling input[type='submit'], .fancy-btn {
     font-weight: 400;
     color: #000;
     text-align: center;

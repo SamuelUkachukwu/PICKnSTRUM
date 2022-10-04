@@ -14,40 +14,61 @@
 
 {% block content %}
 <div class="container mt-4">
-    <div class="row">
-        <div class="col col-md-2 d-none d-lg-block">
-
-            <div class="card rounded-0 post-card text-center bg-warning py-3 dynamic-card" style="width: 95%; margin: auto;">
-              <img src="{{ MEDIA_URL }}esp-guitar.png" class="card-img-top rounded-0" alt="standing guitar image back ground">
-              <div class="text-box py-2 border-0">
-                <p class="card-text"><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong></span></p>
-                <a href="{% url 'products' %}" class="card-title btn btn-lg btn-primary">SHOP NOW</a>
-              </div>
-            </div>
-
+  <div class="row justify-content-center">
+    <!-- left side -->
+    <div class="col col-md-2 d-none d-lg-block">
+      <div class="card rounded-0 post-card text-center bg-warning py-3 dynamic-card" style="width: 95%; margin: auto;">
+        <img src="{{ MEDIA_URL }}esp-guitar.png" class="card-img-top rounded-0" alt="standing guitar image back ground">
+        <div class="text-box py-2 border-0">
+          <p class="card-text"><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong></span></p>
+          <a href="{% url 'products' %}" class="card-title btn btn-lg btn-primary">SHOP NOW</a>
         </div>
-        <div class="col-12 col-md-7 mt-4">
-            <div class="card mb-3 border-0">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="{{ product.name }}">
-                  </div>
-                  <div class="col-md-8 d-flex align-items-end">
-                    <div class="card-body">
-                      <h6 class="card-title">{{ product.name }}</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            <form action="{% url 'review' product.id %}" method="POST">
-                {% csrf_token %}
-                {{ review_form | crispy }}
-                <input type="submit" class="btn btn-small bg-warning rounded-0" value="Submit Review">
-                <a class="ms-3 btn btn-small bg-warning rounded-0" href="{% url 'profile' %}">Return to Profile</a>
-            </form>
-        </div>
+      </div>
     </div>
+    <!-- middle  -->
+    <div class="col-12 col-md-6 mt-4 px-3">
+      <div class="row mb-3">
+        <div class="col-3">
+          {% if product.image %}
+          <a href="{% url 'product_detail' product.id %}">
+              <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="{{ product.name }}">
+          </a>
+          {% else %}
+          <a href="{% url 'product_detail' product.id %}">
+              <img class="img-fluid rounded-start" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+          </a>
+          {% endif %}
+        </div>
+        <div class="col-9 d-flex align-items-center">
+          <div>
+            <h6 class="card-title mb-2">{{ product.name }}</h6>
+            <a class="text-muted text-decoration-none pt-2" href="{% url 'products' %}?category={{ product.category.name }}">
+              <i class="fas fa-tag me-1"></i>{{ product.category.friendly_name }}
+            </a>
+            <p class="mb-0 text-left fs-5 text-danger fw-bold mt-1">€{{ product.price }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <form action="{% url 'review' product.id %}" method="POST">
+          {% csrf_token %}
+          {{ review_form | crispy }}
+          <input type="submit" class="btn btn-small bg-warning rounded-0" value="Submit Review">
+          <a class="ms-3 btn btn-small bg-warning rounded-0 fancy-btn" href="{% url 'profile' %}">back to Profile</a>
+      </form>
+      </div>
+    </div>
+    <!-- right -->
+    <div class="col col-md-2 d-none d-lg-block">
+      <div class="card rounded-0 post-card text-center bg-warning py-3 dynamic-card" style="width: 95%; margin: auto;">
+        <img src="{{ MEDIA_URL }}electric_guitar_ad.png" class="card-img-top rounded-0" alt="standing guitar image back ground">
+        <div class="text-box py-2 border-0">
+          <p class="card-text"><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong></span></p>
+          <a href="{% url 'products' %}" class="card-title btn btn-lg btn-primary">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- trust statments here  -->
 {% include 'includes/trust-stm.html' %}
