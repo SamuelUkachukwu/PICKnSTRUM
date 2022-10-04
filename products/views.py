@@ -117,6 +117,7 @@ def review(request, product_id):
 
 def delete_review(request, product_id):
     """This function deletes a selected review"""
-    review_delete = get_object_or_404(Review, product_id)
+    product = get_object_or_404(Product, pk=product_id)
+    review_delete = product.reviews.get(name=request.user)
     review_delete.delete()
     return redirect('profile')
