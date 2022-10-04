@@ -95,13 +95,21 @@ def review(request, product_id):
             template_name = 'products/review.html'
             context = {
                 'product': product,
-                'review': review,
+                'review': ReviewForm(),
                 'review_form': review_form,
                 }
             return render(request, template_name, context)
     except Review.DoesNotExist:
-        review_form = ReviewForm()
+        if request.method == 'POST':
+            review_form = ReviewForm(request.POST)
+            if review_form.is_valid():
+                form = review_form.save(commit=False)
+                form.name = request.user
+                form.product = product
+                review_form.save()
+                return redirect('profile')
+            review_form = ReviewForm()
         return render(request, 'products/review.html', {
-            'review_form': review_form,
+            'review_form': ReviewForm(),
             'product': product
             })
