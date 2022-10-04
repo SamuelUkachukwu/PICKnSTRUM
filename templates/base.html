@@ -98,13 +98,13 @@
                 <a class="{% if product_count %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                     <div class="text-center">
                         <div><i class="fas fa-shopping-cart"></i></div>
-                        <p class="my-0">
+
                             {% if product_count %}
                                 <p class="my-0">Cart <span class="badge text-bg-secondary">{{ product_count }}</span></p>
                             {% else %}
                                 <p class="my-0">Cart <span class="badge text-bg-secondary">0</span></p>
                             {% endif %}
-                        </p>
+
                     </div>
                 </a>
                 </li>
@@ -167,9 +167,9 @@
 
   <footer class="container-fluid bg-warning text-center py-3">
     <!-- <div class="container text-center"> -->
-        <div class="row mt-3">
+        <div class="row mt-3 justify-content-center">
           <div class="col-12 col-lg-4"></div>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <!-- Begin Mailchimp Signup Form -->
                 <div id="mc_embed_signup" class="mail-chimp-box">
                   <form
@@ -177,7 +177,8 @@
                     method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate pt-4"
                     target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
-                      <p>Be the first to know about special deals and promotions. Subscribe to our News Letter </p>
+                      <h5>Subscribe to our News Letter</h5>
+                      <p>Be the first to know about special deals and promotions.  </p>
                       <div class="mc-field-group">
                         <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" required placeholder="Email Required">
                         <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
@@ -191,7 +192,7 @@
                           name="b_2f7dbdbcc9a2cdb4acadbcbc5_a6c7c4e7e1" tabindex="-1" value=""></div>
                       <div class="optionalParent">
                         <div class="clear foot">
-                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn button mt-2">
+                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn button mt-3">
                         </div>
                       </div>
                     </div>

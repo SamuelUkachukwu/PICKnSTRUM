@@ -113,3 +113,10 @@ def review(request, product_id):
             'review_form': ReviewForm(),
             'product': product
             })
+
+
+def delete_review(request, product_id):
+    """This function deletes a selected review"""
+    review_delete = get_object_or_404(Review, product_id)
+    review_delete.delete()
+    return redirect('profile')

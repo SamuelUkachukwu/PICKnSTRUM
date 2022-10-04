@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+
+from checkout.models import Order
+from products.models import Review
 from .models import UserProfile
 
 from .forms import UserProfileForm, ProfileImageForm
-from checkout.models import Order
 
 
 # Create your views here.
@@ -12,6 +14,7 @@ from checkout.models import Order
 def profile(request):
     """Renders the profile page"""
     profile = get_object_or_404(UserProfile, user=request.user)
+    reviews = Review.objects.filter(name=request.user)
     image_form = ProfileImageForm(
         request.POST or None,
         request.FILES or None,
@@ -25,6 +28,7 @@ def profile(request):
         'profile': profile,
         'orders': orders,
         'image_form': image_form,
+        'reviews': reviews,
         'profile_page': True
     }
     return render(request, 'profiles/profile.html', context)

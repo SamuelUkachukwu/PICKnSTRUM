@@ -69,6 +69,7 @@
           </ul>
 
           <!-- Tab panes -->
+          <!-- orders -->
           <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
               {% if orders %}
@@ -102,8 +103,48 @@
               </div>
               {% endif %}
             </div>
+            <!-- reviews -->
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <!-- <div class="container"> -->
+                <div class="row">
+                  {% for review in reviews %}
+                  <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <div class="row">
+                      <div class="col-3">
+                        {% if review.product.image %}
+                        <a href="{% url 'product_detail' review.product.id %}">
+                          <img src="{{review.product.image.url}}" alt="{{review.product.name}}" style="width: 100%;">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' review.product.id %}">
+                          <img src="{{ MEDIA_URL }}noimage.png" alt="{{review.product.name}}" style="width: 100%;">
+                        </a>
+                        {% endif %}
+                      </div>
+                      <div class="col-9">
+                        <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapse{{review.product.id}}" role="button" aria-expanded="false" aria-controls="collapse{{review.product.id}}">
+                          <h5><small>{{ review.product.name|truncatechars:20 }}</small></h5>
+                          <p><small>{{ review.body|truncatechars:25 }} | <span><i class="fas fa-star yellow"></i></span> {{ review.rate }}</small></p>
+                        </a>
+                        <div class="text-end">
+                          <a class="text-info text-decoration-none" href="{% url 'review' review.product.id %}"><small>Edit</small></a> |
+                          <a class="text-danger text-decoration-none pe-5" href=""><small>Delete</small></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="collapse" id="collapse{{review.product.id}}">
+                      <div class="card card-body rounded-0 mt-3">
+                        <p><strong>{{ review.product.name }}</strong></p>
+                         <p><small>{{ review.body}}</small></p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
 
-            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">... hi</div>
+                  </div>
+                <!-- </div> -->
+            </div>
+            <!-- address -->
             <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">
               <div class="row col-12 col-md-6 m-auto">
                 <div class="card border-0 mt-5">
