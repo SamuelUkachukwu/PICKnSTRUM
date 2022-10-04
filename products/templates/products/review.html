@@ -50,9 +50,20 @@
         </div>
       </div>
       <div class="row">
+        <h5></h5>
         <form action="{% url 'review' product.id %}" method="POST">
           {% csrf_token %}
-          {{ review_form | crispy }}
+          <fieldset class="px-3">
+            <legend class="form-label fs-6 px-2 w-auto"><strong><small>Add Review</small></strong></legend>
+          {{ review_form.body | as_crispy_field }}
+          </fieldset>
+          <fieldset class="px-3">
+            <legend class="form-label fs-6 px-2 w-auto"><strong><small>Rate 1 - 5</small></strong></legend>
+          {{ review_form.rate | as_crispy_field }}
+          </fieldset>
+
+
+
           <input type="submit" class="btn btn-small bg-warning rounded-0" value="Submit Review">
           <a class="ms-3 btn btn-small bg-warning rounded-0 fancy-btn" href="{% url 'profile' %}">back to Profile</a>
       </form>
@@ -64,7 +75,7 @@
         <img src="{{ MEDIA_URL }}electric_guitar_ad.png" class="card-img-top rounded-0" alt="standing guitar image back ground">
         <div class="text-box py-2 border-0">
           <p class="card-text"><span class="my-0"><strong>PICK </strong>&<strong> STRUM</strong></span></p>
-          <a href="{% url 'products' %}" class="card-title btn btn-lg btn-primary">SHOP NOW</a>
+          <a href="{% url 'products' %}?category=clearance,deals" class="card-title btn btn-lg btn-primary">SHOP DEALS</a>
         </div>
       </div>
     </div>

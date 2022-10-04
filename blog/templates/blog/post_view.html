@@ -34,7 +34,11 @@
     <!-- middle content -->
     <div class="col col-md-7">
       <div class="card rounded-0 border-0">
+        {% if post.featured_image.url %}
         <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
+        {% else %}
+        <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 border-0" alt="..." >
+        {% endif %}
         <div class="card-body text-end">
           <h5 class="card-title">{{ post.title }}</h5>
           <p class="card-text">{{ post.created_on }}</p>
@@ -76,8 +80,12 @@
       {% for post in posts %}
       <div class="card rounded-0 border-0 mb-2 py-0" style="width: 95%; margin: auto;">
         <a href="{% url 'view_post' post.slug %}">
-        <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0" alt="{{ post.title }}">
-      </a>
+            {% if post.featured_image.url %}
+          <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
+          {% else %}
+          <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 border-0" alt="..." >
+          {% endif %}
+        </a>
         <div class="card-body">
           <h5 class="card-title">{{ post.title}}</h5>
           <p class="card-text">{{ post.excerpt|truncatechars:100 }}</p>
