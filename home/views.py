@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
+from .forms import ContactUsForm
 
 
 # Create your views here.
@@ -14,15 +15,18 @@ def about_us(request):
     return render(request, template_name)
 
 
-def contct_us(request):
+def contact_us(request):
     """Renders the contact us page"""
     phone = settings.PICKNSTRUM_PHONE
     email = settings.PICKNSTRUM_EMAIL
     address = settings.PICKNSTRUM_ADDRESS
+    form = ContactUsForm()
     context = {
         'phone': phone,
         'email': email,
-        'address': address
+        'address': address,
+        'form': form,
+        'contact_us': True
     }
     template_name = 'home/connect.html'
     return render(request, template_name, context)
