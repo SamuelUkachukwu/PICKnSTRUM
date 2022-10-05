@@ -1,0 +1,9 @@
+.connect-hero{
+background: #000 url("/media/page-designs/about.jpg") no-repeat fixed center;
+}
+
+.connect-text{
+
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}

@@ -192,6 +192,7 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 # company data
 PICKNSTRUM_PHONE = '+353831900005'
 PICKNSTRUM_EMAIL = 'picknstrum@gmail.com'
+PICKNSTRUM_ADDRESS = '55 Macala Street, Ballinasloe, Co Galway Ireland.'
 
 SUMMERNOTE_THEME = 'bs4'
 
