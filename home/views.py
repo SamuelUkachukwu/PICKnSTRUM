@@ -17,9 +17,9 @@ def about_us(request):
 
 def contact_us(request):
     """Renders the contact us page"""
-    phone = settings.PICKNSTRUM_PHONE
-    email = settings.PICKNSTRUM_EMAIL
-    address = settings.PICKNSTRUM_ADDRESS
+    phone = settings.DEFAULT_FROM_PHONE
+    email = settings.DEFAULT_FROM_EMAIL
+    address = settings.DEFAULT_FROM_ADDRESS
     form = ContactUsForm()
     context = {
         'phone': phone,

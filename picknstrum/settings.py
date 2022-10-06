@@ -189,10 +189,12 @@ STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
+DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
 # company data
-PICKNSTRUM_PHONE = '+353831900005'
-PICKNSTRUM_EMAIL = 'picknstrum@gmail.com'
-PICKNSTRUM_ADDRESS = '55 Macala Street, Ballinasloe, Co Galway Ireland.'
+DEFAULT_FROM_PHONE = os.environ.get('PHONE_HOST_USER')
+
+DEFAULT_FROM_ADDRESS = os.environ.get('ADDRESS_HOST_USER')
 
 SUMMERNOTE_THEME = 'bs4'
 
