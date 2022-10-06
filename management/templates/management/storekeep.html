@@ -25,7 +25,7 @@
         <div class="col-12">
             <h6>Product Store</h6>
             <div class="my-3">
-                <a href="#" class="fancy-btn text-decoration-none">Add Product</a>
+                <a href="{% url 'add_product' %}" class="fancy-btn text-decoration-none">Add Product</a>
             </div>
             <div>
                 <p class="mt-2"><i class="fas fa-exclamation text-info pe-2"></i> <small class="text-muted">Please note.
@@ -72,11 +72,10 @@
                     </div>
                     <div class="card-footer bg-white border-0 pt-0">
                         {% if post.status == 1 %}
-                        <a href="{% url 'view_post' post.slug %}" class="text-decoration-none me-5"><i
-                                class="fab fa-readme"></i>...VIEW STORY</a>
-                        <a class="text-decoration-none" href="#">EDIT</a>
+                        <a href="{% url 'view_post' post.slug %}" class="text-decoration-none me-5"><small><i class="fab fa-readme"></i>...VIEW POST</small></a>
+                        <a class="text-decoration-none" href="#"><small><i class="fas fa-edit"></i>...EDIT</small></a>
                         {% else %}
-                        <a class="text-decoration-none" href="#"><i class="fas fa-edit"></i>...EDIT</a>
+                        <a class="text-decoration-none" href="#"><small><i class="fas fa-edit"></i>...EDIT</small></a>
                         {% endif %}
                     </div>
                 </div>

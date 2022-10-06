@@ -91,7 +91,7 @@ def review(request, product_id):
                 messages.success(
                     request, f'You have updated your review of {product}.\
                     Thank you for your feed back!')
-                return redirect('profile')
+                return redirect(reverse('product_detail', args=[product.id]))
             template_name = 'products/review.html'
             context = {
                 'product': product,
@@ -107,7 +107,7 @@ def review(request, product_id):
                 form.name = request.user
                 form.product = product
                 review_form.save()
-                return redirect('profile')
+                return redirect(reverse('product_detail', args=[product.id]))
             review_form = ReviewForm()
         return render(request, 'products/review.html', {
             'review_form': ReviewForm(),

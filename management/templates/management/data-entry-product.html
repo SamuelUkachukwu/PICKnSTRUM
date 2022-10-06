@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %} Data Entry Product{% endblock %}
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>Product Entry/</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="{% if edit %}{% url 'edit_product' product.id %} {% else %}{% url 'add_product' %}{% endif %}" method="POST" class="row g-3" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-md-6">
+                    {{ form.name | as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.sku | as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.category | as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.image_url | as_crispy_field }}
+                </div>
+                <div class="col-sm-7">
+                    {{ form.image | as_crispy_field }}
+                </div>
+                <div class="col-sm">
+                    {{ form.rating | as_crispy_field }}
+                </div>
+                <div class="col-sm">
+                    {{ form.price | as_crispy_field }}
+                </div>
+                <div class="col-12">
+                    {{ form.description | as_crispy_field }}
+                </div>
+                <div class="col-12">
+                    {{ form.features | as_crispy_field }}
+                    <p><small class="text-muted"><i class="fas fa-exclamation text-info pe-2"></i><i>Hold down “Control”, or “Command” on a Window or Mac, to select more than one.</i></small></p>
+                </div>
+                <div class="col">
+                    <input class="fancy-btn" type="submit" value="Save Product">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- trust statments here  -->
+{% include 'includes/trust-stm.html' %}
+{% endblock %}
