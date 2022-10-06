@@ -23,7 +23,7 @@ def profile(request):
     if image_form.is_valid():
         image_form.save()
         return redirect('profile')
-    orders = profile.orders.all()
+    orders = profile.orders.all().order_by("-date")
     context = {
         'profile': profile,
         'orders': orders,
