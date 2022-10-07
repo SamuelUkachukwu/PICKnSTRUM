@@ -45,7 +45,7 @@
             <div class="col">
                 <h6>Blog Post</h6>
                 <div class="my-3">
-                    <a href="#" class="fancy-btn text-decoration-none">Add Post</a>
+                    <a href="{% url 'add_post' %}" class="fancy-btn text-decoration-none">Add Post</a>
                 </div>
             </div>
         </div>
@@ -72,14 +72,31 @@
                     </div>
                     <div class="card-footer bg-white border-0 pt-0">
                         {% if post.status == 1 %}
-                        <a href="{% url 'view_post' post.slug %}" class="text-decoration-none me-5"><small><i class="fab fa-readme"></i>...VIEW POST</small></a>
-                        <a class="text-decoration-none" href="#"><small><i class="fas fa-edit"></i>...EDIT</small></a>
+                        <a class="text-decoration-none me-5" href="{% url 'view_post' post.slug %}"><small><i class="fab fa-readme"></i>...VIEW POST</small></a>
+                        <a class="text-decoration-none" href="{% url 'edit_post' post.slug %}"><small><i class="fas fa-edit"></i>...EDIT</small></a>
                         {% else %}
-                        <a class="text-decoration-none" href="#"><small><i class="fas fa-edit"></i>...EDIT</small></a>
+                        <a class="text-decoration-none" href="{% url 'edit_post' post.slug %}"><small><i class="fas fa-edit"></i>...EDIT</small></a>
                         {% endif %}
+                        <a class="text-decoration-none ms-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{post.slug}}" href=""><small>DELETE</small></a>
                     </div>
                 </div>
             </div>
+            <!-- delete modal -->
+            <div class="modal fade" id="staticBackdrop{{post.slug}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body text-center">
+                        <p class="m-0"><small>Are You Sure You Want To Delete This Product?</small></p>
+
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn fancy-btn" data-bs-dismiss="modal">Cancel</button>
+                    <a href="{% url 'delete' post.slug %}" type="button" class="btn btn-danger rounded-0">Delete</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        <!-- end here modal -->
         {% endfor %}
         </div>
         <!-- pagination -->

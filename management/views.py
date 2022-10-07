@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from blog.models import Post
 from products.models import Product
 
-from .forms import ProductForm
+from .forms import ProductForm, AddPostForm
 
 
 # Create your views here.
@@ -102,3 +102,79 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product successfully deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_post(request):
+    """Add a post to the database"""
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Only store owners are permitted to take this action.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = AddPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            form.author = request.user
+            form.save()
+            messages.success(request, 'Post Added Successfully!')
+            return redirect(reverse('view_post', args=[post.slug]))
+        else:
+            messages.error(request, 'Error adding the post. \
+                Verify that all fields are filled in accurately.')
+    else:
+        form = AddPostForm()
+
+    template_name = 'management/data-entry-post.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template_name, context)
+
+
+@login_required
+def edit_post(request, slug):
+    """ modify a product in the database """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Only store owners are permitted to take this action.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        form = AddPostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Post successfully updated!')
+            return redirect(reverse('view_post', args=[post.slug]))
+        else:
+            messages.error(
+                request, 'Post update failed. \
+                    Please verify that the form is accurate.')
+    else:
+        form = AddPostForm(instance=post)
+        messages.info(request, f'You are editing {post.title}')
+
+    template_name = 'management/data-entry-post.html'
+    context = {
+        'post': post,
+        'form': form,
+        'edit_post': True,
+
+    }
+    return render(request, template_name, context)
+
+
+@login_required
+def delete_post(request, slug):
+    """ Remove a post from the database."""
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Only store owners are permitted to take this action.')
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    messages.success(request, 'Post successfully deleted!')
+    return redirect(reverse('management'))

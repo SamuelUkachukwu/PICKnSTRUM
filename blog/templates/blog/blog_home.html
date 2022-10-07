@@ -25,7 +25,7 @@
           {% if top_story.featured_image.url %}
             <img src="{{ top_story.featured_image.url }}" alt="{{ top_story.title }}" >
           {% else %}
-            <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" alt="{{ top_story.title }}" >
+            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ top_story.title }}" >
           {% endif %}
       <a href="{% url 'view_post' top_story.slug %}">
       <div class="card-img-overlay p-0">

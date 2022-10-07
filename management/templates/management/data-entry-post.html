@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %} Data Entry Product{% endblock %}
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>Product Entry/</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="{% if edit_post %}{% url 'edit_post' post.slug %} {% else %}{% url 'add_post' %}{% endif %}" method="POST" class="row g-3" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-md-6">
+                    {{ form.title | as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    {{ form.category | as_crispy_field }}
+                </div>
+                <div class="col-md-12">
+                    {{ form.content | as_crispy_field }}
+                </div>
+                <div class="col-sm-7">
+                    {{ form.featured_image | as_crispy_field }}
+                </div>
+                <div class="col-sm">
+                    {{ form.status | as_crispy_field }}
+                </div>
+                <div class="col-12">
+                    {{ form.excerpt | as_crispy_field }}
+                </div>
+                <div class="col">
+                    <input class="fancy-btn" type="submit" value="Save Post">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- trust statments here  -->
+{% include 'includes/trust-stm.html' %}
+{% endblock %}

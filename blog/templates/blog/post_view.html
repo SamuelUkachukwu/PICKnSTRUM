@@ -34,10 +34,10 @@
     <!-- middle content -->
     <div class="col col-md-7">
       <div class="card rounded-0 border-0">
-        {% if post.featured_image.url %}
+        {% if post.featured_image %}
         <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
         {% else %}
-        <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 border-0" alt="..." >
+        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top rounded-0 border-0" alt="..." >
         {% endif %}
         <div class="card-body text-end">
           <h5 class="card-title">{{ post.title }}</h5>
