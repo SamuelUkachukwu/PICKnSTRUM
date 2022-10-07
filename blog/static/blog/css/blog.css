@@ -32,10 +32,7 @@
 .post-heading {
     font-size: clamp(1.2rem, 1vw, 1.6rem) !important;
 }
-.text-responsive{
-    font-size: clamp(0.8rem, 0.9vw, 1.1rem) !important;
-    font-weight: bold;
-}
+
 /*  post likes and dislikes */
 .likes-dislikes {
     color: hsl(0, 81%, 35%)

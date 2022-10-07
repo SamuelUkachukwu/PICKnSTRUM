@@ -120,4 +120,5 @@ def delete_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     review_delete = product.reviews.get(name=request.user)
     review_delete.delete()
+    messages.success(request, f'{product.name}. Successfully deleted!')
     return redirect('profile')

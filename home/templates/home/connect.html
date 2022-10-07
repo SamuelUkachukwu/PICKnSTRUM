@@ -17,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+{% include 'includes/offer.html' %}
 {% if message_sent %}
     <div class="container my-5">
         <div class="row">
@@ -45,7 +46,7 @@
                     <p><i class="fas fa-phone"></i><a class="text-decoration-none ps-2" href="tel:+353831900005" aria-label="call pick n strum on +353831900005"> {{ phone }}</a></p>
                     <p>
                         <i class="fas fa-at"></i>
-                        <a class="text-decoration-none ps-2" href="mailto:{{email}}" target="_blank" rel="noopener" aria-label="send a mail to pick n strum">{{email}}</a>
+                        <a class="text-decoration-none ps-2" href="mailto:{{email}}" target="_blank" rel="noopener" aria-label="send a mail to pick n strum">{{cmp_email}}</a>
                     </p>
                 </div>
                 </div>

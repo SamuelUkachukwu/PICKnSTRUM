@@ -13,12 +13,13 @@
 
 
 {% block content %}
+{% include 'includes/offer.html' %}
 <div class="container mb-5 mt-3">
     <div class="row">
-        <div class="col text-center mt-3">
+        <div class="col text-center mt-1">
             {% for c in current_categories %}
                 <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                    <span class="p-2 mt-2 badge text-black rounded-0 border">{{ c.friendly_name }}</span>
+                    <span class="p-2 mt-1 badge text-black rounded-0 border fs-5 h-text">{{ c.friendly_name }}</span>
                 </a>
             {% endfor %}
         </div>
@@ -70,7 +71,7 @@
                 <div class="card-footer bg-transparent border-0">
                     <div class="row">
                         <div class="col">
-                            <p class="mb-0 text-left fs-3 text-danger fw-bold mt-1">€{{ product.price }}</p>
+                            <h6 class="mb-0 text-left fs-3 text-danger fw-bold mt-1">€{{ product.price }}</h6>
                             {% if product.category %}
                             <p class="small mt-1 mb-0">
                                 <a class="text-muted text-decoration-none" href="{% url 'products' %}?category={{ product.category.name }}">

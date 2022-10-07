@@ -18,6 +18,9 @@ class ProductForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
+        self.fields['rating'].widget.attrs['min'] = 0
+        self.fields['rating'].widget.attrs['max'] = 5
+        self.fields['price'].widget.attrs['min'] = 0
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'form-styling'
 

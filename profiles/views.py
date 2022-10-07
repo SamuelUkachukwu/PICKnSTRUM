@@ -14,7 +14,7 @@ from .forms import UserProfileForm, ProfileImageForm
 def profile(request):
     """Renders the profile page"""
     profile = get_object_or_404(UserProfile, user=request.user)
-    reviews = Review.objects.filter(name=request.user)
+    reviews = Review.objects.filter(name=request.user).order_by("-created_on")
     image_form = ProfileImageForm(
         request.POST or None,
         request.FILES or None,

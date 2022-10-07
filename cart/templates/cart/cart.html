@@ -13,12 +13,13 @@
 {% endblock %}
 
 {% block content %}
+{% include 'includes/offer.html' %}
 <div class="container mt-5">
     <div class="row">
         {% if cart_items %}
 
             <div class="col">
-                <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart</h4>
+                <h4>Your <span class="my-0 logo1">PICK</span><span class="logo2"> & </span><span class="logo1">STRUM</span> Cart</h4>
             </div>
             {% for item in cart_items %}
                 <div class="card mb-3 cart-items border-0">
@@ -97,10 +98,10 @@
             </div>
         {% else %}
             <div class="col text-center mt-2">
-                <h4>Your <strong>PICK </strong>&<strong> STRUM</strong> Cart is Empty</h4>
+                <h4>Your <span class="my-0 logo1">PICK</span><span class="logo2"> & </span><span class="logo1">STRUM</span> Cart is Empty</h4>
                 <p class="mt-5 mb-5">
                     Your Shopping Cart yearn to be filled. Give it purpose — fill it with quality string Instrument.
-                    Continue shopping on the <a class="text-decoration-none" href="{% url 'products' %}"><strong>PICK </strong>&<strong> STRUM</strong> homepage</a>,
+                    Continue shopping on the <a class="text-decoration-none" href="{% url 'products' %}"><span class="my-0 logo1">PICK</span><span class="logo2"> & </span><span class="logo1">STRUM</span> homepage</a>,
                     learn about today's <a class="text-decoration-none" href="{% url 'products' %}?category=clearance,deals">deals</a>.
                 </p>
             </div>
