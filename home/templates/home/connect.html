@@ -17,49 +17,60 @@
 {% endblock %}
 
 {% block content %}
-{% if contact_us %}
-<div class="container">
-    <div class="row">
-        <div class="col text-center my-2">
-            <h5 class="mb-3">Get in Touch</h5>
-            <p>Wish to speak with someone? We sincerely appreciated your feedback. Here is how you can reach us.</p>
+{% if message_sent %}
+    <div class="container my-5">
+        <div class="row">
+            <div class="col">
+                <div class="col text-center my-2">
+                    <h5 class="mb-3">Thank You for Contacting Us</h5>
+                    <p>Your email has been received, and we will contact you shortly.</p>
+                </div>
+            </div>
         </div>
     </div>
+{% elif contact_us %}
 
-    <div class="row">
-        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center contact connect-text-contact">
-           <div class="p-2">
-            <p><i class="fas fa-map-marker pe-2"></i> {{address}}</p>
-            <p><i class="fas fa-phone"></i><a class="text-decoration-none ps-2" href="tel:+353831900005" aria-label="call pick n strum on +353831900005"> {{ phone }}</a></p>
-            <p>
-                <i class="fas fa-at"></i>
-                <a class="text-decoration-none ps-2" href="mailto:{{email}}" target="_blank" rel="noopener" aria-label="send a mail to pick n strum">{{email}}</a>
-            </p>
-           </div>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center my-2">
+                    <h5 class="mb-3">Get in Touch</h5>
+                    <p>Wish to speak with someone? We sincerely appreciated your feedback. Here is how you can reach us.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center contact connect-text-contact">
+                <div class="p-2">
+                    <p><i class="fas fa-map-marker pe-2"></i> {{address}}</p>
+                    <p><i class="fas fa-phone"></i><a class="text-decoration-none ps-2" href="tel:+353831900005" aria-label="call pick n strum on +353831900005"> {{ phone }}</a></p>
+                    <p>
+                        <i class="fas fa-at"></i>
+                        <a class="text-decoration-none ps-2" href="mailto:{{email}}" target="_blank" rel="noopener" aria-label="send a mail to pick n strum">{{email}}</a>
+                    </p>
+                </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form action="{% url 'contact_us' %}" method="POST">
+                        {% csrf_token %}
+                        <fieldset>
+                            <legend>contact us</legend>
+                            <div>
+                                {{ form.name | as_crispy_field }}
+                            </div>
+                            <div>
+                                {{ form.email | as_crispy_field }}
+                            </div>
+                            <div>
+                                {{ form.body | as_crispy_field }}
+                            </div>
+                            <div>
+                                <input type="submit" value="Contact Us" class="fancy-btn">
+                            </div>
+                        </fieldset>
+                    </form>
+            </div>
+            </div>
         </div>
-        <div class="col-12 col-md-6">
-            <form action="">
-                {% csrf_token %}
-                <fieldset>
-                    <legend>contact us</legend>
-                    <div>
-                        {{ form.name | as_crispy_field }}
-                    </div>
-                    <div>
-                        {{ form.email | as_crispy_field }}
-                    </div>
-                    <div>
-                        {{ form.body | as_crispy_field }}
-                    </div>
-                    <div>
-                        <input type="submit" value="Contact Us" class="fancy-btn">
-                    </div>
-                </fieldset>
-            </form>
-    </div>
-    </div>
-</div>
-
 {% else %}
 <div class="container-fluid connect-hero">
     <div class="row align-items-center justify-content-center">

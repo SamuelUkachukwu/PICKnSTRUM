@@ -77,7 +77,7 @@
                         {% else %}
                         <a class="text-decoration-none" href="{% url 'edit_post' post.slug %}"><small><i class="fas fa-edit"></i>...EDIT</small></a>
                         {% endif %}
-                        <a class="text-decoration-none ms-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{post.slug}}" href=""><small>DELETE</small></a>
+                        <a class="text-decoration-none ms-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{post.slug}}" href=""><small><i class="fas fa-trash-alt"></i> ...DELETE</small></a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content rounded-0">
                     <div class="modal-body text-center">
-                        <p class="m-0"><small>Are You Sure You Want To Delete This Product?</small></p>
+                        <p class="m-0"><small><i class="fas fa-trash-alt pe-3"></i> Are You Sure You Want To Delete This Post?</small></p>
 
                     </div>
                     <div class="modal-footer">

@@ -1,5 +1,11 @@
 from django.shortcuts import render
+
+from django.contrib import messages
 from django.conf import settings
+
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
 from .forms import ContactUsForm
 
 
@@ -18,12 +24,38 @@ def about_us(request):
 def contact_us(request):
     """Renders the contact us page"""
     phone = settings.DEFAULT_FROM_PHONE
-    email = settings.DEFAULT_FROM_EMAIL
+    cmp_email = settings.DEFAULT_FROM_EMAIL
     address = settings.DEFAULT_FROM_ADDRESS
-    form = ContactUsForm()
+
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST, request.FILES)
+        if form.is_valid():
+            sender = request.POST['name']
+            from_email = request.POST['email']
+            form_message = request.POST['body']
+            subject = render_to_string(
+                'home/contact_us_email/contact_us_email_subject.txt',
+                {'sender': sender})
+            message = render_to_string(
+                'home/contact_us_email/contact_us_email_body.txt',
+                {
+                    'sender': sender,
+                    'form_message': form_message,
+                    'from_email': from_email
+                    })
+            send_mail(
+                subject,
+                message,
+                from_email,
+                [cmp_email],
+                )
+            messages.success(request, 'Message Sent!')
+            return render(request, 'home/connect.html', {'message_sent': True})
+    else:
+        form = ContactUsForm()
     context = {
         'phone': phone,
-        'email': email,
+        'cmp_email': cmp_email,
         'address': address,
         'form': form,
         'contact_us': True

@@ -1,0 +1,10 @@
+Hello Admin,
+
+message from {{ sender }}.
+
+{{ form_message }}
+
+{{ email}} is the email address to get in touch with {{ sender }}.
+
+
+Please respond to the aforementioned inquiry in line with company guidelines.
