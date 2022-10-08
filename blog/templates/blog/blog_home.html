@@ -22,10 +22,10 @@
     {% for top_story in top_stories|slice:":2" %}
 
     <div class="card text-bg-dark col-12 col-md-6 p-0 rounded-0 stories-container mb-3">
-          {% if top_story.featured_image.url %}
+          {% if top_story.featured_image %}
             <img src="{{ top_story.featured_image.url }}" alt="{{ top_story.title }}" >
           {% else %}
-            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ top_story.title }}" >
+            <img src="{{ MEDIA_URL }}solar.jpg" alt="{{ top_story.title }}" >
           {% endif %}
       <a href="{% url 'view_post' top_story.slug %}">
       <div class="card-img-overlay p-0">
@@ -57,10 +57,10 @@
           <p class="fs-5"><strong>{{ post.category.friendly_name }}</strong></p>
         </div>
         <a href="{% url 'view_post' post.slug %}">
-          {% if post.featured_image.url %}
+          {% if post.featured_image %}
           <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 dynamic-card" alt="{{ post.title}}" >
           {% else %}
-          <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 dynamic-card" alt="{{ post.title}}" >
+          <img src="{{ MEDIA_URL }}solar.jpg" class="card-img-top rounded-0 dynamic-card" alt="{{ post.title}}" >
           {% endif %}
         </a>
         <div class="card-body">

@@ -21,7 +21,6 @@
   <div class="row">
     <!-- left side bar -->
     <div class="col col-md-2 d-none d-lg-block">
-
         <div class="card rounded-0 post-card text-center bg-warning py-3 dynamic-card" style="width: 95%; margin: auto;">
           <img src="{{ MEDIA_URL }}esp-guitar.png" class="card-img-top rounded-0" alt="standing guitar image back ground">
           <div class="text-box py-2 border-0">
@@ -29,7 +28,6 @@
             <a href="{% url 'products' %}" class="card-title btn btn-lg btn-primary">SHOP NOW</a>
           </div>
         </div>
-
     </div>
     <!-- middle content -->
     <div class="col col-md-7">
@@ -37,7 +35,7 @@
         {% if post.featured_image %}
         <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
         {% else %}
-        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top rounded-0 border-0" alt="..." >
+        <img src="{{ MEDIA_URL }}solar.jpg" class="card-img-top rounded-0 border-0" alt="..." >
         {% endif %}
         <div class="card-body text-end">
           <h5 class="card-title">{{ post.title }}</h5>
@@ -80,7 +78,7 @@
       {% for post in posts %}
       <div class="card rounded-0 border-0 mb-2 py-0" style="width: 95%; margin: auto;">
         <a href="{% url 'view_post' post.slug %}">
-            {% if post.featured_image.url %}
+            {% if post.featured_image %}
           <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
           {% else %}
           <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 border-0" alt="..." >

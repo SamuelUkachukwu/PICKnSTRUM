@@ -119,7 +119,7 @@ def add_post(request):
             form.author = request.user
             form.save()
             messages.success(request, 'Post Added Successfully!')
-            return redirect(reverse('view_post', args=[post.slug]))
+            return redirect(reverse('management'))
         else:
             messages.error(request, 'Error adding the post. \
                 Verify that all fields are filled in accurately.')
@@ -147,7 +147,7 @@ def edit_post(request, slug):
         if form.is_valid():
             form.save()
             messages.success(request, 'Post successfully updated!')
-            return redirect(reverse('view_post', args=[post.slug]))
+            return redirect(reverse('management'))
         else:
             messages.error(
                 request, 'Post update failed. \

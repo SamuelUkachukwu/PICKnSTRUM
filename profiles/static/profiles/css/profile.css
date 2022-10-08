@@ -19,7 +19,7 @@
 }
 
 .text-resp {
-    font-size: clamp(0.7rem, 0.9vw, 1.2rem);
+    font-size: clamp(1rem, 0.9vw, 1.2rem);
     font-weight: bold;
 }
 

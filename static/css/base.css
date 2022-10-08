@@ -3,11 +3,33 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* Color Theme Swatches in Hex */
+.guitar-burst-1-hex { color: #F2B705; }
+.guitar-burst-2-hex { color: #D98E04; }
+.guitar-burst-3-hex { color: #D97904; }
+.guitar-burst-4-hex { color: #A62F03; }
+.guitar-burst-5-hex { color: #590902; }
+
+/* Color Theme Swatches in RGBA */
+.guitar-burst-1-rgba { color: rgba(242, 182, 5, 1); }
+.guitar-burst-2-rgba { color: rgba(216, 142, 3, 1); }
+.guitar-burst-3-rgba { color: rgba(216, 121, 3, 1); }
+.guitar-burst-4-rgba { color: rgba(165, 47, 3, 1); }
+.guitar-burst-5-rgba { color: rgba(89, 8, 1, 1); }
+
+/* Color Theme Swatches in HSLA */
+.guitar-burst-1-hsla { color: hsla(45, 95, 48, 1); }
+.guitar-burst-2-hsla { color: hsla(38, 96, 43, 1); }
+.guitar-burst-3-hsla { color: hsla(32, 96, 43, 1); }
+.guitar-burst-4-hsla { color: hsla(16, 96, 33, 1); }
+.guitar-burst-5-hsla { color: hsla(4, 95, 17, 1); }
 
 body {
     font-family: 'Lato', sans-serif;
 }
-
+p{
+    /* font-size: 1rem; */
+}
 h1,
 h2,
 h3,
@@ -218,16 +240,11 @@ input,
 /*------------------- toast styling */
 .message-container {
     position: fixed;
-    right: 15px;
+    right: 5px;
     top: 100px;
     z-index: 99999999;
+    width: 310px;
 }
-
-/* @media (min-width: 992px) {
-    .header-backspace {
-        padding-top: 170px;
-    }
-} */
 
 /* media styling for screen size mobile  */
 @media (max-width: 991px) {
