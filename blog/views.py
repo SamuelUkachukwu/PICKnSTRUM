@@ -48,7 +48,7 @@ def view_blog_article(request, slug):
         'cat_list': cat_list,
         "liked": liked,
         "disliked": disliked,
-        'on_blog': True,
+
     }
     return render(request, template_name, context)
 
