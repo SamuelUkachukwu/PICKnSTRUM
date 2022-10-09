@@ -3,33 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* Color Theme Swatches in Hex */
-.guitar-burst-1-hex { color: #F2B705; }
-.guitar-burst-2-hex { color: #D98E04; }
-.guitar-burst-3-hex { color: #D97904; }
-.guitar-burst-4-hex { color: #A62F03; }
-.guitar-burst-5-hex { color: #590902; }
 
-/* Color Theme Swatches in RGBA */
-.guitar-burst-1-rgba { color: rgba(242, 182, 5, 1); }
-.guitar-burst-2-rgba { color: rgba(216, 142, 3, 1); }
-.guitar-burst-3-rgba { color: rgba(216, 121, 3, 1); }
-.guitar-burst-4-rgba { color: rgba(165, 47, 3, 1); }
-.guitar-burst-5-rgba { color: rgba(89, 8, 1, 1); }
+/* ----------------------root colors  */
+:root {
+    --white: #fff;
+    --light-grey: #ccc;
+    --black: #000;
+    --yellow: #F2B705;
+    --off-white: #ebeae9;
+    --rust: #A62F03;
+    --rust-dark: #590902;
+    --ash: #aaaaaa;
+    --light-blue: #5d6977;
+}
 
-/* Color Theme Swatches in HSLA */
-.guitar-burst-1-hsla { color: hsla(45, 95, 48, 1); }
-.guitar-burst-2-hsla { color: hsla(38, 96, 43, 1); }
-.guitar-burst-3-hsla { color: hsla(32, 96, 43, 1); }
-.guitar-burst-4-hsla { color: hsla(16, 96, 33, 1); }
-.guitar-burst-5-hsla { color: hsla(4, 95, 17, 1); }
+.bg-custom {
+    background-color: var(--yellow);
+    color: var(--black) !important;
+}
 
 body {
     font-family: 'Lato', sans-serif;
 }
-p{
-    /* font-size: 1rem; */
-}
+
 h1,
 h2,
 h3,
@@ -47,13 +43,6 @@ h6,
 
 .logo2 {
     font-family: 'Henny Penny', cursive;
-}
-
-/* ----------------------root colors  */
-:root {
-    --white: #fff;
-    --light-grey: #ccc;
-    --black: #000;
 }
 
 /* -----------------------scrollbar styling */
@@ -82,8 +71,8 @@ h6,
 
 .carousel-item {
     height: 66vh;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--white);
     position: relative;
     background-position: center;
     background-size: cover;
@@ -111,7 +100,7 @@ h6,
 }
 
 .hero-card {
-    background-color: #652e2e;
+    background-color: var(--rust);
     position: relative;
 }
 
@@ -120,7 +109,7 @@ h6,
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: var(--white);
 }
 
 .hero-card-image {
@@ -129,15 +118,15 @@ h6,
 
 /* -------------product page styling */
 .yellow {
-    color: #ffae00;
+    color: var(--yellow);
 }
 
 .dynamic-card {
-    box-shadow: 2px 2px 3px #aaaaaa;
+    box-shadow: 2px 2px 3px var(--ash);
 }
 
 .dynamic-card:hover {
-    box-shadow: 2px 2px 3px #310d0d;
+    box-shadow: 2px 2px 3px var(--rust);
 }
 
 .product-image {
@@ -183,11 +172,11 @@ input,
 .mail-chimp-box input,
 .form-styling {
     box-sizing: border-box;
-    border: 1px solid #000;
+    border: 1px solid var(--black);
     border-radius: 0px;
-    background-color: white;
+    background-color: var(--white);
     padding: 10px 12px;
-    box-shadow: 0 1px 3px 0 #5d6977;
+    box-shadow: 0 1px 3px 0 var(--light-blue);
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
 }
@@ -197,26 +186,36 @@ input,
 .mail-chimp-box input[type='submit'],
 .form-styling input[type='submit'],
 .fancy-btn {
-    font-weight: 400;
-    color: #000;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--white) !important;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #ffc107;
+    background-color: var(--rust) !important;
     ;
-    border: 1px solid #ffc107;
+    border: 1px solid var(--rust);
     ;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     border-radius: 0;
-    box-shadow: 0 1px 3px 0 #5d6977;
+    box-shadow: 0 1px 3px 0 var(--light-blue);
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
+    transition: 300ms ease;
+}
 
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover,
+.mail-chimp-box input[type='submit']:hover,
+.form-styling input[type='submit']:hover,
+.fancy-btn:hover {
+    color: var(--black) !important;
+    background-color: var(--yellow) !important;
 }
 
 #div_id_rate div {

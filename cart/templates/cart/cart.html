@@ -37,12 +37,13 @@
                             <p class="m-0"><small>SKU: {{ item.product.sku|upper }}</small></p>
                             <p class="card-text">Product Price: <small class="text-muted"> €{{ item.product.price }}</small></p>
                             <div class="row">
-                                    <div class="col-sm col-md-8 col-lg-3">
+                                    <div class="col-12 col-md-6">
                                         <form class="form update-form" action="{% url 'update_cart' item.item_id %}" method="POST">
                                             {% csrf_token %}
                                             <div class="input-group" >
-                                                <select class="form-select" name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                                    <option value="{{ item.quantity }}">Quantity: {{ item.quantity }}</option>
+                                                    <span class="input-group-text">Quantity:</span>
+                                                <select class="border" name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    <option value="{{ item.quantity }}">{{ item.quantity }}</option>
                                                     <option value="1"> 1</option>
                                                     <option value="2"> 2</option>
                                                     <option value="3"> 3</option>
