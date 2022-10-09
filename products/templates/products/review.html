@@ -46,7 +46,7 @@
             <a class="text-muted text-decoration-none pt-2" href="{% url 'products' %}?category={{ product.category.name }}">
               <i class="fas fa-tag me-1"></i>{{ product.category.friendly_name }}
             </a>
-            <p class="mb-0 text-left fs-5 text-danger fw-bold mt-1">€{{ product.price }}</p>
+            <h6 class="mb-0 text-left fs-5 text-danger fw-bold mt-1">€{{ product.price }}</h6>
           </div>
         </div>
       </div>
@@ -62,9 +62,6 @@
             <legend class="form-label fs-6 px-2 w-auto"><strong><small>Rate 1 - 5</small></strong></legend>
           {{ review_form.rate | as_crispy_field }}
           </fieldset>
-
-
-
           <input type="submit" class="btn btn-small fancy-btn rounded-0" value="Submit Review">
           <a class="ms-3 btn btn-small rounded-0 fancy-btn" href="{% url 'profile' %}">back to Profile</a>
       </form>
