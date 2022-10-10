@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.http import Http404
+
 from django.views import View
 from .models import Post, PostCategory
 
@@ -13,13 +13,9 @@ def blog_home(request):
     page = request.GET.get('page')
     posts = paginator.get_page(page)
 
-    try:
-        query = PostCategory.objects.get(name='top_stories')
-        if query:
-            top_stories = Post.objects.filter(category=query).order_by('?')
-            return top_stories
-    except PostCategory.DoesNotExist:
-        raise Http404("Technical Issues please try again")
+    query = PostCategory.objects.get(name='top_stories')
+    top_stories = Post.objects.filter(category=query).order_by('?')
+
     context = {
         'posts': posts,
         'on_blog': True,
