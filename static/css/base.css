@@ -244,25 +244,34 @@ input,
     z-index: 99999999;
     width: 310px;
 }
+
 /* --------------------error page styling*/
 .error-page {
     position: relative;
-  }
-  /* https://css-tricks.com/snippets/css/transparent-background-images/ */
+    height: 70vh;
+}
+
+/* https://css-tricks.com/snippets/css/transparent-background-images/ */
 .error-page::after {
     content: "";
-    background-image: url("/media/page-designs/contact_us.jpg");
+    background-image: url("/media/guitar_4041.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.8;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: -1;
-  }
+}
+
+.text-404 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 /* media styling for screen size mobile  */
 @media (max-width: 991px) {
     .header-backspace {

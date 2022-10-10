@@ -19,7 +19,7 @@ def blog_home(request):
             top_stories = Post.objects.filter(category=query).order_by('?')
             return top_stories
     except PostCategory.DoesNotExist:
-        raise Http404("Poll does not exist")
+        raise Http404("Technical Issues please try again")
     context = {
         'posts': posts,
         'on_blog': True,
