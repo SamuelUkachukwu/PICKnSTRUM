@@ -254,7 +254,7 @@ input,
 /* https://css-tricks.com/snippets/css/transparent-background-images/ */
 .error-page::after {
     content: "";
-    background-image: url("/media/guitar_4041.jpg");
+    background-image: url("/media/guitar_404.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
