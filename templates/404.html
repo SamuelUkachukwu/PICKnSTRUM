@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %} Home{% endblock %}
+{% block page_header %}
+<div class="container header-backspace">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+{% include 'includes/offer.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col error-page">
+
+        </div>
+    </div>
+</div>
+ <!-- trust statments here  -->
+ {% include 'includes/trust-stm.html' %}
+{% endblock %}

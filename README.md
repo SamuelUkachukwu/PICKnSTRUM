@@ -1,108 +1,209 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pick & Strum
+Pick&Strum is a specially designed website application for a business that sells stringed instruments, including anything from guitars to violins, and related accessories. It is intended to provide users with a secure and simple experience. This project was created utilizing the Django framework and supporting languages in Python, HTML, CSS, JavaScript, as well as other libraries like Crispy, Summernote Allauth and Stripe.
 
-Welcome SamuelUkachukwu,
+## Table of Content
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- [Responsiveness](#responsiveness)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- [Site Scope](#site-scope)
+    * [user stories](#user-stories)
 
-## Gitpod Reminders
+- [Features](#features)
+    * [Navigation](#navigation)
+    * [Features left to implement](#features-left-to-implement)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [Database Model](#database-model)
 
-`python3 -m http.server`
+- [Wire Frame](#wire-frame)
 
-A blue button should appear to click: _Make Public_,
+- [Language, Framework, Library and Tools](#language-framework-library-and-tools)
 
-Another blue button should appear to click: _Open Browser_.
+- [Testing](#testing)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- [Bugs](#bugs)
 
-A blue button should appear to click: _Make Public_,
+- [Deployment](#deployment)
 
-Another blue button should appear to click: _Open Browser_.
+- [Credits](#credits)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- [Acknowledgment](#acknowledgment)
 
-To log into the Heroku toolbelt CLI:
+- [Disclaimer](#disclaimer)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Responsiveness:
+The site is responsive and can be easily accessed with full functionality in full screen, tablet and mobile screen
+![responsive design of the website from ami.responsive.com]()
 
-------
+## Site Scope
+* Responsive Design: Pick&Strum website should be fully responsive in all devices from screen size 280 upwards
+* No loss to functionality between mobile devices and tablets or desktops
+* Site user can view products and blog post.
+* Site users can make purchase without need to create an account.
+* Site users can view blog post and intaract by liking or disliking post.
+* Site users can create a personal account and save and view thier order history
+* Site Users can update thier data and review product they have purchased.
+* Restrictions to key site features unless site user is registered and logged in
+* Logged in users’ ability to perform full CRUD functionality to their profile and reviews posted on the site
+* Logged in users ability to interact with posts in the blog section
 
-## Release History
+### User stories
+| As a...                | I can...                                                 | So I can...                                                                 |
+| :------------          |   :------------------------                              |        :--------------------------                                          |
+|As a user               | I can see all products           |  so that I can select some to purchase.                                          |
+|As a user               | I can view individual products                          |so that I can see the rating, details, specifications, price, quantity
+|As a user                |I can easily identify deals and clearance               |so that I can benefit from the deals and promotions
+|As a user               |I can search for a product by name or category           |so that I can find a product easily and quickly
+|As a user               |I can sort available products in order of prices or brand |so that I can make informed decision and manage purchase and expense parameters
+|As a user               |I can add items I want into a bag                        |so that I can easily add or remove items
+|As a user                |I can view the total of my purchase                       |so that I can make informed decision on how much I am spending
+|As a user                  |I can view list of posted blogs                        |so that I can select and read any one I like
+|As a user                  | I can click on a post                                  |  so that I can read the full post.
+|As a user             |I can easily register an account                       |so that I will be able to view my profile
+|As a user             |I can Easily Login and Logout                          |so that I can access my personal information
+|As a user             |I can easily recover my password                       |so that I can log back into my profile
+|As a user             |I can have a personalized user profile                 |so that I can view my order history update my user profile and save my payment confirmation
+|As a user             |I can Subscribe to sites newsletter                    |so that I can receive informative newsletters and benefit from any deals available
+|As a user               |I can save purchase history to my profile              |so that I can review the items and plan feature purchases
+|As a user               |I can pay for products in my shopping bag securely     |so that I can feel safe and confident using my card on the site
+|As a Site Admin        |I can view a data entry form                           |so that I can add, update and delete products and posts
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[back to content](#table-of-content)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Features
+### Navigation:
+Navigation bar containing site logo that is also a home button and a login link beside a call to action register button
+![navigation user not logged in](static/img/user_not_logged_in.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+If user is logged in the registered username appears as a link to the far right. On click the username drops down to a tab with links to view the logged in user profile, submit new story or logout of the site.
+![navigation user logged in](static/img/logged_in_user.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+on the home page, post by site users are listed in rows to the left in order of new to old posts and peginated by 20 post.
+![home page](static/img/homepage.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+To the right of the home page is a list of categories chosen by the site admin and can only be modified by the site admin. Each category has a link to a page with only post listed under that category.
+![category list page](static/img/category_page.png)
+site users need to be logged in to view the category page.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Each post can be viewed in detail by clicking the Title of the post this takes the site user to a detail view page were logged in users can interact with the post by liking or disliking the post or leaving a public comment.
+site users not logged in are requested to do so to be able to interact with the post they are viewing.
+![request to login before interaction](static/img/sign_in_required.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+In addition to being able to interact with posts, registered users can also add, edit and delete own posts in a custom user page.
+![private profile page](static/img/user_profile_page.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+When each post is viewed, site users can also view a public profile of the author with a list of all the authors published post sorted in order of new to old.
+![public profile page](static/img/public_profile.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Features left to implement:
+* Follow Author functionality
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ [back to content](#table-of-content)
+## Database Model
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Relational Database Model was used in this project
+![Data Model](static/img/relational%20database%20model.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[back to content](#table-of-content)
+## Wire Frame
+Mock up site was created using figma wireframing. individual frames can be seen [here](wireframe.md)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[back to content](#table-of-content)
+## Language, Framework, Library and Tools
+* HTML5 [More on HTML5 ](https://en.wikipedia.org/wiki/HTML5)
+* CSS3 [More on CSS](https://en.wikipedia.org/wiki/CSS)
+* JavaScript [More on JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* Python [Python](https://www.python.org/) [Read More on Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-------
+* Bootstarp 5 [Bootstrap](https://getbootstrap.com/)
+* Django [Django](https://www.djangoproject.com/)
 
-## FAQ about the uptime script
+* Django-allauth [django-allauth read the doc](https://django-allauth.readthedocs.io/en/latest/)
+* Cloudinary [Image hosting](https://cloudinary.com/)
+* Crispy-form [django-crispy-form read the doc](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
+* Summernote [Summernote Docs](https://summernote.org/)
 
-**Why have you added this script?**
+* Figma [more on Figma](https://www.figma.com/)
+* Heroku [more on Heroku](https://devcenter.heroku.com/)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[back to content](#table-of-content)
 
-**How will this affect me?**
+## Testing
+The codes were tested by doing the following:
+### Manual Testing:
+1.	Entered invalid inputs and wrong inputs where inputs are requested with respect to integers and strings.
+2.	Recruited help from friends to use app and offer feedback
+3.  Lunching site on different devices and browsers to check for responsiveness and bugs.
+    * google chrom
+    * fire fox
+    * microsoft edge
+    * Operamini
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### W3C CSS Validation: No Errors returned
+![CSS validation](static/img/css_validation.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Pep8 Validation: No errors returned
+![pep8 validation](static/img/pep8_check.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+#### Accessibility:
 
-**So….?**
+Accessibility testing was conducted using light house devtools and it confirmed that the fonts and colors selected are easy to read and accecssible.
+![lighthouse validation](static/img/lighthousetest.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+#### Unittest:
+Unit test was created to test the form.py, views.py and models.py
 
-**Can I opt out?**
+[back to content](#table-of-content)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Bugs
+* none found
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+[back to content](#table-of-content)
 
-**Anything more?**
+## Deployment
+The project was deployed to Heroku with the following steps:
+1. create a Heroku account
+1.  in the settings section reveal the config var and enter the key and value pair from the settings.py file
+DJANGO_URL, SECRET_KEY, PORT and CLOUDINARY_URL
+1.	on the Resources tab select Heroku Postgres as the database
+1. on the treminal type:
+ ```
+ python3 manage.py makemigrations
+ ```
+ and
+ ```
+ python3 manage.py migrate
+ ```
+ to migrate your database.
+1.	on the CLI create a requirements.txt file using the command:
+ ```
+ pip3 freeze -–local > requirements.txt
+ ```
+1.	Add a Procfile with the required codes in it: ```web: gunicorn .wasgi```
+1.	Change Debug to False and commit repository to Github.
+1. In the deploy section select github and search for the repository name. link up the Heroku app to the github repository code.
+1. Scroll down and setup automatic deploy to allow Heroku to update app from gitpod push and click on the manual deploy option.
+1. click view to view the app.
+* The Deployed App can be viewed here [](https://story-base.herokuapp.com/)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[back to content](#table-of-content)
 
----
+## Credits
+* Code Institute [Code Institute](https://codeinstitute.net/ie/)
+* Django Doc [read the doc](https://docs.djangoproject.com/en/4.0/)
+* Pixabay for the images used on the site [Pixabay](https://pixabay.com/)
+* Ukachukwu Sherifat [@Nurse_Ukachukwu](https://twitter.com/nurse_ukachukwu) for external user testing.
 
-Happy coding!
+[back to content](#table-of-content)
+
+## Acknowledgment
+* Code Institute Tutor Assistance
+* Caleb Mbakwe Mentor
+* Sherifat and Olivia for all the love and support
+
+[back to content](#table-of-content)
+
+## Disclaimer
+This site was developed for educational purposes only. _Samuel Ukachukwu 22/06/2022_
