@@ -1,5 +1,5 @@
 .connect-hero{
-background: #000 url("/media/page-designs/about.jpg") no-repeat fixed center;
+background: #000 url("/media/about.jpg") no-repeat fixed center;
 }
 
 .connect-text-about{
@@ -13,7 +13,7 @@ background: #000 url("/media/page-designs/about.jpg") no-repeat fixed center;
   /* https://css-tricks.com/snippets/css/transparent-background-images/ */
 .connect-text-contact::after {
     content: "";
-    background-image: url("/media/page-designs/contact_us.jpg");
+    background-image: url("/media/contact_us.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

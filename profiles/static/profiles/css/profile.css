@@ -25,22 +25,22 @@
 
 /* background cover photo */
 .cool {
-    background: url(/media/page-designs/cool.jpg) no-repeat center center;
+    background: url(/media/cool.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .goth {
-    background: url(/media/page-designs/goth.png) no-repeat center center;
+    background: url(/media/goth.png) no-repeat center center;
     background-size: cover;
 }
 
 .serenity {
-    background: url(/media/page-designs/serenity.jpg) no-repeat center center;
+    background: url(/media/serenity.jpg) no-repeat center center;
     background-size: cover;
 }
 
 .rock {
-    background: url(/media/page-designs/rock.jpg) no-repeat center center;
+    background: url(/media/rock.jpg) no-repeat center center;
     background-size: cover;
 }
 
