@@ -28,7 +28,7 @@
                         {% if item.product.image %}
                         <img class="img-fluid rounded m-auto" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="110px" height="110px">
                         {% else %}
-                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="110px" height="110px">
+                        <img class="img-fluid rounded m-auto" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="110px" height="110px">
                         {% endif %}
                     </div>
                     <div class="col-9">
