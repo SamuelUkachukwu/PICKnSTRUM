@@ -2,9 +2,11 @@ Hello Admin,
 
 message from {{ sender }}.
 
+message reads:
+
 {{ form_message }}
 
-{{ email}} is the email address to get in touch with {{ sender }}.
+{{ from_email }} is the email address to get in touch with {{ sender }}.
 
 
 Please respond to the aforementioned inquiry in line with company guidelines.
