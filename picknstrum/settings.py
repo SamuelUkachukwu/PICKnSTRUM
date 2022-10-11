@@ -110,8 +110,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -232,9 +230,9 @@ DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 # company data
 DEFAULT_FROM_PHONE = os.environ.get('PHONE_HOST_USER')
-
 DEFAULT_FROM_ADDRESS = os.environ.get('ADDRESS_HOST_USER')
 
+# summernote
 SUMMERNOTE_THEME = 'bs4'
 
 SUMMERNOTE_CONFIG = {

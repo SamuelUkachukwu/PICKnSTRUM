@@ -116,8 +116,9 @@ def add_post(request):
         form = AddPostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
-            form.author = request.user
-            form.save()
+            user = request.user
+            post.author = user
+            post.save()
             messages.success(request, 'Post Added Successfully!')
             return redirect(reverse('management'))
         else:

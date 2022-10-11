@@ -38,7 +38,6 @@ class AddPostForm(forms.ModelForm):
             'featured_image',
             'status',
             'excerpt'
-
         )
 
     def __init__(self, *args, **kwargs):
