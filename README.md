@@ -30,6 +30,14 @@ Pick&Strum is a specially designed website application for a business that sells
 
 - [Disclaimer](#disclaimer)
 
+<details>
+<summary>Dropdown Heading</summary>
+<br>
+Choice 1
+<br> Choice 2
+<br> Choice 2
+<br>
+</details>
 
 ## Responsiveness:
 The site is responsive and can be easily accessed with full functionality in full screen, tablet and mobile screen
@@ -73,16 +81,50 @@ The site is responsive and can be easily accessed with full functionality in ful
 
 ## Features
 ### Navigation:
-Navigation bar containing site logo that is also a home button and a login link beside a call to action register button
-![navigation user not logged in](static/img/user_not_logged_in.png)
+Navigation bar is fully responsive and show different layout yet equal functionality in mobile and desktop site.
+the company name also servers as a home button for users to get to the home page on a click.
+a search bar is convinently placed in the middle for ease of use and in mobile it drops down below the navbar at a convinent line of sight .
+on the right is the user account and store cart link, both icons are degined to show informations easily recognized by the user.
+* The account icon hides a dropdown indicated by the down chevron arrow.
+* If user is not logged in the options to register or login is shown.
+* if logged in the opitins to manage store (if superuser) profile and logout is shown.
 
-If user is logged in the registered username appears as a link to the far right. On click the username drops down to a tab with links to view the logged in user profile, submit new story or logout of the site.
-![navigation user logged in](static/img/logged_in_user.png)
+<details>
+<summary>Navigation ScreenShots</summary>
+<br>Site Navigation
 
-on the home page, post by site users are listed in rows to the left in order of new to old posts and peginated by 20 post.
-![home page](static/img/homepage.png)
+![navigation user logged in](readme_imgs/user-logged-in.png)
 
-To the right of the home page is a list of categories chosen by the site admin and can only be modified by the site admin. Each category has a link to a page with only post listed under that category.
+<br>Navigation user not logged in
+
+![navigation user not logged in](readme_imgs/user-not-logged-in.png)
+
+<br>Navigation mobile view
+
+![navigation mobile view](readme_imgs/mobile-dropdown.png)
+
+<br>Navigation mobile view search dropdown
+
+![navigation mobile view search dropdown](readme_imgs/mobile-search-position.png)
+<br>
+</details>
+
+
+### Home Page:
+The site Home page features a bold statement in line with what the site offers. A call out to music lovers and an offer to assist in making that dream come through.
+the home page is built around a Carousel that imtermitently changes both eye catching and informative presenting clients to the options of: shop Now, shop deals or blog post.
+<details>
+<summary>Home Page</summary>
+<br> Home Page 1
+
+![home page](readme_imgs/home-page1.png)
+<br> Home Page 2
+
+![home page](readme_imgs/Home-page-2.png)
+</details>
+
+
+
 ![category list page](static/img/category_page.png)
 site users need to be logged in to view the category page.
 
