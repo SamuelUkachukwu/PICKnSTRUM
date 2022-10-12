@@ -65,5 +65,6 @@ def contact_us(request):
 
 
 def privacy_policy(request):
+    """Renders the privacy policy page"""
     template_name = 'home/privacy_policy.html'
     return render(request, template_name)
