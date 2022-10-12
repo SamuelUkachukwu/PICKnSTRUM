@@ -13,13 +13,18 @@
 
 {% block content %}
 {% include 'includes/offer.html' %}
-
 <div class="container-fluid">
     <div class="row">
         <div class="col error-page d-flex justify-content-center align-items-center">
             <div class="text-black text-center text-404">
                 <p >404</p>
-                <p class="fs-5">Please try again later as we are having some technical difficulties right now.</p>
+                <p class="fs-5">The page you are looking for isn't available.</p>
+                <h4>
+                    <a href="{% url 'products' %}"
+                        class="shop-now-button btn btn-lg fancy-btn rounded-0 text-uppercase py-3">
+                            Return to shop
+                    </a>
+                </h4>
             </div>
         </div>
     </div>
