@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://picknstrum.herokuapp.com/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/cart/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=electric_guitar</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=acoustic_guitar</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=bass_guitar</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=electric_guitar,acoustic_guitar,bass_guitar</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=violin</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=cello</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=banjo</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=violin,cello,banjo</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=picks</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=amps</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=carry_case</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=strings</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=tuners</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=clearance</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=deals</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/?category=clearance,deals</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/about_us/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/contact_us/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/25/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/25/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/24/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/24/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/17/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/17/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/18/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/18/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/30/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/30/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/26/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/26/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/2/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/2/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/31/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/31/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/27/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/27/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/3/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/3/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/4/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/4/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/5/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/5/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/10/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/10/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/12/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/12/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/13/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/13/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/16/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/16/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/19/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/19/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/6/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/6/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/7/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/7/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/21/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/21/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/9/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/9/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/20/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/20/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/33/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/33/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/1/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/1/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/22/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/22/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/23/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/23/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/8/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/8/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/14/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/14/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/15/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/15/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/11/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/11/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/32/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/32/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/28/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/28/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/products/29/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=/management/delete/29/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/count-down-to-the-best-albums-of-2022/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/a-weekend-of-traditional-irish-music-a-weekend-of-traditional-irish-music/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/how-to-clean-a-guitar/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/guitar-home-recording-made-easy/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/diy-tips-and-tricks/</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/?page=2</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F25%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F24%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F17%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F18%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F30%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F26%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F2%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F31%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F27%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F3%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F4%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F5%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F10%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F12%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F13%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F16%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F19%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F6%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F7%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F21%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F9%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F20%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F33%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F1%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F22%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F23%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F8%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F14%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F15%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F11%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F32%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F28%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/signup/?next=%2Fmanagement%2Fdelete%2F29%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/count-down-to-the-best-albums-of-2022/?page=2</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/a-weekend-of-traditional-irish-music-a-weekend-of-traditional-irish-music/?page=2</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/how-to-clean-a-guitar/?page=2</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/guitar-home-recording-made-easy/?page=2</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/diy-tips-and-tricks/?page=2</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/?page=1</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F25%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F24%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F17%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F18%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F30%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F26%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F2%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F31%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F27%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F3%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F4%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F5%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F10%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F12%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F13%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F16%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F19%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F6%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F7%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F21%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F9%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F20%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F33%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F1%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F22%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F23%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F8%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F14%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F15%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F11%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F32%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F28%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/accounts/login/?next=%2Fmanagement%2Fdelete%2F29%2F</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/count-down-to-the-best-albums-of-2022/?page=1</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/a-weekend-of-traditional-irish-music-a-weekend-of-traditional-irish-music/?page=1</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/how-to-clean-a-guitar/?page=1</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/guitar-home-recording-made-easy/?page=1</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://picknstrum.herokuapp.com/blog/post/diy-tips-and-tricks/?page=1</loc>
+  <lastmod>2022-10-12T09:35:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

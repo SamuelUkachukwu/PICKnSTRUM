@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /management/
+Sitemap: https://picknstrum.herokuapp.com/sitemap.xml
