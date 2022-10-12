@@ -22,14 +22,11 @@
        <li class="list-inline-item">
            <a class="{% if product_count %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
                <div class="text-center">
-
-
                         {% if product_count %}
                             <p class="m-0"><i class="fas fa-shopping-cart"></i> <span class="badge text-bg-secondary">{{ product_count }}</span></p>
                         {% else %}
                             <p class="m-0"><i class="fas fa-shopping-cart"></i> <span class="badge text-bg-secondary">0</span></p>
                         {% endif %}
-
                </div>
            </a>
        </li>

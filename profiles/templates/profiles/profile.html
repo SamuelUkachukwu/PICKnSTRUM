@@ -28,8 +28,6 @@
             {% else %}
                 <div class="card text-bg-dark mb-2 profile-header rounded-0 rock">
             {% endif %}
-
-
                 {% if profile.image %}
                 <img class="profile-image" src="{{ profile.image.url }}" alt="profile image">
                 {% else %}
@@ -105,7 +103,6 @@
             </div>
             <!-- reviews -->
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-              <!-- <div class="container"> -->
                 <div class="row">
                   {% for review in reviews %}
                   <div class="col-12 col-md-6 col-lg-4 mb-3">
@@ -145,7 +142,6 @@
                   <div class="modal-content rounded-0">
                       <div class="modal-body text-center">
                           <p class="m-0"><small>Are You Sure You Want To Delete This Review?</small></p>
-                          <!-- <p>{{ review.product.name }}</p> -->
                       </div>
                       <div class="modal-footer">
                       <button type="button" class="btn fancy-btn" data-bs-dismiss="modal">Cancel</button>
@@ -156,9 +152,7 @@
               </div>
               <!-- end here modal -->
                   {% endfor %}
-
                   </div>
-                <!-- </div> -->
             </div>
             <!-- address -->
             <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab" tabindex="0">
@@ -191,7 +185,6 @@
           </div>
         </div>
       </div>
-
       <!-- trust statments here  -->
       {% include 'includes/mood_choices.html' %}
       {% include 'includes/trust-stm.html' %}
