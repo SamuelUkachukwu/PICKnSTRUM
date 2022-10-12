@@ -62,3 +62,8 @@ def contact_us(request):
     }
     template_name = 'home/connect.html'
     return render(request, template_name, context)
+
+
+def privacy_policy(request):
+    template_name = 'home/privacy_policy.html'
+    return render(request, template_name)
