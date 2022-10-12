@@ -51,7 +51,8 @@ class ProductFeature(models.Model):
 
 class Review(models.Model):
     """Review can be added to product model"""
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="reviews")
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField(max_length=254)
     rate = models.IntegerField(choices=RATES)

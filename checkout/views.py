@@ -1,4 +1,10 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render,
+    redirect,
+    reverse,
+    get_object_or_404,
+    HttpResponse
+    )
 from django.views.decorators.http import require_POST
 
 from django.conf import settings
@@ -73,9 +79,10 @@ def checkout(request):
                         )
                         order_line_item.save()
                 except Product.DoesNotExist:
+                    phone = settings.PICKNSTRUM_PHONE
                     messages.error(request, (
                         "A Product in your cart was not found in our database"
-                        f"Please call {settings.PICKNSTRUM_PHONE} for assistance!")
+                        f"Please call {phone} for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))

@@ -30,7 +30,10 @@ class Post(models.Model):
         User, null=True, on_delete=models.SET_NULL)
     updated_on = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(
-        PostCategory, null=True, on_delete=models.SET_NULL, related_name='post')
+        PostCategory,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='post')
     content = models.TextField()
     featured_image = models.ImageField(null=True, blank=True)
     excerpt = models.TextField(blank=True)
