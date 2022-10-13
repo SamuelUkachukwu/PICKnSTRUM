@@ -287,6 +287,15 @@ The steps in deployment is recorded [here](deployment.md)
 * Django Doc [read the doc](https://docs.djangoproject.com/en/4.0/)
 * Pixabay for the images used on the site [Pixabay](https://pixabay.com/)
 * Ukachukwu Sherifat [@Nurse_Ukachukwu](https://twitter.com/nurse_ukachukwu) for external user testing.
+*  [wikepedia](https://www.wikipedia.org/).
+* [band camp](https://bandcamp.com/).
+* [The guardian](https://www.theguardian.com/).
+* [Larry Reynolds](https://www.larryreynoldsweekend.com/).
+* [Gear4Music](https://www.gear4music.ie/) for all the product images, name and desccription.
+* [wiki how](https://www.wikihow.com/Main-Page) materials blog.
+* [ESP Guitars](https://www.espguitars.com/) images.
+* [Good Reads](https://www.espguitars.com/) materials quotes.
+
 
 [back to content](#table-of-content)
 
