@@ -173,7 +173,7 @@ DEFAULT_FROM_EMAIL = your email address
 <summary>Config Vars Requirements</summary>
 <br>Config Vars Items
 
-![config var requirements](readme_imgs/config-vars)
+![config var requirements](readme_imgs/config-vars.png)
 </details>
 
 * The Deployed App can be viewed [here](https://picknstrum.herokuapp.com/)

@@ -30,14 +30,6 @@ Pick&Strum is a specially designed website application for a business that sells
 
 - [Disclaimer](#disclaimer)
 
-<details>
-<summary>Dropdown Heading</summary>
-<br>
-Choice 1
-<br> Choice 2
-<br> Choice 2
-<br>
-</details>
 
 ## Responsiveness:
 The site is responsive and can be easily accessed with full functionality in full screen, tablet and mobile screen
@@ -87,7 +79,7 @@ a search bar is convinently placed in the middle for ease of use and in mobile i
 on the right is the user account and store cart link, both icons are degined to show informations easily recognized by the user.
 * The account icon hides a dropdown indicated by the down chevron arrow.
 * If user is not logged in the options to register or login is shown.
-* if logged in the opitins to manage store (if superuser) profile and logout is shown.
+* If logged in the opitons to manage store (if superuser), profile and logout is shown.
 
 <details>
 <summary>Navigation ScreenShots</summary>
@@ -111,9 +103,9 @@ on the right is the user account and store cart link, both icons are degined to 
 <br>
 
 ### Home Page:
-The site Home page features a bold statement in line with what the site offers. A call out to music lovers and an offer to assist in making that dream come through.
-the home page is built around a Carousel that imtermitently changes both eye catching and informative presenting clients to the options of: shop Now, shop deals or blog post.
-The Home page also have a quick find links to individual product categories and announced upcoming events.
+The website's home page includes a strong claim that is consistent with the services it provides. An appeal to music enthusiasts and a promise to help them realize their dreams.
+The home website is designed around a Carousel that periodically switches between eye-catching and informative data, offering customers the alternatives to "Shop Now," "Shop Deals," or "Blog post."
+The Home page also includes quick access to certain product categories and forthcoming events.
 <details>
 <summary>Home Page</summary>
 <br> Home Page 1
@@ -128,9 +120,9 @@ The Home page also have a quick find links to individual product categories and 
 
 ### Footer:
 The footer section contains:
-* A centrally placed newsletter form offrering exclusive first look at products
-* Functional social links to social media platforms of PicknStrum. facebook, twitter, instagram.
-* links to site police, contact us page and about us page
+* A prominent newsletter signup form that lets you learn first about special deals and promotions.
+* Links to PicknStrum's social media channels that are functional.
+* Links to the contact, about, safety, and privacy pages of the website
 
 <details>
 <summary>Site Footer and associated pages</summary>
@@ -149,13 +141,12 @@ The footer section contains:
 <br>
 
 ### Product Page:
-The Product page can be accessed also by the drop down menus on the main navigation row beneath the search box.
-Products are arranged in reponsive cards with informations like product name, price, category and rating.
-site admin logged in also get the option to edit or delet a product.
-Site uers can click and view individual product and decide to add to cart or return to the product main list.
-The quantity of products selected to buy can be adjusted with the select option dropdown.
-When products are added to the cart its undergoes a color change and content counter is set accordingly to the number of products inside it
-Also by way of a toast message users are notified of each addition to cart.
+The drop-down menus on the primary navigation row below the search box can also be used to visit the Product page.
+Product information, including name, price, category, and rating, is organized in responsive cards.
+Editing or deleting a product is also an option for logged-in site administrators.
+Users of the website can click on individual products to view them and then choose whether to add them to their shopping carts or go back to the list of all available products.
+The select option dropdown allows you to change the number of products you've chosen to purchase.
+The color of the cart changes when items are added, and the content counter is adjusted to reflect the quantity of items within. Users are also informed of each addition to the cart via a toast message.
 <details>
 <summary>Product Page</summary>
 <br>Product List
@@ -169,8 +160,8 @@ Also by way of a toast message users are notified of each addition to cart.
 <br>
 
 ### Cart:
-Cart content can be viewed from toast notifications or by clicking on the cart icon
-Contents can be adjusted or deleted accordingly.
+You can access cart content by clicking on the cart icon as well as from toast notifications. <br>
+The contents can be changed or removed appropriately.
 <details>
 <summary>Shopping Cart</summary>
 <br>Cart Content
@@ -180,7 +171,7 @@ Contents can be adjusted or deleted accordingly.
 <br>
 
 ### Checkout Success:
-On completing a successful payment the user is presented a summary checkout success page.
+A summary checkout success page is displayed to the user when a successful payment is made.
 <details>
 <summary>Checkout Success</summary>
 <br>Payment Page
@@ -193,7 +184,7 @@ On completing a successful payment the user is presented a summary checkout succ
 <br>
 
 ### Profile:
-Registered Users can login to thier profile and perform simple CRUD processes of viewing thier order history, reviewing a product purchased, updating or deleting thier review, updating thier profile and switching out thier profile pictures.
+When logged in, registered users can examine their order history, evaluate a product they've purchased, edit or delete a review, update their profile, and change their profile image, among other straightforward CRUD operations.
 
 <details>
 <summary>Profile</summary>
@@ -210,10 +201,7 @@ Registered Users can login to thier profile and perform simple CRUD processes of
 
 
 ### Blog
-The blog can be accesed from the home page main navigation and footer section.
-post are organised into categories and the Top stories category is diaplayed on the page top while other posts are diplayed below.
-Each post can be vewed by clicking on the post image.
-Detailed post view can be intaracted with if user is logged in.
+The footer and main navigation on the home page both link to the blog. The Top stories category is displayed at the top of the page while the other categories are presented below. Posts are organized into categories. Clicking on the post image will take you to each post's page. If a user is logged in, they can interact with the detailed post view.
 
 <details>
 <summary>Blog Post</summary>
@@ -227,9 +215,7 @@ Detailed post view can be intaracted with if user is logged in.
 <br>
 
 ### Management:
-Admin when logged in gets a management section. Blog post can be added, edited or deleted.
-Published post gain a view post link while post left in draft do not get the view post link.
-Products can be added from this page also.
+When logged in, admin has access to the management area. Posts on a blog can be posted, altered, or removed. Posts that have been published receive a view post link, however draft posts do not. Additionally, products can be added from this page.
 
 <details>
 <summary>Management and associated pages</summary>
@@ -312,4 +298,4 @@ The steps in deployment is recorded [here](deployment.md)
 [back to content](#table-of-content)
 
 ## Disclaimer
-This site was developed for educational purposes only. _Samuel Ukachukwu 22/06/2022_
+This site was developed for educational purposes only. _Samuel Ukachukwu 13/10/2022_

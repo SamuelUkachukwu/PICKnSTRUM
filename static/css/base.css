@@ -196,10 +196,8 @@ input,
     -ms-user-select: none;
     user-select: none;
     background-color: var(--rust) !important;
-    ;
     border: 1px solid var(--rust);
-    ;
-    padding: .375rem .75rem;
+    padding: .398rem .75rem .355rem;
     font-size: 1.2rem;
     line-height: 1.5;
     border-radius: 0;
