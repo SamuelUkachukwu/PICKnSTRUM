@@ -8,8 +8,8 @@ Pick&Strum is a specially designed website application for a business that sells
 - [Site Scope](#site-scope)
     * [user stories](#user-stories)
 
-- [Features](#features)
-    * [Navigation](#navigation)
+- [Site Features](#site-features)
+    * [Site Navigation](#site-navigation)
     * [Features left to implement](#features-left-to-implement)
 
 - [Database Model](#database-model)
@@ -79,8 +79,8 @@ The site is responsive and can be easily accessed with full functionality in ful
 
 [back to content](#table-of-content)
 
-## Features
-### Navigation:
+## Site Features
+### Site Navigation:
 Navigation bar is fully responsive and show different layout yet equal functionality in mobile and desktop site.
 the company name also servers as a home button for users to get to the home page on a click.
 a search bar is convinently placed in the middle for ease of use and in mobile it drops down below the navbar at a convinent line of sight .
@@ -108,11 +108,12 @@ on the right is the user account and store cart link, both icons are degined to 
 ![navigation mobile view search dropdown](readme_imgs/mobile-search-position.png)
 <br>
 </details>
-
+<br>
 
 ### Home Page:
 The site Home page features a bold statement in line with what the site offers. A call out to music lovers and an offer to assist in making that dream come through.
 the home page is built around a Carousel that imtermitently changes both eye catching and informative presenting clients to the options of: shop Now, shop deals or blog post.
+The Home page also have a quick find links to individual product categories and announced upcoming events.
 <details>
 <summary>Home Page</summary>
 <br> Home Page 1
@@ -123,112 +124,175 @@ the home page is built around a Carousel that imtermitently changes both eye cat
 ![home page](readme_imgs/Home-page-2.png)
 </details>
 
+<br>
+
+### Footer:
+The footer section contains:
+* A centrally placed newsletter form offrering exclusive first look at products
+* Functional social links to social media platforms of PicknStrum. facebook, twitter, instagram.
+* links to site police, contact us page and about us page
+
+<details>
+<summary>Site Footer and associated pages</summary>
+<br>Footer
+
+![footer](readme_imgs/footer.png)
+<br> About Us
+
+![About Us](readme_imgs/about-us.png)
+<br> Contact Us
+
+![contact Us](readme_imgs/contact-us.png)
+<br>
+</details>
+
+<br>
+
+### Product Page:
+The Product page can be accessed also by the drop down menus on the main navigation row beneath the search box.
+Products are arranged in reponsive cards with informations like product name, price, category and rating.
+site admin logged in also get the option to edit or delet a product.
+Site uers can click and view individual product and decide to add to cart or return to the product main list.
+The quantity of products selected to buy can be adjusted with the select option dropdown.
+When products are added to the cart its undergoes a color change and content counter is set accordingly to the number of products inside it
+Also by way of a toast message users are notified of each addition to cart.
+<details>
+<summary>Product Page</summary>
+<br>Product List
+
+![Product List Page](readme_imgs/product-page.png)
+<br>Product Detail View
+
+![Product Detail Page](readme_imgs/product-detai-view.png)
+<br>
+</details>
+<br>
+
+### Cart:
+Cart content can be viewed from toast notifications or by clicking on the cart icon
+Contents can be adjusted or deleted accordingly.
+<details>
+<summary>Shopping Cart</summary>
+<br>Cart Content
+
+![Cart Content](readme_imgs/cart.png)
+</details>
+<br>
+
+### Checkout Success:
+On completing a successful payment the user is presented a summary checkout success page.
+<details>
+<summary>Checkout Success</summary>
+<br>Payment Page
+
+![Payment Page](readme_imgs/checkout-page.png)
+<br>Checkout Success page
+
+![Checkout Success page](readme_imgs/checkout-success.png)
+</details>
+<br>
+
+### Profile:
+Registered Users can login to thier profile and perform simple CRUD processes of viewing thier order history, reviewing a product purchased, updating or deleting thier review, updating thier profile and switching out thier profile pictures.
+
+<details>
+<summary>Profile</summary>
+<br>Profile Pages
+
+![Profile Page 1](readme_imgs/profile-1.png)
+![Profile Page 2](readme_imgs/profile-2.png)
+![Profile Page 3](readme_imgs/profile-3.png)
+![Profile Page 4](readme_imgs/profile-4.png)
+![Purchase history](readme_imgs/review.png)
+![Product Review](readme_imgs/review-2.png)
+</details>
+<br>
 
 
-![category list page](static/img/category_page.png)
-site users need to be logged in to view the category page.
+### Blog
+The blog can be accesed from the home page main navigation and footer section.
+post are organised into categories and the Top stories category is diaplayed on the page top while other posts are diplayed below.
+Each post can be vewed by clicking on the post image.
+Detailed post view can be intaracted with if user is logged in.
 
-Each post can be viewed in detail by clicking the Title of the post this takes the site user to a detail view page were logged in users can interact with the post by liking or disliking the post or leaving a public comment.
-site users not logged in are requested to do so to be able to interact with the post they are viewing.
-![request to login before interaction](static/img/sign_in_required.png)
+<details>
+<summary>Blog Post</summary>
+<br>Blog Page
 
-In addition to being able to interact with posts, registered users can also add, edit and delete own posts in a custom user page.
-![private profile page](static/img/user_profile_page.png)
+![Blog Page](readme_imgs/blog-page.png)
+<br>Detail Post page
 
-When each post is viewed, site users can also view a public profile of the author with a list of all the authors published post sorted in order of new to old.
-![public profile page](static/img/public_profile.png)
+![Detail Post page](readme_imgs/blog-post.png)
+</details>
+<br>
+
+### Management:
+Admin when logged in gets a management section. Blog post can be added, edited or deleted.
+Published post gain a view post link while post left in draft do not get the view post link.
+Products can be added from this page also.
+
+<details>
+<summary>Management and associated pages</summary>
+<br>Management Page
+
+![Management Page](readme_imgs/management-1.png)
+![Management Page](readme_imgs/data-entry-1.png)
+![Management Page](readme_imgs/data-entry-2.png)
+</details>
+<br>
 
 ### Features left to implement:
-* Follow Author functionality
-
+* Product rating being calculated from user reviews.
 
  [back to content](#table-of-content)
-## Database Model
+ <br>
 
+## Database Model
 Relational Database Model was used in this project
-![Data Model](static/img/relational%20database%20model.png)
+
+<details>
+<summary>Data Model</summary>
+<br>Relational Data Model PicknStrum
+
+![Data Model](readme_imgs/picknstrum%20datamodel.png)
+</details>
+<br>
 
 [back to content](#table-of-content)
 ## Wire Frame
-Mock up site was created using figma wireframing. individual frames can be seen [here](wireframe.md)
+Mock up site was created using Balsamiq wireframing. individual frames can be seen [here](wireframe.md)
 
 [back to content](#table-of-content)
+<br>
+
 ## Language, Framework, Library and Tools
 * HTML5 [More on HTML5 ](https://en.wikipedia.org/wiki/HTML5)
 * CSS3 [More on CSS](https://en.wikipedia.org/wiki/CSS)
 * JavaScript [More on JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * Python [Python](https://www.python.org/) [Read More on Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-
 * Bootstarp 5 [Bootstrap](https://getbootstrap.com/)
 * Django [Django](https://www.djangoproject.com/)
-
+* Psycopg2 [PostgreSQl](https://www.postgresql.org/)
 * Django-allauth [django-allauth read the doc](https://django-allauth.readthedocs.io/en/latest/)
-* Cloudinary [Image hosting](https://cloudinary.com/)
 * Crispy-form [django-crispy-form read the doc](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
 * Summernote [Summernote Docs](https://summernote.org/)
-
-* Figma [more on Figma](https://www.figma.com/)
+* Balsamiq [more on Balsamiq](https://balsamiq.com/)
 * Heroku [more on Heroku](https://devcenter.heroku.com/)
 
 [back to content](#table-of-content)
 
 ## Testing
-The codes were tested by doing the following:
-### Manual Testing:
-1.	Entered invalid inputs and wrong inputs where inputs are requested with respect to integers and strings.
-2.	Recruited help from friends to use app and offer feedback
-3.  Lunching site on different devices and browsers to check for responsiveness and bugs.
-    * google chrom
-    * fire fox
-    * microsoft edge
-    * Operamini
-
-#### W3C CSS Validation: No Errors returned
-![CSS validation](static/img/css_validation.png)
-
-#### Pep8 Validation: No errors returned
-![pep8 validation](static/img/pep8_check.png)
-
-#### Accessibility:
-
-Accessibility testing was conducted using light house devtools and it confirmed that the fonts and colors selected are easy to read and accecssible.
-![lighthouse validation](static/img/lighthousetest.png)
-
-#### Unittest:
-Unit test was created to test the form.py, views.py and models.py
+Deployed site was tested Manually and codes where validated online [go to test page](test.md)
 
 [back to content](#table-of-content)
 
 ## Bugs
-* none found
+* Blog page will throw error if ```blog_category.json``` fixtures are not loaded as the category "Top stories" is essential to the page
 
 [back to content](#table-of-content)
 
 ## Deployment
-The project was deployed to Heroku with the following steps:
-1. create a Heroku account
-1.  in the settings section reveal the config var and enter the key and value pair from the settings.py file
-DJANGO_URL, SECRET_KEY, PORT and CLOUDINARY_URL
-1.	on the Resources tab select Heroku Postgres as the database
-1. on the treminal type:
- ```
- python3 manage.py makemigrations
- ```
- and
- ```
- python3 manage.py migrate
- ```
- to migrate your database.
-1.	on the CLI create a requirements.txt file using the command:
- ```
- pip3 freeze -–local > requirements.txt
- ```
-1.	Add a Procfile with the required codes in it: ```web: gunicorn .wasgi```
-1.	Change Debug to False and commit repository to Github.
-1. In the deploy section select github and search for the repository name. link up the Heroku app to the github repository code.
-1. Scroll down and setup automatic deploy to allow Heroku to update app from gitpod push and click on the manual deploy option.
-1. click view to view the app.
-* The Deployed App can be viewed here [](https://story-base.herokuapp.com/)
+The steps in deployment is recorded [here](deployment.md)
 
 [back to content](#table-of-content)
 
