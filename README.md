@@ -33,7 +33,7 @@ Pick&Strum is a specially designed website application for a business that sells
 
 ## Responsiveness:
 The site is responsive and can be easily accessed with full functionality in full screen, tablet and mobile screen
-![responsive design of the website from ami.responsive.com]()
+![responsive design of the website from ami.responsive.com](readme_imgs/responsive.png)
 
 ## Site Scope
 * Responsive Design: Pick&Strum website should be fully responsive in all devices from screen size 280 upwards
