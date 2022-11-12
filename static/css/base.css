@@ -152,7 +152,15 @@ h6,
     top: 70px;
     right: 30px;
 }
-
+.cart-img{
+    width:110px;
+    height:110px;
+}
+/* Code validation and refactoring.
+Fixed missing ul tag in mobile-header.html.
+Removed unused code in blog paginators.
+Fixed bad value button for attribute type on a elements.
+Removed type atributes on script tags */
 /* ----------------element with cusors */
 .btt-link {
     cursor: pointer;

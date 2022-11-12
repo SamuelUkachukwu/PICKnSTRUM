@@ -124,7 +124,7 @@
           <li><a href="{% url 'account_logout' %}" class="nav-link h-text list-group-item border-0 ">Logout</a></li>
           {% else %}
           <li><a href="{% url 'account_signup' %}" class="nav-link h-text list-group-item border-0 ">Register</a></li>
-          <li></li><a href="{% url 'account_login' %}" class="nav-link h-text list-group-item border-0 ">Login</a></li>
+          <li><a href="{% url 'account_login' %}" class="nav-link h-text list-group-item border-0 ">Login</a></li>
           {% endif %}
         </ul>
       </div>
@@ -151,7 +151,7 @@
           <li><a href="{% url 'account_logout' %}" class="nav-link h-text list-group-item border-0 ">Logout</a></li>
           {% else %}
           <li><a href="{% url 'account_signup' %}" class="nav-link h-text list-group-item border-0 ">Register</a></li>
-          <li></li><a href="{% url 'account_login' %}" class="nav-link h-text list-group-item border-0 ">Login</a></li>
+          <li><a href="{% url 'account_login' %}" class="nav-link h-text list-group-item border-0 ">Login</a></li>
           {% endif %}
         </ul>
       </div>
@@ -266,8 +266,8 @@
     document.getElementById("copy-right1").innerHTML = new Date().getFullYear();
   </script>
 
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-  <script type='text/javascript'>
+  <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script>
     (function ($) {
       window.fnames = new Array();
       window.ftypes = new Array();

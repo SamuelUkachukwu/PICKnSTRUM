@@ -23,10 +23,9 @@ class ProfileImageForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
-
+        self.fields['image'].widget.attrs['class'] = 'form-styling'
         for field in self.fields:
             self.fields[field].label = False
-            self.fields[field].widget.attrs['class'] = 'form-styling'
 
 
 class UserProfileForm(forms.ModelForm):

@@ -26,9 +26,9 @@
                     <div class="row g-0">
                     <div class="col-3 d-flex">
                         {% if item.product.image %}
-                        <img class="img-fluid rounded m-auto" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="110px" height="110px">
+                        <img class="img-fluid rounded m-auto cart-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                         {% else %}
-                        <img class="img-fluid rounded m-auto" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="110px" height="110px">
+                        <img class="img-fluid rounded m-auto cart-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                         {% endif %}
                     </div>
                     <div class="col-9">
@@ -109,7 +109,6 @@
         {% endif %}
         </div>
     </div>
-</div>
  <!-- trust statments here  -->
  {% include 'includes/trust-stm.html' %}
 {% endblock %}

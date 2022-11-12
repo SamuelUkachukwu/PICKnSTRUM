@@ -34,8 +34,7 @@
                 <img class="profile-image float-start" src="{{ MEDIA_URL }}noimage.png" alt="profile image not available">
                 {% endif %}
 
-            <a class="edit-icon" data-bs-toggle="collapse" href="#pic-edit" role="button" aria-expanded="false"
-              aria-controls="edit profile pictures collapse button">
+            <a class="edit-icon" data-bs-toggle="collapse" href="#pic-edit" role="button" aria-expanded="false">
               <i class="far fa-edit text-white"></i>
             </a>
           </div>
@@ -119,7 +118,7 @@
                         {% endif %}
                       </div>
                       <div class="col-9">
-                        <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapse{{review.product.id}}" role="button" aria-expanded="false" aria-controls="collapse{{review.product.id}}">
+                        <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapse{{review.product.id}}" role="button" aria-expanded="false">
                           <h5><small>{{ review.product.name|truncatechars:20 }}</small></h5>
                           <p><small>{{ review.body|truncatechars:25 }} | <span><i class="fas fa-star yellow"></i></span> {{ review.rate }}</small></p>
                         </a>
@@ -137,7 +136,7 @@
                     </div>
                   </div>
                   <!-- delete modal -->
-                <div class="modal fade" id="staticBackdrop{{review.product.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop{{review.product.id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content rounded-0">
                       <div class="modal-body text-center">
@@ -145,7 +144,7 @@
                       </div>
                       <div class="modal-footer">
                       <button type="button" class="btn fancy-btn" data-bs-dismiss="modal">Cancel</button>
-                      <a href="{% url 'delete_review' review.product.id %}" type="button" class="btn btn-danger rounded-0">Delete</a>
+                      <a href="{% url 'delete_review' review.product.id %}" class="btn btn-danger rounded-0">Delete</a>
                       </div>
                   </div>
                   </div>

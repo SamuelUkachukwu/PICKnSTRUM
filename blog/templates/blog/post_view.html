@@ -79,9 +79,9 @@
       <div class="card rounded-0 border-0 mb-2 py-0" style="width: 95%; margin: auto;">
         <a href="{% url 'view_post' post.slug %}">
             {% if post.featured_image %}
-          <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="..." >
+          <img src="{{ post.featured_image.url }}" class="card-img-top rounded-0 border-0" alt="image for {{ post.title}} post" >
           {% else %}
-          <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 border-0" alt="..." >
+          <img src="https://res.cloudinary.com/shybold/image/upload/v1664883644/solar_imbgzk.jpg" class="card-img-top rounded-0 border-0" alt="default image for image post not found" >
           {% endif %}
         </a>
         <div class="card-body">
@@ -102,10 +102,8 @@
                 <li class="page-item"><a class="page-link text-responsive" href="?page={{ posts.previous_page_number }}">previous</a></li>
               {% endif %}
 
-              <span class="current">
                 <li class="page-item disabled"><a class="page-link text-responsive rounded-0" href="">Page {{ posts.number }} of
                     {{ posts.paginator.num_pages }}.</a></li>
-              </span>
 
               {% if posts.has_next %}
                 <li class="page-item"><a class="page-link text-responsive" href="?page={{ posts.next_page_number }}">next</a></li>
