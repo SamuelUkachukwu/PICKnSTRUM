@@ -286,8 +286,9 @@ The steps in deployment is recorded [here](deployment.md)
 * Code Institute [Code Institute](https://codeinstitute.net/ie/)
 * Django Doc [read the doc](https://docs.djangoproject.com/en/4.0/)
 * Pixabay for the images used on the site [Pixabay](https://pixabay.com/)
+* Istockphotos for the favicon picture [istockphotos](https://www.istockphoto.com/photos/guitar-pick-silhouette)
 * Ukachukwu Sherifat [@Nurse_Ukachukwu](https://twitter.com/nurse_ukachukwu) for external user testing.
-*  [wikepedia](https://www.wikipedia.org/).
+* [wikepedia](https://www.wikipedia.org/).
 * [band camp](https://bandcamp.com/).
 * [The guardian](https://www.theguardian.com/).
 * [Larry Reynolds](https://www.larryreynoldsweekend.com/).
