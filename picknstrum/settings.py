@@ -31,7 +31,7 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['picknstrum.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['picknstrum.herokuapp.com', 'localhost', 'picknstrum-0acdd2bd95ab.herokuapp.com']
 
 # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
